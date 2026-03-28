@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : locale === "ro"
         ? "Distribuitor Turcia LG Chem și Basechem. Partenerul dvs. expert în materiale plastice tehnice."
         : "LG Chem and Basechem Turkey distributor. Your expert partner in engineering plastics.",
-    icons: { icon: "/favicon.ico" },
+    icons: { icon: "/logo.png" },
     keywords: t("home"),
   };
 }
