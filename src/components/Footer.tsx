@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { Phone, Mail, Globe, MapPin } from "lucide-react";
 
@@ -25,19 +26,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="mb-5">
-              <svg width="70" height="82" viewBox="0 0 140 165" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="70" cy="68" r="62" stroke="white" strokeWidth="2" fill="none"/>
-                <ellipse cx="70" cy="38" rx="52" ry="12" stroke="white" strokeWidth="1.2" fill="none"/>
-                <ellipse cx="70" cy="68" rx="62" ry="18" stroke="white" strokeWidth="1.2" fill="none"/>
-                <ellipse cx="70" cy="98" rx="52" ry="12" stroke="white" strokeWidth="1.2" fill="none"/>
-                <ellipse cx="70" cy="20" rx="30" ry="6" stroke="white" strokeWidth="1" fill="none"/>
-                <ellipse cx="70" cy="116" rx="30" ry="6" stroke="white" strokeWidth="1" fill="none"/>
-                <ellipse cx="70" cy="68" rx="28" ry="62" stroke="white" strokeWidth="1.2" fill="none"/>
-                <ellipse cx="70" cy="68" rx="52" ry="62" stroke="white" strokeWidth="1.2" fill="none"/>
-                <line x1="70" y1="6" x2="70" y2="130" stroke="white" strokeWidth="1.5"/>
-                <text x="70" y="78" textAnchor="middle" fill="#4CAF50" fontSize="26" fontWeight="800" letterSpacing="5" fontFamily="Arial Black, Arial, sans-serif">BUTEO</text>
-                <text x="70" y="152" textAnchor="middle" fill="#aaaaaa" fontSize="11" letterSpacing="4" fontFamily="Arial, sans-serif">PETROKİMYA</text>
-              </svg>
+              <Image src="/logo.png" alt="Buteo Petrokimya" width={70} height={70} className="object-contain" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs mb-6">
               {t("footer.description")}

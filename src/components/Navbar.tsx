@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
@@ -56,24 +57,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center group">
-            <svg width="70" height="82" viewBox="0 0 140 165" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Globe outer circle */}
-              <circle cx="70" cy="68" r="62" stroke={scrolled ? "#222" : "#ffffff"} strokeWidth="2" fill="none"/>
-              {/* Latitude lines */}
-              <ellipse cx="70" cy="38" rx="52" ry="12" stroke={scrolled ? "#222" : "#ffffff"} strokeWidth="1.2" fill="none"/>
-              <ellipse cx="70" cy="68" rx="62" ry="18" stroke={scrolled ? "#222" : "#ffffff"} strokeWidth="1.2" fill="none"/>
-              <ellipse cx="70" cy="98" rx="52" ry="12" stroke={scrolled ? "#222" : "#ffffff"} strokeWidth="1.2" fill="none"/>
-              <ellipse cx="70" cy="20" rx="30" ry="6" stroke={scrolled ? "#222" : "#ffffff"} strokeWidth="1" fill="none"/>
-              <ellipse cx="70" cy="116" rx="30" ry="6" stroke={scrolled ? "#222" : "#ffffff"} strokeWidth="1" fill="none"/>
-              {/* Longitude lines */}
-              <ellipse cx="70" cy="68" rx="28" ry="62" stroke={scrolled ? "#222" : "#ffffff"} strokeWidth="1.2" fill="none"/>
-              <ellipse cx="70" cy="68" rx="52" ry="62" stroke={scrolled ? "#222" : "#ffffff"} strokeWidth="1.2" fill="none"/>
-              <line x1="70" y1="6" x2="70" y2="130" stroke={scrolled ? "#222" : "#ffffff"} strokeWidth="1.5"/>
-              {/* BUTEO text inside globe */}
-              <text x="70" y="78" textAnchor="middle" fill="#4CAF50" fontSize="26" fontWeight="800" letterSpacing="5" fontFamily="Arial Black, Arial, sans-serif">BUTEO</text>
-              {/* PETROKİMYA text below */}
-              <text x="70" y="152" textAnchor="middle" fill={scrolled ? "#555" : "#cccccc"} fontSize="11" letterSpacing="4" fontFamily="Arial, sans-serif">PETROKİMYA</text>
-            </svg>
+            <Image src="/logo.png" alt="Buteo Petrokimya" width={70} height={70} className="object-contain" />
           </Link>
 
           {/* Desktop Nav */}

@@ -58,7 +58,7 @@ export default function AboutPage() {
                     { year: "2023", text: "Şirket kuruldu" },
                     { year: "2023", text: "LG Chem Türkiye distribütörlüğü alındı" },
                     { year: "2024", text: "Basechem distribütörlüğü başladı" },
-                    { year: "2024", text: "Romanya ofisi açıldı" },
+                    { year: "2025", text: "Romanya ofisi açıldı" },
                   ].map((item, i) => (
                     <div key={i} className="flex gap-4 items-start">
                       <span className="text-sm font-bold px-3 py-1 rounded-full text-white flex-shrink-0" style={{backgroundColor: "#1B4332"}}>

@@ -217,7 +217,7 @@ export default function LGChemPage() {
               <div className="flex-1">
                 <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/80 text-sm px-4 py-2 rounded-full mb-6">
                   <Star size={14} fill="currentColor" />
-                  Türkiye Yetkili Distribütörü
+                  Türkiye Distribütörü
                 </div>
                 <div className="flex items-center gap-4 mb-6">
                   {/* LG Chem logo badge */}
