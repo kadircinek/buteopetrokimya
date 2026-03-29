@@ -346,7 +346,7 @@ function LGChemBanner() {
               <span className="font-black text-3xl" style={{color: "#c8102e"}}>LG</span>
             </div>
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{color: "#4CAF50"}}>Türkiye Yetkili Distribütörü</div>
+              <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{color: "#4CAF50"}}>Türkiye Distribütörü</div>
               <h2 className="text-2xl sm:text-3xl font-black text-white">LG Chem Tüm Ürünleri</h2>
               <p className="text-white/70 text-sm mt-1">
                 LUPOY · LUPOX · LUMID · LUMILOY · LUCEL · LUSEP · KEYFLEX ve daha fazlası
@@ -394,7 +394,7 @@ function BasechemBanner() {
               <span className="font-black text-xs leading-tight text-center" style={{color: "#1B4332"}}>BASE<br/>CHEM</span>
             </div>
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{color: "#86efac"}}>Türkiye Yetkili Distribütörü</div>
+              <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{color: "#86efac"}}>Türkiye Distribütörü</div>
               <h2 className="text-2xl sm:text-3xl font-black text-white">Basechem Compound Ürünleri</h2>
               <p className="text-white/70 text-sm mt-1">
                 Samsung · LG · Hyundai OEM Tedarikçisi — 30+ Yıl Deneyim
