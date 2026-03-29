@@ -21,6 +21,21 @@ const nextConfig: NextConfig = {
         destination: "/tr",
         permanent: true,
       },
+      {
+        source: "/tr/contact-us",
+        destination: "/tr/contact",
+        permanent: true,
+      },
+      {
+        source: "/en/contact-us",
+        destination: "/en/contact",
+        permanent: true,
+      },
+      {
+        source: "/contact-us",
+        destination: "/tr/contact",
+        permanent: true,
+      },
     ];
   },
 };
