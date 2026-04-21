@@ -9,6 +9,7 @@ export default function AboutPage() {
   const t = useTranslations("about");
   const s = useTranslations("services");
   const r = useTranslations("rnd");
+  const c = useTranslations("contact");
   const locale = useLocale();
 
   const features = [
@@ -23,6 +24,13 @@ export default function AboutPage() {
     { title: r("t2"), desc: r("d2") },
     { title: r("t3"), desc: r("d3") },
     { title: r("t4"), desc: r("d4") },
+  ];
+
+  const timeline = [
+    { year: "2023", text: t("timeline1") },
+    { year: "2023", text: t("timeline2") },
+    { year: "2024", text: t("timeline3") },
+    { year: "2025", text: t("timeline4") },
   ];
 
   return (
@@ -48,18 +56,13 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Buteo Petrokimya Hakkında</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">{t("aboutTitle")}</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">{t("description1")}</p>
                 <p className="text-gray-600 leading-relaxed mb-8">{t("description2")}</p>
 
                 {/* Timeline */}
                 <div className="space-y-4">
-                  {[
-                    { year: "2023", text: "Şirket kuruldu" },
-                    { year: "2023", text: "LG Chem Türkiye distribütörlüğü alındı" },
-                    { year: "2024", text: "Basechem distribütörlüğü başladı" },
-                    { year: "2025", text: "Romanya ofisi açıldı" },
-                  ].map((item, i) => (
+                  {timeline.map((item, i) => (
                     <div key={i} className="flex gap-4 items-start">
                       <span className="text-sm font-bold px-3 py-1 rounded-full text-white flex-shrink-0" style={{backgroundColor: "#1B4332"}}>
                         {item.year}
@@ -88,23 +91,23 @@ export default function AboutPage() {
         {/* Offices */}
         <section className="py-20" style={{background: "#f8fafc"}}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Ofislerimiz</h2>
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">{t("officesTitle")}</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {/* Turkey */}
               <div className="p-8 rounded-3xl border border-gray-100 bg-white hover:shadow-xl transition-all">
                 <div className="flex items-center gap-3 mb-6">
                   <span className="text-3xl">🇹🇷</span>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">Türkiye Ofisi</h3>
-                    <p className="text-gray-500 text-sm">Ana Merkez</p>
+                    <h3 className="text-xl font-bold text-gray-900">{c("turkey")}</h3>
+                    <p className="text-gray-500 text-sm">{t("trOfficeHQ")}</p>
                   </div>
                 </div>
                 <div className="space-y-3 text-sm text-gray-600">
-                  <div><span className="font-semibold text-gray-800">Şirket:</span> Buteo Petrokimya</div>
-                  <div><span className="font-semibold text-gray-800">Lokasyon:</span> İstanbul, Türkiye</div>
-                  <div><span className="font-semibold text-gray-800">Depolar:</span> Avrupa Yakası + Anadolu Yakası</div>
-                  <div><span className="font-semibold text-gray-800">Tel:</span> +90 542 189 43 40</div>
-                  <div><span className="font-semibold text-gray-800">Web:</span> www.buteopetrokimya.com</div>
+                  <div><span className="font-semibold text-gray-800">{t("companyLabel")}:</span> Buteo Petrokimya</div>
+                  <div><span className="font-semibold text-gray-800">{t("locationLabel")}:</span> İstanbul, Türkiye</div>
+                  <div><span className="font-semibold text-gray-800">{t("warehousesLabel")}:</span> {t("warehousesValue")}</div>
+                  <div><span className="font-semibold text-gray-800">{c("phone")}:</span> +90 542 189 43 40</div>
+                  <div><span className="font-semibold text-gray-800">{t("webLabel")}:</span> www.buteopetrokimya.com</div>
                 </div>
               </div>
 
@@ -113,14 +116,14 @@ export default function AboutPage() {
                 <div className="flex items-center gap-3 mb-6">
                   <span className="text-3xl">🇷🇴</span>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">Romanya Ofisi</h3>
-                    <p className="text-gray-500 text-sm">Avrupa Operasyonları</p>
+                    <h3 className="text-xl font-bold text-gray-900">{c("romania")}</h3>
+                    <p className="text-gray-500 text-sm">{t("roOfficeEurope")}</p>
                   </div>
                 </div>
                 <div className="space-y-3 text-sm text-gray-600">
-                  <div><span className="font-semibold text-gray-800">Şirket:</span> BUTEO PETROCHEMICALS ROMANIA S.R.L.</div>
-                  <div><span className="font-semibold text-gray-800">Adres:</span> Bucureşti Sectorul 5, Strada MIHAIL KOGĂLNICEANU, Nr. 12, Clădirea C4, Camera 23</div>
-                  <div><span className="font-semibold text-gray-800">Şehir:</span> Bükreş, Romanya</div>
+                  <div><span className="font-semibold text-gray-800">{t("companyLabel")}:</span> BUTEO PETROCHEMICALS ROMANIA S.R.L.</div>
+                  <div><span className="font-semibold text-gray-800">{t("addressLabel")}:</span> Bucureşti Sectorul 5, Strada MIHAIL KOGĂLNICEANU, Nr. 12, Clădirea C4, Camera 23</div>
+                  <div><span className="font-semibold text-gray-800">{t("cityLabel")}:</span> Bucureşti, România</div>
                 </div>
               </div>
             </div>
@@ -153,14 +156,14 @@ export default function AboutPage() {
         {/* CTA */}
         <section className="py-16" style={{background: "#f0fdf4"}}>
           <div className="max-w-3xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4" style={{color: "#1B4332"}}>Çözüm Ortağınız Olmaya Hazırız</h2>
-            <p className="text-gray-600 mb-8">Projeleriniz için teknik destek ve hammadde tedariki konusunda bize ulaşın.</p>
+            <h2 className="text-3xl font-bold mb-4" style={{color: "#1B4332"}}>{t("ctaTitle")}</h2>
+            <p className="text-gray-600 mb-8">{t("ctaDesc")}</p>
             <Link
               href={`/${locale}/contact`}
               className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-full"
               style={{backgroundColor: "#1B4332"}}
             >
-              İletişime Geç <ArrowRight size={18} />
+              {t("ctaBtn")} <ArrowRight size={18} />
             </Link>
           </div>
         </section>

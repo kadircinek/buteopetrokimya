@@ -1,205 +1,299 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ArrowRight, ExternalLink, Star } from "lucide-react";
 
-/* ─────────────── DATA ─────────────── */
+/* ─────────────── LOCALE-BASED DATA ─────────────── */
 
-const engineeringPlastics = [
-  {
-    brand: "LUPOY",
-    base: "PC (Polycarbonate)",
-    color: "#1a3a5c",
-    desc: "Yüksek darbe dayanımı, optik saydamlık ve alev geciktirici özellikli PC bileşiği.",
-    highlights: ["Alev Geciktirici", "UV Kararlı", "Şeffaf Renkler", "Gıda Onaylı"],
-    grades: ["LUPOY GN-1001P", "LUPOY GP-1000M", "LUPOY HF-1000M", "LUPOY FR-1000"],
-    applications: ["Otomotiv", "Elektronik", "Tıbbi Cihazlar", "Beyaz Eşya"],
-    featured: true,
-  },
-  {
-    brand: "LUPOX / LUMAX",
-    base: "PBT (Polybutylene Terephthalate)",
-    color: "#2D6A4F",
-    desc: "Üstün ısı ve kimyasal direnç, mükemmel elektriksel yalıtım özellikleriyle PBT bileşiği.",
-    highlights: ["Isı Dirençli", "Kimyasal Dayanım", "Cam Elyaf Takviyeli", "Alev Geciktirici"],
-    grades: ["LUPOX GP-1000", "LUPOX HV-1010", "LUMAX HP-1030", "LUPOX FR-1005"],
-    applications: ["Elektrik/Elektronik", "Otomotiv Konektör", "Fiş & Soket", "Aydınlatma"],
-    featured: true,
-  },
-  {
-    brand: "LUPOL",
-    base: "PP (Polypropylene)",
-    color: "#40916C",
-    desc: "Geliştirilmiş mekanik özellikler, hafiflik ve kimyasal direnç için özel PP bileşiği.",
-    highlights: ["Hafif", "Kimyasal Dirençli", "Cam Elyaf", "Uzun Ömür"],
-    grades: ["LUPOL GC-3000H", "LUPOL LF-3500", "LUPOL SF-3300"],
-    applications: ["Otomotiv İç Döşeme", "Endüstriyel Parçalar", "Elektrik Aksamı"],
-    featured: false,
-  },
-  {
-    brand: "LUPOS",
-    base: "Styrenics Compound",
-    color: "#52B788",
-    desc: "İyileştirilmiş ısı deformasyon direnciyle yüksek performanslı stiren bileşiği.",
-    highlights: ["Isı Stabilitesi", "Kolay İşleme", "Parlak Yüzey"],
-    grades: ["LUPOS SG-1000", "LUPOS HH-1010"],
-    applications: ["Beyaz Eşya", "Elektronik Cihazlar", "Ev Aletleri"],
-    featured: false,
-  },
-  {
-    brand: "LUMID / LUXY",
-    base: "PA6 / PA66 (Polyamide)",
-    color: "#1B4332",
-    desc: "Mükemmel ısı direnci ve mekanik dayanım için poliamid tabanlı bileşikler.",
-    highlights: ["Yüksek Isı Direnci", "Cam Elyaf Takviyeli", "Aşınma Direnci", "Alev Geciktirici"],
-    grades: ["LUMID GP-1000F", "LUMID HP-1020G", "LUXY SE-1000", "LUMID FR-1030"],
-    applications: ["Otomotiv Motor Aksamı", "Elektrik Konektörler", "Endüstriyel"],
-    featured: true,
-  },
-  {
-    brand: "LUMILOY",
-    base: "mPPO (Modified PPO/PPE)",
-    color: "#0d2b1a",
-    desc: "Boyutsal kararlılık, alev geciktiricilik ve elektriksel yalıtım özellikleri üstün mPPO malzeme. Noryl® eşdeğeri.",
-    highlights: ["Boyutsal Kararlılık", "Alev Geciktirici", "Elektrik Yalıtımı", "Düşük Nem Absorbsiyonu"],
-    grades: ["LUMILOY GN-1000", "LUMILOY FN-1010", "LUMILOY SX-1200"],
-    applications: ["Ağ Ekipmanları", "Sunucu Kasaları", "Elektrik Panelleri", "Otomotiv"],
-    featured: true,
-  },
-  {
-    brand: "LUMIPLAS",
-    base: "PC-based Light Diffusion",
-    color: "#2D6A4F",
-    desc: "Işık difüzyon fonksiyonlu PC bazlı özel malzeme. Otomotiv aydınlatma için ideal.",
-    highlights: ["Işık Difüzyonu", "Yüksek Şeffaflık", "Optik Saydamlık", "UV Kararlı"],
-    grades: ["LUMIPLAS LD-1000", "LUMIPLAS OP-1010"],
-    applications: ["Otomotiv Farları", "LED Aydınlatma", "Sinyal Lambaları"],
-    featured: false,
-  },
-  {
-    brand: "LUCEL",
-    base: "POM (Polyoxymethylene)",
-    color: "#40916C",
-    desc: "Düşük sürtünme ve yüksek aşınma direnci için POM bazlı bileşik.",
-    highlights: ["Düşük Sürtünme", "Aşınma Direnci", "Yüksek Rijitlik", "Boyutsal Hassasiyet"],
-    grades: ["LUCEL MH-2000", "LUCEL GF-2020", "LUCEL LF-2010"],
-    applications: ["Dişliler", "Yataklar", "Otomotiv Mekanizmaları", "Kapı Sistemleri"],
-    featured: false,
-  },
-  {
-    brand: "LUCON",
-    base: "Conductive Engineering Plastic",
-    color: "#1B4332",
-    desc: "Elektriksel iletkenlik özelliğine sahip özel mühendislik plastiği. ESD koruması için ideal.",
-    highlights: ["Elektriksel İletkenlik", "ESD Koruma", "EMI Kalkanı"],
-    grades: ["LUCON CR-1000", "LUCON EM-1020"],
-    applications: ["Elektronik Ambalaj", "ESD Muhafazalar", "Yarı İletken Ekipmanlar"],
-    featured: false,
-  },
-  {
-    brand: "LUSEP",
-    base: "PPS / SPS Compound",
-    color: "#0d2b1a",
-    desc: "Extreme sıcaklık ve kimyasallara karşı üstün direnç gösteren yüksek performanslı PPS/SPS bileşiği.",
-    highlights: ["200°C+ Isı Direnci", "Kimyasal Direnci", "Alev Geciktirici", "Boyutsal Kararlılık"],
-    grades: ["LUSEP SG-2000", "LUSEP GF-2030"],
-    applications: ["Otomotiv Motor Parçaları", "Endüstriyel Pompalar", "Kimyasal Ekipmanlar"],
-    featured: false,
-  },
+function getEngineeringPlastics(locale: string) {
+  const data: Record<string, {
+    desc: string;
+    highlights: string[];
+    applications: string[];
+  }[]> = {
+    tr: [
+      { desc: "Yüksek darbe dayanımı, optik saydamlık ve alev geciktirici özellikli PC bileşiği.", highlights: ["Alev Geciktirici", "UV Kararlı", "Şeffaf Renkler", "Gıda Onaylı"], applications: ["Otomotiv", "Elektronik", "Tıbbi Cihazlar", "Beyaz Eşya"] },
+      { desc: "Üstün ısı ve kimyasal direnç, mükemmel elektriksel yalıtım özellikleriyle PBT bileşiği.", highlights: ["Isı Dirençli", "Kimyasal Dayanım", "Cam Elyaf Takviyeli", "Alev Geciktirici"], applications: ["Elektrik/Elektronik", "Otomotiv Konektör", "Fiş & Soket", "Aydınlatma"] },
+      { desc: "Geliştirilmiş mekanik özellikler, hafiflik ve kimyasal direnç için özel PP bileşiği.", highlights: ["Hafif", "Kimyasal Dirençli", "Cam Elyaf", "Uzun Ömür"], applications: ["Otomotiv İç Döşeme", "Endüstriyel Parçalar", "Elektrik Aksamı"] },
+      { desc: "İyileştirilmiş ısı deformasyon direnciyle yüksek performanslı stiren bileşiği.", highlights: ["Isı Stabilitesi", "Kolay İşleme", "Parlak Yüzey"], applications: ["Beyaz Eşya", "Elektronik Cihazlar", "Ev Aletleri"] },
+      { desc: "Mükemmel ısı direnci ve mekanik dayanım için poliamid tabanlı bileşikler.", highlights: ["Yüksek Isı Direnci", "Cam Elyaf Takviyeli", "Aşınma Direnci", "Alev Geciktirici"], applications: ["Otomotiv Motor Aksamı", "Elektrik Konektörler", "Endüstriyel"] },
+      { desc: "Boyutsal kararlılık, alev geciktiricilik ve elektriksel yalıtım özellikleri üstün mPPO malzeme.", highlights: ["Boyutsal Kararlılık", "Alev Geciktirici", "Elektrik Yalıtımı", "Düşük Nem Absorbsiyonu"], applications: ["Ağ Ekipmanları", "Sunucu Kasaları", "Elektrik Panelleri", "Otomotiv"] },
+      { desc: "Işık difüzyon fonksiyonlu PC bazlı özel malzeme. Otomotiv aydınlatma için ideal.", highlights: ["Işık Difüzyonu", "Yüksek Şeffaflık", "Optik Saydamlık", "UV Kararlı"], applications: ["Otomotiv Farları", "LED Aydınlatma", "Sinyal Lambaları"] },
+      { desc: "Düşük sürtünme ve yüksek aşınma direnci için POM bazlı bileşik.", highlights: ["Düşük Sürtünme", "Aşınma Direnci", "Yüksek Rijitlik", "Boyutsal Hassasiyet"], applications: ["Dişliler", "Yataklar", "Otomotiv Mekanizmaları", "Kapı Sistemleri"] },
+      { desc: "Elektriksel iletkenlik özelliğine sahip özel mühendislik plastiği. ESD koruması için ideal.", highlights: ["Elektriksel İletkenlik", "ESD Koruma", "EMI Kalkanı"], applications: ["Elektronik Ambalaj", "ESD Muhafazalar", "Yarı İletken Ekipmanlar"] },
+      { desc: "Extreme sıcaklık ve kimyasallara karşı üstün direnç gösteren yüksek performanslı PPS/SPS bileşiği.", highlights: ["200°C+ Isı Direnci", "Kimyasal Direnci", "Alev Geciktirici", "Boyutsal Kararlılık"], applications: ["Otomotiv Motor Parçaları", "Endüstriyel Pompalar", "Kimyasal Ekipmanlar"] },
+    ],
+    en: [
+      { desc: "PC compound with high impact resistance, optical transparency and flame retardancy.", highlights: ["Flame Retardant", "UV Stable", "Transparent Colors", "Food Approved"], applications: ["Automotive", "Electronics", "Medical Devices", "White Goods"] },
+      { desc: "PBT compound with superior heat and chemical resistance, excellent electrical insulation.", highlights: ["Heat Resistant", "Chemical Resistance", "Glass Fiber Reinforced", "Flame Retardant"], applications: ["Electrical/Electronics", "Automotive Connectors", "Plugs & Sockets", "Lighting"] },
+      { desc: "Special PP compound for improved mechanical properties, lightness and chemical resistance.", highlights: ["Lightweight", "Chemical Resistant", "Glass Fiber", "Long Life"], applications: ["Automotive Interior", "Industrial Parts", "Electrical Components"] },
+      { desc: "High-performance styrene compound with improved heat deflection resistance.", highlights: ["Heat Stability", "Easy Processing", "Glossy Surface"], applications: ["White Goods", "Electronic Devices", "Home Appliances"] },
+      { desc: "Polyamide-based compounds for excellent heat resistance and mechanical strength.", highlights: ["High Heat Resistance", "Glass Fiber Reinforced", "Wear Resistance", "Flame Retardant"], applications: ["Automotive Engine Parts", "Electrical Connectors", "Industrial"] },
+      { desc: "mPPO material with superior dimensional stability, flame retardancy and electrical insulation. Noryl® equivalent.", highlights: ["Dimensional Stability", "Flame Retardant", "Electrical Insulation", "Low Moisture Absorption"], applications: ["Network Equipment", "Server Housings", "Electrical Panels", "Automotive"] },
+      { desc: "Special PC-based material with light diffusion function. Ideal for automotive lighting.", highlights: ["Light Diffusion", "High Transparency", "Optical Clarity", "UV Stable"], applications: ["Automotive Headlights", "LED Lighting", "Signal Lights"] },
+      { desc: "POM-based compound for low friction and high wear resistance.", highlights: ["Low Friction", "Wear Resistance", "High Rigidity", "Dimensional Precision"], applications: ["Gears", "Bearings", "Automotive Mechanisms", "Door Systems"] },
+      { desc: "Special engineering plastic with electrical conductivity. Ideal for ESD protection.", highlights: ["Electrical Conductivity", "ESD Protection", "EMI Shielding"], applications: ["Electronic Packaging", "ESD Enclosures", "Semiconductor Equipment"] },
+      { desc: "High-performance PPS/SPS compound with superior resistance to extreme temperatures and chemicals.", highlights: ["200°C+ Heat Resistance", "Chemical Resistance", "Flame Retardant", "Dimensional Stability"], applications: ["Automotive Engine Parts", "Industrial Pumps", "Chemical Equipment"] },
+    ],
+    ro: [
+      { desc: "Compus PC cu rezistență ridicată la impact, transparență optică și ignifugare.", highlights: ["Ignifug", "Stabil UV", "Culori Transparente", "Aprobat Alimentar"], applications: ["Automotive", "Electronică", "Dispozitive Medicale", "Electrocasnice"] },
+      { desc: "Compus PBT cu rezistență superioară la căldură și substanțe chimice, izolație electrică excelentă.", highlights: ["Rezistent la Căldură", "Rezistență Chimică", "Armat cu Fibră de Sticlă", "Ignifug"], applications: ["Electric/Electronic", "Conectori Auto", "Prize & Fișe", "Iluminat"] },
+      { desc: "Compus PP special pentru proprietăți mecanice îmbunătățite, ușurință și rezistență chimică.", highlights: ["Ușor", "Rezistent Chimic", "Fibră de Sticlă", "Durabilitate"], applications: ["Interior Auto", "Piese Industriale", "Componente Electrice"] },
+      { desc: "Compus stirenic de înaltă performanță cu rezistență îmbunătățită la deformarea termică.", highlights: ["Stabilitate Termică", "Prelucrare Ușoară", "Suprafață Lucioasă"], applications: ["Electrocasnice", "Dispozitive Electronice", "Aparate Casnice"] },
+      { desc: "Compuși pe bază de poliamidă pentru rezistență excelentă la căldură și rezistență mecanică.", highlights: ["Rezistență Termică Ridicată", "Armat cu Fibră de Sticlă", "Rezistență la Uzură", "Ignifug"], applications: ["Piese Motor Auto", "Conectori Electrici", "Industrial"] },
+      { desc: "Material mPPO cu stabilitate dimensională superioară, ignifugare și izolație electrică. Echivalent Noryl®.", highlights: ["Stabilitate Dimensională", "Ignifug", "Izolație Electrică", "Absorbție Redusă de Umiditate"], applications: ["Echipamente Rețea", "Carcase Server", "Panouri Electrice", "Automotive"] },
+      { desc: "Material special pe bază de PC cu funcție de difuzie a luminii. Ideal pentru iluminatul auto.", highlights: ["Difuzie Lumină", "Transparență Ridicată", "Claritate Optică", "Stabil UV"], applications: ["Faruri Auto", "Iluminat LED", "Lămpi de Semnal"] },
+      { desc: "Compus pe bază de POM pentru frecare redusă și rezistență ridicată la uzură.", highlights: ["Frecare Redusă", "Rezistență la Uzură", "Rigiditate Ridicată", "Precizie Dimensională"], applications: ["Angrenaje", "Lagăre", "Mecanisme Auto", "Sisteme Uși"] },
+      { desc: "Material plastic tehnic special cu conductivitate electrică. Ideal pentru protecție ESD.", highlights: ["Conductivitate Electrică", "Protecție ESD", "Ecranare EMI"], applications: ["Ambalaje Electronice", "Carcase ESD", "Echipamente Semiconductoare"] },
+      { desc: "Compus PPS/SPS de înaltă performanță cu rezistență superioară la temperaturi extreme și substanțe chimice.", highlights: ["Rezistență Termică 200°C+", "Rezistență Chimică", "Ignifug", "Stabilitate Dimensională"], applications: ["Piese Motor Auto", "Pompe Industriale", "Echipamente Chimice"] },
+    ],
+  };
+  return data[locale] || data["en"];
+}
+
+function getElastomers(locale: string) {
+  const data: Record<string, { desc: string; highlights: string[]; applications: string[] }[]> = {
+    tr: [
+      { desc: "Kauçuk benzeri esneklik ve plastik işlenebilirliği bir arada sunan termoplastik elastomer.", highlights: ["Kauçuk Esnekliği", "Kolay İşleme", "Geri Dönüştürülebilir", "Geniş Sertlik Yelpazesi"], applications: ["Otomotiv Contalar", "Kablolar", "Tutma Yüzeyleri", "Tıbbi Cihazlar"] },
+      { desc: "Mükemmel UV ve ısı direnciyle dış mekan uygulamaları için özel TPO.", highlights: ["UV Kararlılığı", "Hava Koşullarına Dayanıklı", "Hafif", "Boyama Yapışması"], applications: ["Otomotiv Dış Süslemeler", "Tampon Kaplamalar", "Dış Mekan Paneller"] },
+    ],
+    en: [
+      { desc: "Thermoplastic elastomer combining rubber-like flexibility with plastic processability.", highlights: ["Rubber Flexibility", "Easy Processing", "Recyclable", "Wide Hardness Range"], applications: ["Automotive Seals", "Cables", "Grip Surfaces", "Medical Devices"] },
+      { desc: "Special TPO for outdoor applications with excellent UV and heat resistance.", highlights: ["UV Stability", "Weather Resistant", "Lightweight", "Paint Adhesion"], applications: ["Automotive Exterior Trims", "Bumper Coatings", "Outdoor Panels"] },
+    ],
+    ro: [
+      { desc: "Elastomer termoplastic care combină flexibilitatea cauciucului cu prelucrabilitatea plasticului.", highlights: ["Flexibilitate Cauciuc", "Prelucrare Ușoară", "Reciclabil", "Gamă Largă Duritate"], applications: ["Garnituri Auto", "Cabluri", "Suprafețe de Prindere", "Dispozitive Medicale"] },
+      { desc: "TPO special pentru aplicații exterioare cu rezistență excelentă UV și termică.", highlights: ["Stabilitate UV", "Rezistent la Intemperii", "Ușor", "Aderență Vopsea"], applications: ["Ornamente Exterioare Auto", "Acoperiri Bara", "Panouri Exterioare"] },
+    ],
+  };
+  return data[locale] || data["en"];
+}
+
+function getPoliolefinProducts(locale: string) {
+  const data: Record<string, {
+    fullName: string;
+    desc: string;
+    highlights: string[];
+    grades: { grade: string; desc: string; tags: string[] }[];
+    applications: string[];
+  }[]> = {
+    tr: [
+      {
+        fullName: "Akrilonitril Butadien Stiren",
+        desc: "Mükemmel darbe direnci ve yüzey kalitesiyle dünya genelinde en çok kullanılan mühendislik termoplastiği. LG Chem, global ABS pazarında No.1 üreticidir.",
+        highlights: ["Yüksek Darbe Direnci", "İyi Yüzey Kalitesi", "Kolay İşleme", "UV & Alev Geciktirici Gradlar"],
+        grades: [
+          { grade: "HI121H",  desc: "Genel amaç, yüksek darbe, enjeksiyon kalıplama", tags: ["Genel Amaç", "Enjeksiyon"] },
+          { grade: "HI121",   desc: "Yüksek darbe direnci, geniş uygulama yelpazesi", tags: ["Yüksek Darbe", "Enjeksiyon"] },
+          { grade: "HI100H",  desc: "Yüksek darbe, yüksek akış, ev aletleri", tags: ["Yüksek Akış"] },
+          { grade: "AF312",   desc: "Alev geciktirici V-0 sınıfı, TV & monitör gövdeleri", tags: ["Alev Geciktirici", "V-0"] },
+          { grade: "AF360",   desc: "Alev geciktirici, yüksek ısı direnci, elektronik", tags: ["Alev Geciktirici", "Yüksek Isı"] },
+          { grade: "AF366A",  desc: "V-0 @ 1.5mm, IT/OA cihazları", tags: ["V-0", "Elektronik"] },
+          { grade: "TR558",   desc: "Şeffaf ABS, optik saydamlık gerektiren uygulamalar", tags: ["Şeffaf"] },
+          { grade: "GP-0411", desc: "Genel amaç enjeksiyon gradı, dengeli mekanik özellikler", tags: ["Genel Amaç"] },
+        ],
+        applications: ["Beyaz Eşya", "TV & Monitör Gövdeleri", "Otomotiv İç Aksamı", "Elektronik", "Oyuncak"],
+      },
+      {
+        fullName: "Polikarbonat — LUPOY™",
+        desc: "LG Chem'in LUPOY markası altında sunulan yüksek performanslı PC ve PC alaşımları. Optik saydamlık, alev geciktiricilik ve mükemmel mekanik özellikler.",
+        highlights: ["Optik Şeffaflık", "Yüksek Darbe Direnci", "Geniş Sıcaklık Aralığı", "PC/ABS Alaşımı Gradlar"],
+        grades: [
+          { grade: "LUPOY 1201-18",   desc: "Genel amaç PC, ekstrüzyon & enjeksiyon", tags: ["Genel Amaç"] },
+          { grade: "LUPOY 1301EP-30", desc: "Yüksek akışkanlık, ince cidarlı parçalar", tags: ["Yüksek Akış"] },
+          { grade: "LUPOY 1303-10C",  desc: "Dengeli mekanik özellikler, geniş uygulama", tags: ["Dengeli"] },
+          { grade: "LUPOY 1303-07",   desc: "Düşük viskozite, kompleks geometriler", tags: ["Düşük Viskozite"] },
+          { grade: "LUPOY EF1006F",   desc: "Şeffaf, halojen içermez alev geciktirici", tags: ["Şeffaf", "Halojen Free"] },
+          { grade: "LUPOY UF1004C",   desc: "Işık kılavuz panel uygulamaları (LGP)", tags: ["Optik", "LGP"] },
+          { grade: "LUPOY GP5300",    desc: "PC/ABS alaşımı, %30 cam elyaf takviyeli", tags: ["PC/ABS", "30% GF"] },
+        ],
+        applications: ["Otomotiv Farları", "LED Aydınlatma", "Medikal Cihazlar", "Elektronik Kasalar", "Optik Parçalar"],
+      },
+      {
+        fullName: "Akrilonitril Stiren Akrilat",
+        desc: "ABS'e benzer işlenebilirlik özellikleriyle üstün UV ve hava koşullarına dayanıklılık sağlar. Dış mekan uygulamalarının vazgeçilmez malzemesi.",
+        highlights: ["Üstün UV Direnci", "Hava Koşullarına Dayanıklı", "Renk Kararlılığı", "Yüzey Kalitesi"],
+        grades: [
+          { grade: "LI941",   desc: "Yüksek ısı, iyi hava koşullarına dayanım, otomotiv dış aksamı", tags: ["Yüksek Isı", "Otomotiv"] },
+          { grade: "LI921NS", desc: "Genel amaç, antistatik, iyi hava direnci", tags: ["Antistatik", "Genel Amaç"] },
+          { grade: "LI921",   desc: "UV kararlı, ekstrüzyon & enjeksiyon kalıplama", tags: ["UV Kararlı"] },
+        ],
+        applications: ["Otomotiv Dış Aksamı", "Bahçe Ekipmanları", "Yapı Profilleri", "Dış Mekan Aydınlatma", "Çatı Sistemleri"],
+      },
+      {
+        fullName: "Polipropilen — SEETEC™",
+        desc: "LG Chem'in SEETEC markasıyla sunulan polipropilen çözümleri. Mükemmel çekme mukavemeti, hafiflik ve kimyasal direnç.",
+        highlights: ["Hafif Yapı", "Kimyasal Direnç", "Geniş MFR Yelpazesi", "Homopolimer & Kopolimer"],
+        grades: [
+          { grade: "SEETEC H1500", desc: "Homopolimer, yüksek akış, dengeli mekanik, ev eşyası & oyuncak", tags: ["Homopolimer", "Yüksek Akış"] },
+          { grade: "SEETEC H1501", desc: "Homopolimer, orta akış, genel enjeksiyon", tags: ["Homopolimer"] },
+          { grade: "SEETEC M1500", desc: "Kopolimer, darbe modifiyeli, düşük sıcaklık direnci", tags: ["Kopolimer", "Darbe Modifiyeli"] },
+          { grade: "SEETEC H7700", desc: "Spunbond lif gradı, hijyen & medikal", tags: ["Fiber", "Medikal"] },
+          { grade: "SEETEC H7900", desc: "Melt-blown lif gradı, filtre & maske", tags: ["Melt-blown", "Filtre"] },
+        ],
+        applications: ["Otomotiv İç Döşeme", "Ambalaj", "Beyaz Eşya", "Medikal Lif", "Endüstriyel Parçalar"],
+      },
+    ],
+    en: [
+      {
+        fullName: "Acrylonitrile Butadiene Styrene",
+        desc: "The most widely used engineering thermoplastic in the world with excellent impact resistance and surface quality. LG Chem is the No.1 producer in the global ABS market.",
+        highlights: ["High Impact Resistance", "Good Surface Quality", "Easy Processing", "UV & Flame Retardant Grades"],
+        grades: [
+          { grade: "HI121H",  desc: "General purpose, high impact, injection molding", tags: ["General Purpose", "Injection"] },
+          { grade: "HI121",   desc: "High impact resistance, wide application range", tags: ["High Impact", "Injection"] },
+          { grade: "HI100H",  desc: "High impact, high flow, home appliances", tags: ["High Flow"] },
+          { grade: "AF312",   desc: "Flame retardant V-0 grade, TV & monitor housings", tags: ["Flame Retardant", "V-0"] },
+          { grade: "AF360",   desc: "Flame retardant, high heat resistance, electronics", tags: ["Flame Retardant", "High Heat"] },
+          { grade: "AF366A",  desc: "V-0 @ 1.5mm, IT/OA devices", tags: ["V-0", "Electronics"] },
+          { grade: "TR558",   desc: "Transparent ABS for applications requiring optical clarity", tags: ["Transparent"] },
+          { grade: "GP-0411", desc: "General purpose injection grade, balanced mechanical properties", tags: ["General Purpose"] },
+        ],
+        applications: ["White Goods", "TV & Monitor Housings", "Automotive Interior", "Electronics", "Toys"],
+      },
+      {
+        fullName: "Polycarbonate — LUPOY™",
+        desc: "High-performance PC and PC alloys offered under LG Chem's LUPOY brand. Optical transparency, flame retardancy and excellent mechanical properties.",
+        highlights: ["Optical Transparency", "High Impact Resistance", "Wide Temperature Range", "PC/ABS Alloy Grades"],
+        grades: [
+          { grade: "LUPOY 1201-18",   desc: "General purpose PC, extrusion & injection", tags: ["General Purpose"] },
+          { grade: "LUPOY 1301EP-30", desc: "High flow, thin-wall parts", tags: ["High Flow"] },
+          { grade: "LUPOY 1303-10C",  desc: "Balanced mechanical properties, wide application", tags: ["Balanced"] },
+          { grade: "LUPOY 1303-07",   desc: "Low viscosity, complex geometries", tags: ["Low Viscosity"] },
+          { grade: "LUPOY EF1006F",   desc: "Transparent, halogen-free flame retardant", tags: ["Transparent", "Halogen Free"] },
+          { grade: "LUPOY UF1004C",   desc: "Light guide panel applications (LGP)", tags: ["Optical", "LGP"] },
+          { grade: "LUPOY GP5300",    desc: "PC/ABS alloy, 30% glass fiber reinforced", tags: ["PC/ABS", "30% GF"] },
+        ],
+        applications: ["Automotive Headlights", "LED Lighting", "Medical Devices", "Electronic Enclosures", "Optical Parts"],
+      },
+      {
+        fullName: "Acrylonitrile Styrene Acrylate",
+        desc: "Provides superior UV and weather resistance with processability similar to ABS. The essential material for outdoor applications.",
+        highlights: ["Superior UV Resistance", "Weather Resistant", "Color Stability", "Surface Quality"],
+        grades: [
+          { grade: "LI941",   desc: "High heat, good weather resistance, automotive exterior", tags: ["High Heat", "Automotive"] },
+          { grade: "LI921NS", desc: "General purpose, antistatic, good weather resistance", tags: ["Antistatic", "General Purpose"] },
+          { grade: "LI921",   desc: "UV stable, extrusion & injection molding", tags: ["UV Stable"] },
+        ],
+        applications: ["Automotive Exterior", "Garden Equipment", "Building Profiles", "Outdoor Lighting", "Roof Systems"],
+      },
+      {
+        fullName: "Polypropylene — SEETEC™",
+        desc: "Polypropylene solutions offered under LG Chem's SEETEC brand. Excellent tensile strength, lightweight and chemical resistance.",
+        highlights: ["Lightweight", "Chemical Resistance", "Wide MFR Range", "Homopolymer & Copolymer"],
+        grades: [
+          { grade: "SEETEC H1500", desc: "Homopolymer, high flow, balanced mechanical, housewares & toys", tags: ["Homopolymer", "High Flow"] },
+          { grade: "SEETEC H1501", desc: "Homopolymer, medium flow, general injection", tags: ["Homopolymer"] },
+          { grade: "SEETEC M1500", desc: "Copolymer, impact modified, low temperature resistance", tags: ["Copolymer", "Impact Modified"] },
+          { grade: "SEETEC H7700", desc: "Spunbond fiber grade, hygiene & medical", tags: ["Fiber", "Medical"] },
+          { grade: "SEETEC H7900", desc: "Melt-blown fiber grade, filter & mask", tags: ["Melt-blown", "Filter"] },
+        ],
+        applications: ["Automotive Interior", "Packaging", "White Goods", "Medical Fiber", "Industrial Parts"],
+      },
+    ],
+    ro: [
+      {
+        fullName: "Acrilonitril Butadienă Stiren",
+        desc: "Cel mai utilizat termoplastic tehnic din lume cu rezistență excelentă la impact și calitate a suprafeței. LG Chem este producătorul Nr.1 pe piața globală ABS.",
+        highlights: ["Rezistență Ridicată la Impact", "Calitate Bună a Suprafeței", "Prelucrare Ușoară", "Grade UV & Ignifuge"],
+        grades: [
+          { grade: "HI121H",  desc: "Uz general, impact ridicat, turnare prin injecție", tags: ["Uz General", "Injecție"] },
+          { grade: "HI121",   desc: "Rezistență ridicată la impact, gamă largă de aplicații", tags: ["Impact Ridicat", "Injecție"] },
+          { grade: "HI100H",  desc: "Impact ridicat, curgere ridicată, electrocasnice", tags: ["Curgere Ridicată"] },
+          { grade: "AF312",   desc: "Grad ignifug V-0, carcase TV & monitoare", tags: ["Ignifug", "V-0"] },
+          { grade: "AF360",   desc: "Ignifug, rezistență termică ridicată, electronică", tags: ["Ignifug", "Căldură Ridicată"] },
+          { grade: "AF366A",  desc: "V-0 @ 1.5mm, dispozitive IT/OA", tags: ["V-0", "Electronică"] },
+          { grade: "TR558",   desc: "ABS transparent pentru aplicații care necesită claritate optică", tags: ["Transparent"] },
+          { grade: "GP-0411", desc: "Grad de injecție uz general, proprietăți mecanice echilibrate", tags: ["Uz General"] },
+        ],
+        applications: ["Electrocasnice", "Carcase TV & Monitor", "Interior Auto", "Electronică", "Jucării"],
+      },
+      {
+        fullName: "Policarbonat — LUPOY™",
+        desc: "PC și aliaje PC de înaltă performanță oferite sub marca LUPOY a LG Chem. Transparență optică, ignifugare și proprietăți mecanice excelente.",
+        highlights: ["Transparență Optică", "Rezistență Ridicată la Impact", "Gamă Largă de Temperaturi", "Grade Aliaj PC/ABS"],
+        grades: [
+          { grade: "LUPOY 1201-18",   desc: "PC uz general, extrudare & injecție", tags: ["Uz General"] },
+          { grade: "LUPOY 1301EP-30", desc: "Curgere ridicată, piese cu pereți subțiri", tags: ["Curgere Ridicată"] },
+          { grade: "LUPOY 1303-10C",  desc: "Proprietăți mecanice echilibrate, aplicații largi", tags: ["Echilibrat"] },
+          { grade: "LUPOY 1303-07",   desc: "Vâscozitate scăzută, geometrii complexe", tags: ["Vâscozitate Scăzută"] },
+          { grade: "LUPOY EF1006F",   desc: "Transparent, ignifug fără halogen", tags: ["Transparent", "Fără Halogen"] },
+          { grade: "LUPOY UF1004C",   desc: "Aplicații panou ghidare lumină (LGP)", tags: ["Optică", "LGP"] },
+          { grade: "LUPOY GP5300",    desc: "Aliaj PC/ABS, armat cu 30% fibră de sticlă", tags: ["PC/ABS", "30% GF"] },
+        ],
+        applications: ["Faruri Auto", "Iluminat LED", "Dispozitive Medicale", "Carcase Electronice", "Piese Optice"],
+      },
+      {
+        fullName: "Acrilonitril Stiren Acrilat",
+        desc: "Oferă rezistență superioară UV și la intemperii cu prelucrabilitate similară cu ABS. Materialul esențial pentru aplicații exterioare.",
+        highlights: ["Rezistență UV Superioară", "Rezistent la Intemperii", "Stabilitate Culoare", "Calitate Suprafață"],
+        grades: [
+          { grade: "LI941",   desc: "Căldură ridicată, rezistență bună la intemperii, exterior auto", tags: ["Căldură Ridicată", "Automotive"] },
+          { grade: "LI921NS", desc: "Uz general, antistatic, rezistență bună la intemperii", tags: ["Antistatic", "Uz General"] },
+          { grade: "LI921",   desc: "Stabil UV, extrudare & turnare prin injecție", tags: ["Stabil UV"] },
+        ],
+        applications: ["Exterior Auto", "Echipamente Grădină", "Profile Construcții", "Iluminat Exterior", "Sisteme Acoperiș"],
+      },
+      {
+        fullName: "Polipropilenă — SEETEC™",
+        desc: "Soluții de polipropilenă oferite sub marca SEETEC a LG Chem. Rezistență excelentă la tracțiune, ușurință și rezistență chimică.",
+        highlights: ["Structură Ușoară", "Rezistență Chimică", "Gamă Largă MFR", "Homopolimer & Copolimer"],
+        grades: [
+          { grade: "SEETEC H1500", desc: "Homopolimer, curgere ridicată, mecanic echilibrat, articole casnice & jucării", tags: ["Homopolimer", "Curgere Ridicată"] },
+          { grade: "SEETEC H1501", desc: "Homopolimer, curgere medie, injecție generală", tags: ["Homopolimer"] },
+          { grade: "SEETEC M1500", desc: "Copolimer, modificat la impact, rezistență la temperaturi scăzute", tags: ["Copolimer", "Modificat Impact"] },
+          { grade: "SEETEC H7700", desc: "Grad fibră spunbond, igienă & medical", tags: ["Fibră", "Medical"] },
+          { grade: "SEETEC H7900", desc: "Grad fibră melt-blown, filtru & mască", tags: ["Melt-blown", "Filtru"] },
+        ],
+        applications: ["Interior Auto", "Ambalaje", "Electrocasnice", "Fibră Medicală", "Piese Industriale"],
+      },
+    ],
+  };
+  return data[locale] || data["en"];
+}
+
+const engineeringPlasticsMeta = [
+  { brand: "LUPOY",     base: "PC (Polycarbonate)",            color: "#1a3a5c", grades: ["LUPOY GN-1001P", "LUPOY GP-1000M", "LUPOY HF-1000M", "LUPOY FR-1000"], featured: true },
+  { brand: "LUPOX / LUMAX", base: "PBT (Polybutylene Terephthalate)", color: "#2D6A4F", grades: ["LUPOX GP-1000", "LUPOX HV-1010", "LUMAX HP-1030", "LUPOX FR-1005"], featured: true },
+  { brand: "LUPOL",     base: "PP (Polypropylene)",            color: "#40916C", grades: ["LUPOL GC-3000H", "LUPOL LF-3500", "LUPOL SF-3300"], featured: false },
+  { brand: "LUPOS",     base: "Styrenics Compound",            color: "#52B788", grades: ["LUPOS SG-1000", "LUPOS HH-1010"], featured: false },
+  { brand: "LUMID / LUXY", base: "PA6 / PA66 (Polyamide)",    color: "#1B4332", grades: ["LUMID GP-1000F", "LUMID HP-1020G", "LUXY SE-1000", "LUMID FR-1030"], featured: true },
+  { brand: "LUMILOY",   base: "mPPO (Modified PPO/PPE)",       color: "#0d2b1a", grades: ["LUMILOY GN-1000", "LUMILOY FN-1010", "LUMILOY SX-1200"], featured: true },
+  { brand: "LUMIPLAS",  base: "PC-based Light Diffusion",      color: "#2D6A4F", grades: ["LUMIPLAS LD-1000", "LUMIPLAS OP-1010"], featured: false },
+  { brand: "LUCEL",     base: "POM (Polyoxymethylene)",        color: "#40916C", grades: ["LUCEL MH-2000", "LUCEL GF-2020", "LUCEL LF-2010"], featured: false },
+  { brand: "LUCON",     base: "Conductive Engineering Plastic",color: "#1B4332", grades: ["LUCON CR-1000", "LUCON EM-1020"], featured: false },
+  { brand: "LUSEP",     base: "PPS / SPS Compound",            color: "#0d2b1a", grades: ["LUSEP SG-2000", "LUSEP GF-2030"], featured: false },
 ];
 
-const elastomers = [
-  {
-    brand: "KEYFLEX BT",
-    base: "TPE / Thermoplastic Elastomer",
-    desc: "Kauçuk benzeri esneklik ve plastik işlenebilirliği bir arada sunan termoplastik elastomer.",
-    highlights: ["Kauçuk Esnekliği", "Kolay İşleme", "Geri Dönüştürülebilir", "Geniş Sertlik Yelpazesi"],
-    grades: ["KEYFLEX BT 990A", "KEYFLEX BT 101A", "KEYFLEX BT 701A"],
-    applications: ["Otomotiv Contalar", "Kablolar", "Tutma Yüzeyleri", "Tıbbi Cihazlar"],
-    featured: true,
-  },
-  {
-    brand: "KEYFLEX TO",
-    base: "TPO / Thermoplastic Polyolefin",
-    desc: "Mükemmel UV ve ısı direnciyle dış mekan uygulamaları için özel TPO.",
-    highlights: ["UV Kararlılığı", "Hava Koşullarına Dayanıklı", "Hafif", "Boyama Yapışması"],
-    grades: ["KEYFLEX TO 300D", "KEYFLEX TO 500D"],
-    applications: ["Otomotiv Dış Süslemeler", "Tampon Kaplamalar", "Dış Mekan Paneller"],
-    featured: false,
-  },
+const elastomersMeta = [
+  { brand: "KEYFLEX BT", base: "TPE / Thermoplastic Elastomer",    grades: ["KEYFLEX BT 990A", "KEYFLEX BT 101A", "KEYFLEX BT 701A"], featured: true },
+  { brand: "KEYFLEX TO", base: "TPO / Thermoplastic Polyolefin",   grades: ["KEYFLEX TO 300D", "KEYFLEX TO 500D"], featured: false },
 ];
 
-const poliolefinProducts = [
-  {
-    code: "ABS",
-    fullName: "Akrilonitril Butadien Stiren",
-    color: "#1B4332",
-    desc: "Mükemmel darbe direnci ve yüzey kalitesiyle dünya genelinde en çok kullanılan mühendislik termoplastiği. LG Chem, global ABS pazarında No.1 üreticidir.",
-    highlights: ["Yüksek Darbe Direnci", "İyi Yüzey Kalitesi", "Kolay İşleme", "UV & Alev Geciktirici Gradlar"],
-    grades: [
-      { grade: "HI121H", desc: "Genel amaç, yüksek darbe, enjeksiyon kalıplama", tags: ["Genel Amaç", "Enjeksiyon"] },
-      { grade: "HI121", desc: "Yüksek darbe direnci, geniş uygulama yelpazesi", tags: ["Yüksek Darbe", "Enjeksiyon"] },
-      { grade: "HI100H", desc: "Yüksek darbe, yüksek akış, ev aletleri", tags: ["Yüksek Akış"] },
-      { grade: "AF312", desc: "Alev geciktirici V-0 sınıfı, TV & monitör gövdeleri", tags: ["Alev Geciktirici", "V-0"] },
-      { grade: "AF360", desc: "Alev geciktirici, yüksek ısı direnci, elektronik", tags: ["Alev Geciktirici", "Yüksek Isı"] },
-      { grade: "AF366A", desc: "V-0 @ 1.5mm, IT/OA cihazları", tags: ["V-0", "Elektronik"] },
-      { grade: "TR558", desc: "Şeffaf ABS, optik saydamlık gerektiren uygulamalar", tags: ["Şeffaf"] },
-      { grade: "GP-0411", desc: "Genel amaç enjeksiyon gradı, dengeli mekanik özellikler", tags: ["Genel Amaç"] },
-    ],
-    applications: ["Beyaz Eşya", "TV & Monitör Gövdeleri", "Otomotiv İç Aksamı", "Elektronik", "Oyuncak"],
-  },
-  {
-    code: "PC",
-    fullName: "Polikarbonat — LUPOY™",
-    color: "#0d2b1a",
-    desc: "LG Chem'in LUPOY markası altında sunulan yüksek performanslı PC ve PC alaşımları. Optik saydamlık, alev geciktiricilik ve mükemmel mekanik özellikler.",
-    highlights: ["Optik Şeffaflık", "Yüksek Darbe Direnci", "Geniş Sıcaklık Aralığı", "PC/ABS Alaşımı Gradlar"],
-    grades: [
-      { grade: "LUPOY 1201-18", desc: "Genel amaç PC, ekstrüzyon & enjeksiyon", tags: ["Genel Amaç"] },
-      { grade: "LUPOY 1301EP-30", desc: "Yüksek akışkanlık, ince cidarlı parçalar", tags: ["Yüksek Akış"] },
-      { grade: "LUPOY 1303-10C", desc: "Dengeli mekanik özellikler, geniş uygulama", tags: ["Dengeli"] },
-      { grade: "LUPOY 1303-07", desc: "Düşük viskozite, kompleks geometriler", tags: ["Düşük Viskozite"] },
-      { grade: "LUPOY EF1006F", desc: "Şeffaf, halojen içermez alev geciktirici", tags: ["Şeffaf", "Halojen Free"] },
-      { grade: "LUPOY UF1004C", desc: "Işık kılavuz panel uygulamaları (LGP)", tags: ["Optik", "LGP"] },
-      { grade: "LUPOY GP5300", desc: "PC/ABS alaşımı, %30 cam elyaf takviyeli", tags: ["PC/ABS", "30% GF"] },
-    ],
-    applications: ["Otomotiv Farları", "LED Aydınlatma", "Medikal Cihazlar", "Elektronik Kasalar", "Optik Parçalar"],
-  },
-  {
-    code: "ASA",
-    fullName: "Akrilonitril Stiren Akrilat",
-    color: "#2D6A4F",
-    desc: "ABS'e benzer işlenebilirlik özellikleriyle üstün UV ve hava koşullarına dayanıklılık sağlar. Dış mekan uygulamalarının vazgeçilmez malzemesi.",
-    highlights: ["Üstün UV Direnci", "Hava Koşullarına Dayanıklı", "Renk Kararlılığı", "Yüzey Kalitesi"],
-    grades: [
-      { grade: "LI941", desc: "Yüksek ısı, iyi hava koşullarına dayanım, otomotiv dış aksamı", tags: ["Yüksek Isı", "Otomotiv"] },
-      { grade: "LI921NS", desc: "Genel amaç, antistatik, iyi hava direnci", tags: ["Antistatik", "Genel Amaç"] },
-      { grade: "LI921", desc: "UV kararlı, ekstrüzyon & enjeksiyon kalıplama", tags: ["UV Kararlı"] },
-    ],
-    applications: ["Otomotiv Dış Aksamı", "Bahçe Ekipmanları", "Yapı Profilleri", "Dış Mekan Aydınlatma", "Çatı Sistemleri"],
-  },
-  {
-    code: "PP",
-    fullName: "Polipropilen — SEETEC™",
-    color: "#40916C",
-    desc: "LG Chem'in SEETEC markasıyla sunulan polipropilen çözümleri. Mükemmel çekme mukavemeti, hafiflik ve kimyasal direnç.",
-    highlights: ["Hafif Yapı", "Kimyasal Direnç", "Geniş MFR Yelpazesi", "Homopolimer & Kopolimer"],
-    grades: [
-      { grade: "SEETEC H1500", desc: "Homopolimer, yüksek akış, dengeli mekanik, ev eşyası & oyuncak", tags: ["Homopolimer", "Yüksek Akış"] },
-      { grade: "SEETEC H1501", desc: "Homopolimer, orta akış, genel enjeksiyon", tags: ["Homopolimer"] },
-      { grade: "SEETEC M1500", desc: "Kopolimer, darbe modifiyeli, düşük sıcaklık direnci", tags: ["Kopolimer", "Darbe Modifiyeli"] },
-      { grade: "SEETEC H7700", desc: "Spunbond lif gradı, hijyen & medikal", tags: ["Fiber", "Medikal"] },
-      { grade: "SEETEC H7900", desc: "Melt-blown lif gradı, filtre & maske", tags: ["Melt-blown", "Filtre"] },
-    ],
-    applications: ["Otomotiv İç Döşeme", "Ambalaj", "Beyaz Eşya", "Medikal Lif", "Endüstriyel Parçalar"],
-  },
-];
+const poliolefinCodes = ["ABS", "PC", "ASA", "PP"];
 
 /* ─────────────── PAGE ─────────────── */
 
 export default function LGChemPage() {
   const locale = useLocale();
+  const t = useTranslations("lgchem");
+  const h = useTranslations("home");
+
+  const epTexts = getEngineeringPlastics(locale);
+  const elastTexts = getElastomers(locale);
+  const polyTexts = getPoliolefinProducts(locale);
+
+  const engineeringPlastics = engineeringPlasticsMeta.map((m, i) => ({ ...m, ...epTexts[i] }));
+  const elastomers = elastomersMeta.map((m, i) => ({ ...m, ...elastTexts[i] }));
+  const poliolefinProducts = poliolefinCodes.map((code, i) => ({ code, ...polyTexts[i] }));
+
+  const whyItems = [
+    { icon: "🌍", title: t("why1Title"), desc: t("why1Desc") },
+    { icon: "🔬", title: t("why2Title"), desc: t("why2Desc") },
+    { icon: "✅", title: t("why3Title"), desc: t("why3Desc") },
+    { icon: "🤝", title: t("why4Title"), desc: t("why4Desc") },
+  ];
 
   return (
     <>
@@ -217,28 +311,25 @@ export default function LGChemPage() {
               <div className="flex-1">
                 <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/80 text-sm px-4 py-2 rounded-full mb-6">
                   <Star size={14} fill="currentColor" />
-                  Türkiye Distribütörü
+                  {h("distributorBadge")}
                 </div>
                 <div className="flex items-center gap-4 mb-6">
-                  {/* LG Chem logo badge */}
                   <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-xl flex-shrink-0">
                     <span className="font-black text-xl" style={{color: "#c8102e"}}>LG</span>
                   </div>
                   <div>
                     <h1 className="text-4xl lg:text-5xl font-black text-white">LG Chem</h1>
-                    <p className="text-green-300 font-semibold">Ürün Portföyü</p>
+                    <p className="text-green-300 font-semibold">{t("heroSubtitle")}</p>
                   </div>
                 </div>
-                <p className="text-white/80 text-lg leading-relaxed max-w-2xl mb-8">
-                  Buteo Petrokimya olarak <strong className="text-white">LG Chem'in tüm mühendislik plastikleri, petrokim ürünleri ve katkı maddelerini</strong> Türkiye'de satma hakkına sahibiz. 70'ten fazla ülkede faaliyet gösteren global kimya liderinin ürünlerini doğrudan temin edebilirsiniz.
-                </p>
+                <p className="text-white/80 text-lg leading-relaxed max-w-2xl mb-8">{t("heroDesc")}</p>
                 <div className="flex flex-wrap gap-4">
                   <Link
                     href={`/${locale}/contact`}
                     className="flex items-center gap-2 font-bold px-7 py-3.5 rounded-full text-white transition-all hover:-translate-y-1 hover:shadow-xl"
                     style={{backgroundColor: "#4CAF50"}}
                   >
-                    Teklif Al <ArrowRight size={18} />
+                    {t("heroCta")} <ArrowRight size={18} />
                   </Link>
                   <a
                     href="https://www.lgchem.com/product/petrochemicals"
@@ -246,7 +337,7 @@ export default function LGChemPage() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 bg-white/10 border border-white/30 text-white font-semibold px-7 py-3.5 rounded-full hover:bg-white/20 transition-all"
                   >
-                    LG Chem Web Sitesi <ExternalLink size={16} />
+                    {t("heroWebsite")} <ExternalLink size={16} />
                   </a>
                 </div>
               </div>
@@ -254,10 +345,10 @@ export default function LGChemPage() {
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4 w-full lg:w-auto lg:min-w-[280px]">
                 {[
-                  { v: "70+", l: "Ülke" },
-                  { v: "50+", l: "Yıl Deneyim" },
-                  { v: "10", l: "Mühendislik Plastik Markası" },
-                  { v: "100+", l: "Ürün Çeşidi" },
+                  { v: "70+", l: t("stat1Label") },
+                  { v: "50+", l: t("stat2Label") },
+                  { v: "10",  l: t("stat3Label") },
+                  { v: "100+",l: t("stat4Label") },
                 ].map((s, i) => (
                   <div key={i} className="text-center p-5 bg-white/5 border border-white/10 rounded-2xl">
                     <div className="text-3xl font-black mb-1" style={{color: "#4CAF50"}}>{s.v}</div>
@@ -275,15 +366,15 @@ export default function LGChemPage() {
             <div className="flex items-center justify-between mb-12 flex-wrap gap-4">
               <div>
                 <span className="inline-block text-xs font-bold uppercase tracking-widest mb-2 px-3 py-1.5 rounded-full" style={{color: "#1B4332", backgroundColor: "#f0fdf4"}}>
-                  Öne Çıkan Ürünler
+                  {t("featuredBadge")}
                 </span>
                 <h2 className="text-3xl font-bold text-gray-900">
-                  Mühendislik Plastikleri — <span style={{color: "#1B4332"}}>LU Serisi</span>
+                  {t("featuredTitle")}
                 </h2>
-                <p className="text-gray-500 mt-1">Buteo Petrokimya'nın özellikle pazarladığı yüksek katma değerli ürünler</p>
+                <p className="text-gray-500 mt-1">{t("featuredSubtitle")}</p>
               </div>
               <Link href={`/${locale}/contact`} className="flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full text-white" style={{backgroundColor: "#1B4332"}}>
-                Teklif İste <ArrowRight size={16} />
+                {t("requestQuote")} <ArrowRight size={16} />
               </Link>
             </div>
 
@@ -291,7 +382,6 @@ export default function LGChemPage() {
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
               {engineeringPlastics.filter(p => p.featured).map((product) => (
                 <div key={product.brand} className="group rounded-3xl border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all overflow-hidden">
-                  {/* Card header */}
                   <div className="p-6 text-white relative overflow-hidden" style={{backgroundColor: product.color}}>
                     <div className="absolute top-0 right-0 w-28 h-28 rounded-full opacity-10 -translate-y-6 translate-x-6" style={{backgroundColor: "#4CAF50"}} />
                     <div className="relative">
@@ -299,22 +389,15 @@ export default function LGChemPage() {
                       <div className="text-xs opacity-75 font-medium">{product.base}</div>
                     </div>
                   </div>
-                  {/* Card body */}
                   <div className="p-6">
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">{product.desc}</p>
-
-                    {/* Highlights */}
                     <div className="flex flex-wrap gap-1.5 mb-4">
                       {product.highlights.map(h => (
-                        <span key={h} className="text-xs px-2.5 py-1 rounded-full font-medium" style={{backgroundColor: "#f0fdf4", color: "#1B4332"}}>
-                          {h}
-                        </span>
+                        <span key={h} className="text-xs px-2.5 py-1 rounded-full font-medium" style={{backgroundColor: "#f0fdf4", color: "#1B4332"}}>{h}</span>
                       ))}
                     </div>
-
-                    {/* Grades */}
                     <div className="mb-4">
-                      <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Örnek Gradlar</div>
+                      <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">{t("sampleGrades")}</div>
                       <div className="space-y-1">
                         {product.grades.slice(0, 3).map(g => (
                           <div key={g} className="text-sm font-mono font-medium text-gray-700 flex items-center gap-2">
@@ -323,19 +406,15 @@ export default function LGChemPage() {
                           </div>
                         ))}
                         {product.grades.length > 3 && (
-                          <div className="text-xs text-gray-400">+{product.grades.length - 3} daha fazla grad...</div>
+                          <div className="text-xs text-gray-400">+{product.grades.length - 3} {t("moreGrades")}</div>
                         )}
                       </div>
                     </div>
-
-                    {/* Applications */}
                     <div>
-                      <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Uygulama Alanları</div>
+                      <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">{t("appAreas")}</div>
                       <div className="flex flex-wrap gap-1.5">
                         {product.applications.map(a => (
-                          <span key={a} className="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 font-medium">
-                            {a}
-                          </span>
+                          <span key={a} className="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 font-medium">{a}</span>
                         ))}
                       </div>
                     </div>
@@ -360,9 +439,7 @@ export default function LGChemPage() {
                   <p className="text-xs text-gray-500 leading-relaxed mb-3">{product.desc}</p>
                   <div className="flex flex-wrap gap-1">
                     {product.highlights.slice(0, 2).map(h => (
-                      <span key={h} className="text-xs px-2 py-0.5 rounded-full font-medium" style={{backgroundColor: "#f0fdf4", color: "#1B4332"}}>
-                        {h}
-                      </span>
+                      <span key={h} className="text-xs px-2 py-0.5 rounded-full font-medium" style={{backgroundColor: "#f0fdf4", color: "#1B4332"}}>{h}</span>
                     ))}
                   </div>
                 </div>
@@ -376,10 +453,10 @@ export default function LGChemPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-10">
               <span className="inline-block text-xs font-bold uppercase tracking-widest mb-2 px-3 py-1.5 rounded-full" style={{color: "#1B4332", backgroundColor: "#dcfce7"}}>
-                Elastomerler
+                {t("elastomersBadge")}
               </span>
               <h2 className="text-3xl font-bold text-gray-900">
-                KEYFLEX <span style={{color: "#1B4332"}}>Serisi</span>
+                KEYFLEX <span style={{color: "#1B4332"}}>Series</span>
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -395,7 +472,7 @@ export default function LGChemPage() {
                         <span key={h} className="text-xs px-2.5 py-1 rounded-full font-medium bg-white/15 text-white/90">{h}</span>
                       ))}
                     </div>
-                    <div className="text-xs font-bold uppercase tracking-wider text-white/50 mb-2">Gradlar</div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-white/50 mb-2">{t("gradesLabel")}</div>
                     <div className="flex flex-wrap gap-2">
                       {product.grades.map(g => (
                         <span key={g} className="text-xs font-mono px-2.5 py-1 rounded-lg bg-white/10 text-white/80">{g}</span>
@@ -413,19 +490,16 @@ export default function LGChemPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
               <span className="inline-block text-xs font-bold uppercase tracking-widest mb-2 px-3 py-1.5 rounded-full" style={{color: "#1B4332", backgroundColor: "#f0fdf4"}}>
-                Standart Polimerler
+                {t("stdPolymersBadge")}
               </span>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                ABS · PC · ASA · PP — <span style={{color: "#1B4332"}}>Ürün Gradları</span>
-              </h2>
-              <p className="text-gray-500">LG Chem'in geniş polimer portföyünden Türkiye'de temin edebileceğiniz ürünler</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">{t("stdPolymersTitle")}</h2>
+              <p className="text-gray-500">{t("stdPolymersSubtitle")}</p>
             </div>
 
             <div className="space-y-10">
               {poliolefinProducts.map((product) => (
                 <div key={product.code} className="rounded-3xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all">
-                  {/* Product header */}
-                  <div className="p-8 text-white relative overflow-hidden" style={{backgroundColor: product.color}}>
+                  <div className="p-8 text-white relative overflow-hidden" style={{backgroundColor: engineeringPlasticsMeta.find(m => m.brand === "LUPOY")?.color || "#1B4332"}}>
                     <div className="absolute top-0 right-0 w-40 h-40 rounded-full opacity-10 -translate-y-10 translate-x-10" style={{backgroundColor: "#4CAF50"}} />
                     <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                       <div>
@@ -441,33 +515,29 @@ export default function LGChemPage() {
                     <p className="relative text-white/80 text-sm leading-relaxed mt-4 max-w-3xl">{product.desc}</p>
                   </div>
 
-                  {/* Grades table */}
                   <div className="p-6 bg-white">
                     <div className="flex items-center gap-2 mb-4">
-                      <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Mevcut Gradlar</span>
-                      <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-green-100 text-green-800">{product.grades.length} grad</span>
+                      <span className="text-xs font-bold uppercase tracking-widest text-gray-400">{t("availableGrades")}</span>
+                      <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-green-100 text-green-800">{product.grades.length} {t("gradeUnit")}</span>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
                       {product.grades.map((g) => (
                         <div key={g.grade} className="group p-4 rounded-2xl border border-gray-100 hover:border-green-200 hover:bg-green-50 transition-all cursor-pointer">
-                          <div className="font-mono font-black text-base mb-1 group-hover:text-green-800 transition-colors" style={{color: product.color}}>
+                          <div className="font-mono font-black text-base mb-1 group-hover:text-green-800 transition-colors" style={{color: "#1B4332"}}>
                             {g.grade}
                           </div>
                           <div className="text-xs text-gray-500 leading-relaxed mb-2">{g.desc}</div>
                           <div className="flex flex-wrap gap-1">
                             {g.tags.map(tag => (
-                              <span key={tag} className="text-xs px-2 py-0.5 rounded-full font-medium" style={{backgroundColor: "#f0fdf4", color: "#1B4332"}}>
-                                {tag}
-                              </span>
+                              <span key={tag} className="text-xs px-2 py-0.5 rounded-full font-medium" style={{backgroundColor: "#f0fdf4", color: "#1B4332"}}>{tag}</span>
                             ))}
                           </div>
                         </div>
                       ))}
                     </div>
 
-                    {/* Applications */}
                     <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-gray-100">
-                      <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mr-2">Uygulama Alanları:</span>
+                      <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mr-2">{t("appAreasColon")}</span>
                       {product.applications.map(a => (
                         <span key={a} className="text-xs px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium">{a}</span>
                       ))}
@@ -483,15 +553,10 @@ export default function LGChemPage() {
         <section className="py-20" style={{background: "linear-gradient(135deg, #f0fdf4, #dcfce7)"}}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-              Neden <span style={{color: "#1B4332"}}>LG Chem?</span>
+              {t("whyTitle")}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { icon: "🌍", title: "Global Lider", desc: "70'ten fazla ülkede faaliyet gösteren dünya çapında tanınan güvenilir marka." },
-                { icon: "🔬", title: "Güçlü AR-GE", desc: "Sürekli inovasyon ile yeni nesil malzemeler geliştiren teknoloji öncüsü." },
-                { icon: "✅", title: "Sertifikalı Kalite", desc: "ISO uluslararası standartlarıyla güvence altına alınmış üretim süreçleri." },
-                { icon: "🤝", title: "OEM Güvencesi", desc: "Hyundai, GM, Tesla, Samsung, LG gibi global devlerle stratejik iş birlikleri." },
-              ].map((item, i) => (
+              {whyItems.map((item, i) => (
                 <div key={i} className="bg-white p-7 rounded-2xl shadow-sm hover:shadow-lg transition-all text-center">
                   <div className="text-4xl mb-4">{item.icon}</div>
                   <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
@@ -508,19 +573,15 @@ export default function LGChemPage() {
             <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mx-auto mb-6">
               <span className="font-black text-2xl" style={{color: "#c8102e"}}>LG</span>
             </div>
-            <h2 className="text-3xl font-bold text-white mb-4">
-              LG Chem Ürünleri İçin Teklif Alın
-            </h2>
-            <p className="text-white/70 mb-8">
-              Mühendislik plastikleri, petrokim ürünleri veya katkı maddeleri için fiyat teklifi ve teknik datasheet talep edin.
-            </p>
+            <h2 className="text-3xl font-bold text-white mb-4">{t("ctaTitle")}</h2>
+            <p className="text-white/70 mb-8">{t("ctaDesc")}</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href={`/${locale}/contact`}
                 className="flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full transition-all hover:-translate-y-1"
                 style={{backgroundColor: "#4CAF50"}}
               >
-                Teklif İste <ArrowRight size={18} />
+                {t("ctaCta")} <ArrowRight size={18} />
               </Link>
               <a
                 href="tel:+905421894340"

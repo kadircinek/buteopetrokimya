@@ -124,7 +124,7 @@ function AboutSection() {
               className="inline-flex items-center gap-2 font-semibold transition-colors"
               style={{color: "#2D6A4F"}}
             >
-              Daha Fazla <ArrowRight size={16} />
+              {t("readMore")} <ArrowRight size={16} />
             </Link>
           </div>
 
@@ -200,7 +200,7 @@ function ProductsPreview() {
 
   const polyolefins = ["PPH (Moblen)", "PPC", "PPRC", "HDPE", "LDPE", "GPPS", "HIPS", "TPE", "TPU", "EVA"];
   const engineering = ["ABS", "PC", "PMMA", "PBT", "SAN", "PC/ABS", "PPO/PPE", "PA6/PA66"];
-  const additives = ["Darbe Dayanımı Arttırıcı", "UV Masterbatch", "Bağlayıcı", "Çöküntü Giderici"];
+  const additives = t.raw("additivesItems") as string[];
 
   return (
     <section className="py-24 bg-white">
@@ -278,6 +278,7 @@ function ProductsPreview() {
 
 function SectorsPreview() {
   const t = useTranslations("sectors");
+  const h = useTranslations("home");
   const locale = useLocale();
 
   const sectors = [
@@ -326,7 +327,7 @@ function SectorsPreview() {
             className="p-5 rounded-2xl border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-center hover:border-green-400 transition-all group"
           >
             <span className="text-3xl mb-2 group-hover:scale-110 transition-transform">+</span>
-            <span className="text-sm font-medium text-gray-500 group-hover:text-green-700">Tümünü Gör</span>
+            <span className="text-sm font-medium text-gray-500 group-hover:text-green-700">{h("seeAll")}</span>
           </Link>
         </div>
       </div>
@@ -336,6 +337,7 @@ function SectorsPreview() {
 
 function LGChemBanner() {
   const locale = useLocale();
+  const t = useTranslations("home");
   return (
     <section className="py-16 relative overflow-hidden" style={{background: "linear-gradient(135deg, #0d2b1a, #1B4332)"}}>
       <div className="absolute inset-0 opacity-5" style={{backgroundImage: "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)", backgroundSize: "40px 40px"}} />
@@ -346,11 +348,9 @@ function LGChemBanner() {
               <span className="font-black text-3xl" style={{color: "#c8102e"}}>LG</span>
             </div>
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{color: "#4CAF50"}}>Türkiye Distribütörü</div>
-              <h2 className="text-2xl sm:text-3xl font-black text-white">LG Chem Tüm Ürünleri</h2>
-              <p className="text-white/70 text-sm mt-1">
-                LUPOY · LUPOX · LUMID · LUMILOY · LUCEL · LUSEP · KEYFLEX ve daha fazlası
-              </p>
+              <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{color: "#4CAF50"}}>{t("distributorBadge")}</div>
+              <h2 className="text-2xl sm:text-3xl font-black text-white">{t("lgchemAllTitle")}</h2>
+              <p className="text-white/70 text-sm mt-1">{t("lgchemAllSub")}</p>
             </div>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -359,13 +359,13 @@ function LGChemBanner() {
               className="flex items-center gap-2 font-bold px-6 py-3 rounded-full text-white transition-all hover:-translate-y-1"
               style={{backgroundColor: "#4CAF50"}}
             >
-              Tüm LG Chem Ürünleri <ArrowRight size={18} />
+              {t("lgchemAllCta")} <ArrowRight size={18} />
             </Link>
             <Link
               href={`/${locale}/contact`}
               className="flex items-center gap-2 bg-white/10 border border-white/25 text-white font-semibold px-6 py-3 rounded-full hover:bg-white/20 transition-all"
             >
-              Teklif Al
+              {t("getQuote")}
             </Link>
           </div>
         </div>
@@ -384,6 +384,7 @@ function LGChemBanner() {
 
 function BasechemBanner() {
   const locale = useLocale();
+  const t = useTranslations("home");
   return (
     <section className="py-16 relative overflow-hidden" style={{background: "linear-gradient(135deg, #1B4332, #2D6A4F, #40916C)"}}>
       <div className="absolute inset-0 opacity-5" style={{backgroundImage: "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)", backgroundSize: "40px 40px"}} />
@@ -394,11 +395,9 @@ function BasechemBanner() {
               <span className="font-black text-xs leading-tight text-center" style={{color: "#1B4332"}}>BASE<br/>CHEM</span>
             </div>
             <div>
-              <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{color: "#86efac"}}>Türkiye Distribütörü</div>
-              <h2 className="text-2xl sm:text-3xl font-black text-white">Basechem Compound Ürünleri</h2>
-              <p className="text-white/70 text-sm mt-1">
-                Samsung · LG · Hyundai OEM Tedarikçisi — 30+ Yıl Deneyim
-              </p>
+              <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{color: "#86efac"}}>{t("distributorBadge")}</div>
+              <h2 className="text-2xl sm:text-3xl font-black text-white">{t("basechemTitle")}</h2>
+              <p className="text-white/70 text-sm mt-1">{t("basechemSub")}</p>
             </div>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -407,19 +406,19 @@ function BasechemBanner() {
               className="flex items-center gap-2 font-bold px-6 py-3 rounded-full text-white transition-all hover:-translate-y-1"
               style={{backgroundColor: "#4CAF50"}}
             >
-              Tüm Basechem Ürünleri <ArrowRight size={18} />
+              {t("basechemCta")} <ArrowRight size={18} />
             </Link>
             <Link
               href={`/${locale}/contact`}
               className="flex items-center gap-2 bg-white/10 border border-white/25 text-white font-semibold px-6 py-3 rounded-full hover:bg-white/20 transition-all"
             >
-              Teklif Al
+              {t("getQuote")}
             </Link>
           </div>
         </div>
         {/* Product codes strip */}
         <div className="mt-8 pt-8 border-t border-white/10 flex flex-wrap gap-2">
-          {["ABS Compound", "PC Compound", "PBT", "PC/ABS", "PPO/PPE (Norly)", "PA6 / PA66", "Alev Geciktirici (FR)", "Cam Elyaf Takviyeli (GF)", "Özel Renk"].map(p => (
+          {["ABS Compound", "PC Compound", "PBT", "PC/ABS", "PPO/PPE (Noryl)", "PA6 / PA66", "FR (Flame Retardant)", "GF (Glass Fiber)", "Custom Color"].map(p => (
             <span key={p} className="text-xs px-3 py-1.5 rounded-full font-medium bg-white/10 text-white/80 border border-white/10">
               {p}
             </span>
@@ -432,6 +431,7 @@ function BasechemBanner() {
 
 function PartnersSection() {
   const t = useTranslations("partners");
+  const h = useTranslations("home");
 
   return (
     <section className="py-24 bg-white">
@@ -457,7 +457,7 @@ function PartnersSection() {
                 </div>
                 <div>
                   <div className="text-xl font-bold text-gray-900">LG Chem</div>
-                  <div className="text-sm text-gray-500">Global Chemical Leader</div>
+                  <div className="text-sm text-gray-500">{t("lgSubtitle")}</div>
                 </div>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">{t("lgDesc")}</p>
@@ -479,7 +479,7 @@ function PartnersSection() {
                 </div>
                 <div>
                   <div className="text-xl font-bold text-gray-900">Basechem</div>
-                  <div className="text-sm text-gray-500">Engineering Plastics Expert</div>
+                  <div className="text-sm text-gray-500">{t("baseSubtitle")}</div>
                 </div>
               </div>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">{t("baseDesc")}</p>
@@ -494,7 +494,7 @@ function PartnersSection() {
 
         {/* Partner logos strip */}
         <div className="mt-12 py-8 border-t border-gray-100">
-          <p className="text-center text-sm text-gray-400 uppercase tracking-widest mb-6">OEM Referanslar</p>
+          <p className="text-center text-sm text-gray-400 uppercase tracking-widest mb-6">{h("oemRef")}</p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-50">
             {["Samsung", "LG", "Hyundai", "General Motors", "Tesla"].map(brand => (
               <span key={brand} className="text-lg font-bold text-gray-400">{brand}</span>

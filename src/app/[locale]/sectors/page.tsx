@@ -74,23 +74,23 @@ export default function SectorsPage() {
         <section className="py-20" style={{background: "#f8fafc"}}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Sektöre Göre Ürün Rehberi</h2>
-              <p className="text-gray-500">Her sektörün ihtiyacına özel hammadde çözümlerimiz</p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">{t("guideTitle")}</h2>
+              <p className="text-gray-500">{t("guideDesc")}</p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  sector: "Otomotiv",
+                  sector: t("s1"),
                   products: ["PA6/PA66", "PC/ABS", "PPO/PPE", "PBT", "ABS Compound"],
                   icon: "🚗",
                 },
                 {
-                  sector: "Elektrik & Elektronik",
-                  products: ["PC", "ABS", "PA66", "PPO/PPE", "PC/ABS (Yanmaz)"],
+                  sector: t("s2"),
+                  products: ["PC", "ABS", "PA66", "PPO/PPE", t("pcAbsFR")],
                   icon: "⚡",
                 },
                 {
-                  sector: "Medikal",
+                  sector: t("s5"),
                   products: ["PC (Medical grade)", "ABS", "PPH", "PMMA"],
                   icon: "🏥",
                 },
@@ -116,14 +116,14 @@ export default function SectorsPage() {
         {/* CTA */}
         <section className="py-16" style={{background: "#1B4332"}}>
           <div className="max-w-3xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Sektörünüze Özel Çözüm Arıyorsunuz?</h2>
-            <p className="text-white/70 mb-8">Uzman AR-GE ekibimizle projenize özel hammadde belirleme hizmeti sunuyoruz.</p>
+            <h2 className="text-3xl font-bold text-white mb-4">{t("ctaTitle")}</h2>
+            <p className="text-white/70 mb-8">{t("ctaDesc")}</p>
             <Link
               href={`/${locale}/contact`}
               className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-full"
               style={{backgroundColor: "#4CAF50"}}
             >
-              Uzmanlarımızla Konuşun <ArrowRight size={18} />
+              {t("ctaBtn")} <ArrowRight size={18} />
             </Link>
           </div>
         </section>

@@ -5,58 +5,53 @@ import Link from "next/link";
 import { useLocale } from "next-intl";
 import { ArrowRight } from "lucide-react";
 
-const polyolefins = [
-  { code: "PPH (Moblen)", name: "Polipropilen Homopolimer" },
-  { code: "PPC", name: "Polipropilen Kopolimer" },
-  { code: "PPRC", name: "Polipropilen Random Kopolimer" },
-  { code: "HDPE", name: "Yüksek Yoğunluklu Polietilen" },
-  { code: "LDPE", name: "Alçak Yoğunluklu Polietilen" },
-  { code: "GPPS", name: "Kristal Polistiren" },
-  { code: "HIPS", name: "Antişok Polistiren" },
-  { code: "TPE", name: "Termoplastik Elastomer" },
-  { code: "TPU", name: "Termoplastik Poliüretan" },
-  { code: "EVA", name: "Etilen Vinil Asetat" },
-];
-
-const engineering = [
-  { code: "ABS", name: "Akrilonitril Butadyen Sitiren" },
-  { code: "PC", name: "Polikarbonat" },
-  { code: "PMMA", name: "Polimetilmetakrilat" },
-  { code: "PBT", name: "Polibutilen Terafitalat" },
-  { code: "SAN", name: "Stiren Akrilonitril" },
-  { code: "PC/ABS", name: "PC+ABS Blend" },
-  { code: "PPO/PPE", name: "Polyfenil Eter (Norly)" },
-  { code: "PA6/PA66", name: "Poliamid" },
-];
-
-const basechem = [
-  { code: "ABS Compound", sub: "Yanmaz / Cam Elyaf" },
-  { code: "PC Compound", sub: "Yanmaz / Cam Elyaf" },
-  { code: "PBT", sub: "Yanmaz / Cam Elyaf" },
-  { code: "PC/ABS", sub: "Yanmaz / Cam Elyaf" },
-  { code: "PPO/PPE (Norly)", sub: "Yanmaz / Cam Elyaf" },
-  { code: "PA6/PA66", sub: "Yanmaz / Cam Elyaf" },
-];
-
-const lgchem = [
-  { code: "TPE / Keyflex", sub: "" },
-  { code: "PC Compound", sub: "" },
-  { code: "PBT", sub: "" },
-  { code: "PC/ABS", sub: "" },
-  { code: "PPO/PPE (Norly)", sub: "" },
-  { code: "PA6 / PA66", sub: "" },
-];
-
-const additives = [
-  { code: "Darbe Dayanımı Arttırıcı", sub: "Impact Modifier" },
-  { code: "UV Masterbatch", sub: "UV Protection" },
-  { code: "Bağlayıcı", sub: "Coupling Agent" },
-  { code: "Çöküntü Giderici", sub: "Sink Mark Eliminator" },
-];
-
 export default function ProductsPage() {
   const t = useTranslations("products");
   const locale = useLocale();
+
+  const polyolefins = [
+    { code: "PPH (Moblen)", name: t("pphName") },
+    { code: "PPC",          name: t("ppcName") },
+    { code: "PPRC",         name: t("pprcName") },
+    { code: "HDPE",         name: t("hdpeName") },
+    { code: "LDPE",         name: t("ldpeName") },
+    { code: "GPPS",         name: t("gppsName") },
+    { code: "HIPS",         name: t("hipsName") },
+    { code: "TPE",          name: t("tpeName") },
+    { code: "TPU",          name: t("tpuName") },
+    { code: "EVA",          name: t("evaName") },
+  ];
+
+  const engineering = [
+    { code: "ABS",     name: t("absEngName") },
+    { code: "PC",      name: t("pcEngName") },
+    { code: "PMMA",    name: t("pmmaName") },
+    { code: "PBT",     name: t("pbtEngName") },
+    { code: "SAN",     name: t("sanName") },
+    { code: "PC/ABS",  name: "PC+ABS Blend" },
+    { code: "PPO/PPE", name: t("ppoName") },
+    { code: "PA6/PA66",name: t("paName") },
+  ];
+
+  const basechem = [
+    { code: "ABS Compound", sub: t("flameGF") },
+    { code: "PC Compound",  sub: t("flameGF") },
+    { code: "PBT",          sub: t("flameGF") },
+    { code: "PC/ABS",       sub: t("flameGF") },
+    { code: "PPO/PPE (Norly)", sub: t("flameGF") },
+    { code: "PA6/PA66",     sub: t("flameGF") },
+  ];
+
+  const lgchem = [
+    { code: "TPE / Keyflex" },
+    { code: "PC Compound" },
+    { code: "PBT" },
+    { code: "PC/ABS" },
+    { code: "PPO/PPE (Norly)" },
+    { code: "PA6 / PA66" },
+  ];
+
+  const additivesItems = t.raw("additivesItems") as string[];
 
   return (
     <>
@@ -86,7 +81,7 @@ export default function ProductsPage() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-gray-900">{t("polyolefins")}</h2>
-                <p className="text-gray-500 text-sm">LG Chem & Genel Portföy</p>
+                <p className="text-gray-500 text-sm">{t("lgchemPortfolioLabel")}</p>
               </div>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -123,7 +118,7 @@ export default function ProductsPage() {
           </div>
         </section>
 
-        {/* Basechem Products */}
+        {/* Basechem & LG Chem Products */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12">
@@ -134,8 +129,8 @@ export default function ProductsPage() {
                     BC
                   </div>
                   <div>
-                    <h2 className="text-xl font-bold text-gray-900">Basechem Ürünleri</h2>
-                    <p className="text-gray-500 text-sm">Yüksek Performanslı Mühendislik Plastikleri</p>
+                    <h2 className="text-xl font-bold text-gray-900">{t("basechemSectionTitle")}</h2>
+                    <p className="text-gray-500 text-sm">{t("basechemSectionSubtitle")}</p>
                   </div>
                 </div>
                 <div className="space-y-3">
@@ -155,8 +150,8 @@ export default function ProductsPage() {
                     LG
                   </div>
                   <div>
-                    <h2 className="text-xl font-bold text-gray-900">LG Chem Ürünleri</h2>
-                    <p className="text-gray-500 text-sm">Global Kimya Lideri</p>
+                    <h2 className="text-xl font-bold text-gray-900">{t("lgchemSectionTitle")}</h2>
+                    <p className="text-gray-500 text-sm">{t("lgchemSectionSubtitle")}</p>
                   </div>
                 </div>
                 <div className="space-y-3">
@@ -180,14 +175,13 @@ export default function ProductsPage() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-gray-900">{t("additives")}</h2>
-                <p className="text-gray-500 text-sm">Özel Katkı Maddeleri</p>
+                <p className="text-gray-500 text-sm">{t("additivesSectionSubtitle")}</p>
               </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {additives.map((p) => (
-                <div key={p.code} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all">
-                  <div className="font-bold text-gray-900 mb-1">{p.code}</div>
-                  <div className="text-xs text-gray-400">{p.sub}</div>
+              {(t.raw("additivesItems") as string[]).map((item, i) => (
+                <div key={i} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all">
+                  <div className="font-bold text-gray-900">{item}</div>
                 </div>
               ))}
             </div>
@@ -197,8 +191,8 @@ export default function ProductsPage() {
         {/* CTA */}
         <section className="py-20" style={{background: "#1B4332"}}>
           <div className="max-w-3xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ürün Hakkında Bilgi Almak İster misiniz?</h2>
-            <p className="text-white/70 mb-8">Teknik destek ve ürün bilgisi için bizimle iletişime geçin.</p>
+            <h2 className="text-3xl font-bold text-white mb-4">{t("ctaTitle")}</h2>
+            <p className="text-white/70 mb-8">{t("ctaDesc")}</p>
             <Link
               href={`/${locale}/contact`}
               className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-full transition-all hover:-translate-y-1"
