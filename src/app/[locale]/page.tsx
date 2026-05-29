@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 import { useLocale } from "next-intl";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,10 +14,14 @@ import {
   Layers,
   Zap,
   Shield,
+  Warehouse,
+  MapPin,
+  ShieldCheck,
 } from "lucide-react";
 
 function HeroSection() {
   const t = useTranslations("hero");
+  const h = useTranslations("home");
   const locale = useLocale();
 
   return (
@@ -37,10 +42,23 @@ function HeroSection() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-40">
         <div className="max-w-3xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium px-4 py-2 rounded-full mb-8">
-            <span className="w-2 h-2 rounded-full animate-pulse" style={{backgroundColor: "#4CAF50"}} />
-            {t("badge")}
+          {/* Badges */}
+          <div className="flex flex-wrap items-center gap-3 mb-8">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium px-4 py-2 rounded-full">
+              <span className="w-2 h-2 rounded-full animate-pulse" style={{backgroundColor: "#4CAF50"}} />
+              {t("badge")}
+            </div>
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium px-4 py-2 rounded-full">
+              <span className="text-base leading-none">🇹🇷</span>
+              <span className="text-base leading-none">🇷🇴</span>
+              <span className="font-semibold">{h("heroFlagsLabel")}</span>
+            </div>
+          </div>
+
+          {/* Dual distributor line */}
+          <div className="inline-flex items-center gap-2 text-sm font-semibold mb-5" style={{color: "#86efac"}}>
+            <span className="h-px w-8" style={{backgroundColor: "#4CAF50"}} />
+            {h("dualDistributorBadge")}
           </div>
 
           {/* Heading */}
@@ -492,12 +510,43 @@ function PartnersSection() {
           </div>
         </div>
 
-        {/* Partner logos strip */}
-        <div className="mt-12 py-8 border-t border-gray-100">
-          <p className="text-center text-sm text-gray-400 uppercase tracking-widest mb-6">{h("oemRef")}</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-50">
+        {/* OEM references strip */}
+        <div className="mt-12 py-10 border-t border-gray-100">
+          <p className="text-center text-sm font-bold text-gray-500 uppercase tracking-widest mb-8">{h("oemRef")}</p>
+          <div className="flex flex-wrap justify-center items-center gap-4">
             {["Samsung", "LG", "Hyundai", "General Motors", "Tesla"].map(brand => (
-              <span key={brand} className="text-lg font-bold text-gray-400">{brand}</span>
+              <span
+                key={brand}
+                className="text-base sm:text-lg font-bold text-gray-700 px-6 py-3 rounded-2xl border border-gray-200 bg-gray-50 hover:border-green-300 hover:bg-green-50 hover:text-green-800 transition-all"
+              >
+                {brand}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Certifications / standards strip */}
+        <div className="mt-4 pt-10 border-t border-gray-100">
+          <div className="text-center mb-8">
+            <p className="text-sm font-bold text-gray-900">{h("certTitle")}</p>
+            <p className="text-xs text-gray-400 mt-1">{h("certSubtitle")}</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {[
+              { label: h("cert1Label"), desc: h("cert1Desc") },
+              { label: h("cert2Label"), desc: h("cert2Desc") },
+              { label: h("cert3Label"), desc: h("cert3Desc") },
+              { label: h("cert4Label"), desc: h("cert4Desc") },
+            ].map((c, i) => (
+              <div key={i} className="flex items-center gap-3 p-4 rounded-2xl border border-gray-100 hover:shadow-md transition-all">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center text-white flex-shrink-0" style={{backgroundColor: "#1B4332"}}>
+                  <ShieldCheck size={18} />
+                </div>
+                <div>
+                  <div className="font-bold text-gray-900 text-sm">{c.label}</div>
+                  <div className="text-xs text-gray-400 leading-tight">{c.desc}</div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -539,6 +588,158 @@ function CtaSection() {
   );
 }
 
+function GlobalPresence() {
+  const t = useTranslations("presence");
+  const locale = useLocale();
+
+  const stats = [
+    { value: "2", label: t("statCountries") },
+    { value: "3", label: t("statWarehouses") },
+    { value: "2", label: t("statBrands") },
+    { value: "70+", label: t("statGlobalReach") },
+  ];
+
+  return (
+    <section className="py-24 bg-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <span className="inline-block text-sm font-bold uppercase tracking-widest mb-4 px-4 py-2 rounded-full" style={{color: "#2D6A4F", backgroundColor: "#f0fdf4"}}>
+            {t("badge")}
+          </span>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            {t("title")} <span style={{color: "#1B4332"}}>{t("titleHighlight")}</span>
+          </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto">{t("desc")}</p>
+        </div>
+
+        {/* Map panel */}
+        <div className="relative rounded-3xl overflow-hidden mb-10 border border-white/10" style={{background: "linear-gradient(135deg, #0d2b1a 0%, #1B4332 60%, #2D6A4F 100%)"}}>
+          {/* dotted texture */}
+          <div className="absolute inset-0 opacity-20" style={{backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)", backgroundSize: "22px 22px"}} />
+          {/* grid lines */}
+          <div className="absolute inset-0 opacity-5" style={{backgroundImage: "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)", backgroundSize: "60px 60px"}} />
+
+          <div className="relative h-[340px] sm:h-[420px]">
+            {/* abstract landmass */}
+            <svg className="absolute inset-0 w-full h-full opacity-[0.12]" viewBox="0 0 800 420" preserveAspectRatio="xMidYMid slice" fill="#ffffff">
+              <path d="M120 150 Q180 90 280 120 T460 110 Q560 100 620 160 T700 230 Q660 300 560 310 T380 330 Q260 340 200 290 T120 220 Z" />
+            </svg>
+
+            {/* dashed connector between the two pins */}
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 800 420" preserveAspectRatio="none">
+              <path d="M300 165 Q420 110 540 235" fill="none" stroke="#4CAF50" strokeWidth="2.5" strokeDasharray="7 8" opacity="0.8" />
+            </svg>
+
+            {/* Pin: Bucharest (upper-left) */}
+            <div className="absolute" style={{left: "35%", top: "36%"}}>
+              <div className="relative flex flex-col items-center -translate-x-1/2 -translate-y-1/2">
+                <span className="absolute w-10 h-10 rounded-full animate-ping" style={{backgroundColor: "#4CAF50", opacity: 0.25}} />
+                <span className="w-5 h-5 rounded-full border-2 border-white shadow-lg z-10" style={{backgroundColor: "#4CAF50"}} />
+                <div className="mt-3 text-center whitespace-nowrap z-10">
+                  <div className="text-white font-bold text-sm sm:text-base">🇷🇴 {t("mapCity2")}</div>
+                  <div className="text-green-300 text-xs">{t("mapCity2Sub")}</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Pin: Istanbul (right) */}
+            <div className="absolute" style={{left: "67%", top: "56%"}}>
+              <div className="relative flex flex-col items-center -translate-x-1/2 -translate-y-1/2">
+                <span className="absolute w-12 h-12 rounded-full animate-ping" style={{backgroundColor: "#4CAF50", opacity: 0.3}} />
+                <span className="w-6 h-6 rounded-full border-2 border-white shadow-lg z-10 flex items-center justify-center" style={{backgroundColor: "#4CAF50"}}>
+                  <span className="w-2 h-2 rounded-full bg-white" />
+                </span>
+                <div className="mt-3 text-center whitespace-nowrap z-10">
+                  <div className="text-white font-bold text-base sm:text-lg">🇹🇷 {t("mapCity1")}</div>
+                  <div className="text-green-300 text-xs">{t("mapCity1Sub")}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Stats bar */}
+          <div className="relative grid grid-cols-2 md:grid-cols-4 border-t border-white/10">
+            {stats.map((s, i) => (
+              <div key={i} className="text-center py-6 px-3 border-white/10 border-r last:border-r-0 [&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r [&:nth-child(odd)]:border-r-0 md:[&:nth-child(odd)]:border-r">
+                <div className="text-3xl font-black mb-1" style={{color: "#4CAF50"}}>{s.value}</div>
+                <div className="text-white/70 text-xs leading-tight">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Office cards */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* HQ Turkey */}
+          <div className="rounded-3xl border border-gray-100 bg-white overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all">
+            {/* Photo header */}
+            <div className="relative h-52 w-full">
+              <Image
+                src="/offices/turkey-office.jpg"
+                alt={`${t("hqCompany")} — ${t("hqCity")}`}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0" style={{background: "linear-gradient(180deg, rgba(13,43,26,0.1) 0%, rgba(13,43,26,0.75) 100%)"}} />
+              <div className="absolute bottom-4 left-5 right-5 flex items-center gap-2">
+                <span className="text-2xl">🇹🇷</span>
+                <div>
+                  <div className="text-[11px] font-bold uppercase tracking-widest text-green-300">{t("hqLabel")}</div>
+                  <h3 className="text-lg font-bold text-white leading-tight">{t("hqCity")}</h3>
+                </div>
+              </div>
+            </div>
+            {/* Body */}
+            <div className="p-7">
+              <div className="text-sm font-semibold text-gray-800 mb-2">{t("hqCompany")}</div>
+              <p className="text-gray-500 text-sm leading-relaxed mb-4">{t("hqDesc")}</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full font-medium" style={{backgroundColor: "#f0fdf4", color: "#1B4332"}}>
+                  <Warehouse size={13} /> {t("hqWarehouses")}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Europe Romania */}
+          <div className="rounded-3xl border border-gray-100 bg-white overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all">
+            {/* Photo header */}
+            <div className="relative h-52 w-full">
+              <Image
+                src="/offices/romania-office.jpg"
+                alt={`${t("europeCompany")} — ${t("europeCity")}`}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0" style={{background: "linear-gradient(180deg, rgba(13,43,26,0.1) 0%, rgba(13,43,26,0.75) 100%)"}} />
+              <div className="absolute bottom-4 left-5 right-5 flex items-center gap-2">
+                <span className="text-2xl">🇷🇴</span>
+                <div>
+                  <div className="text-[11px] font-bold uppercase tracking-widest text-green-300">{t("europeLabel")}</div>
+                  <h3 className="text-lg font-bold text-white leading-tight">{t("europeCity")}</h3>
+                </div>
+              </div>
+            </div>
+            {/* Body */}
+            <div className="p-7">
+              <div className="text-sm font-semibold text-gray-800 mb-2">{t("europeCompany")}</div>
+              <p className="text-gray-500 text-sm leading-relaxed mb-4">{t("europeDesc")}</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full font-medium" style={{backgroundColor: "#f0fdf4", color: "#1B4332"}}>
+                  <MapPin size={13} /> {t("europeRegion")}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   return (
     <>
@@ -546,6 +747,7 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <AboutSection />
+        <GlobalPresence />
         <LGChemBanner />
         <BasechemBanner />
         <ServicesSection />

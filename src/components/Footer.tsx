@@ -32,13 +32,36 @@ export default function Footer() {
               {t("footer.description")}
             </p>
             {/* Partners */}
-            <div className="flex flex-wrap gap-3">
-              <span className="px-3 py-1.5 bg-white/10 rounded-lg text-xs font-semibold text-gray-300 border border-white/10">
-                LG Chem
-              </span>
-              <span className="px-3 py-1.5 bg-white/10 rounded-lg text-xs font-semibold text-gray-300 border border-white/10">
-                Basechem
-              </span>
+            <div className="mb-6">
+              <div className="text-[10px] font-bold uppercase tracking-widest text-green-400/80 mb-2">{t("footer.authorizedDistributor")}</div>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-3 py-1.5 bg-white/10 rounded-lg text-xs font-semibold text-gray-300 border border-white/10">
+                  LG Chem
+                </span>
+                <span className="px-3 py-1.5 bg-white/10 rounded-lg text-xs font-semibold text-gray-300 border border-white/10">
+                  Basechem
+                </span>
+              </div>
+            </div>
+
+            {/* Corporate identity — two legal entities */}
+            <div className="grid sm:grid-cols-2 gap-4 max-w-lg">
+              <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className="text-base leading-none">🇹🇷</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-green-400">{t("footer.hqOffice")}</span>
+                </div>
+                <div className="text-sm font-semibold text-white leading-snug">Buteo Petrokimya</div>
+                <div className="text-xs text-gray-400 mt-0.5">İstanbul, Türkiye</div>
+              </div>
+              <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className="text-base leading-none">🇷🇴</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-green-400">{t("footer.europeOffice")}</span>
+                </div>
+                <div className="text-sm font-semibold text-white leading-snug">BUTEO PETROCHEMICALS ROMANIA S.R.L.</div>
+                <div className="text-xs text-gray-400 mt-0.5">Bucureşti, România</div>
+              </div>
             </div>
           </div>
 
