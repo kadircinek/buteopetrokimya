@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { buildMetadata, SITE_URL, SITE_NAME, type Locale } from "@/lib/seo";
 import "../globals.css";
 
 type Props = {
@@ -13,29 +14,79 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "nav" });
-
-  const titles: Record<string, string> = {
-    tr: "Buteo Petrokimya | Mühendislik Plastik Distribütörü",
-    en: "Buteo Petrochemicals | Engineering Plastics Distributor",
-    ro: "Buteo Petrochemicals | Distribuitor Materiale Plastice",
-  };
+  const loc = (routing.locales.includes(locale as Locale) ? locale : "tr") as Locale;
 
   return {
-    title: titles[locale] || titles.tr,
-    description:
-      locale === "tr"
-        ? "LG Chem ve Basechem Türkiye distribütörü. Mühendislik plastiklerinde uzman çözüm ortağınız."
-        : locale === "ro"
-        ? "Distribuitor Turcia LG Chem și Basechem. Partenerul dvs. expert în materiale plastice tehnice."
-        : "LG Chem and Basechem Turkey distributor. Your expert partner in engineering plastics.",
-    icons: { icon: "/logo.png" },
-    keywords: t("home"),
+    metadataBase: new URL(SITE_URL),
+    ...buildMetadata("home", loc),
+    icons: { icon: "/logo.png", apple: "/logo.png" },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+    },
   };
 }
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
+}
+
+function StructuredData({ locale }: { locale: Locale }) {
+  const graph = [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: SITE_NAME,
+      legalName: "Buteo Petrokimya",
+      url: SITE_URL,
+      logo: `${SITE_URL}/logo.png`,
+      description:
+        "LG Chem ve Basechem Türkiye distribütörü. Mühendislik plastikleri ve plastik hammadde tedarikçisi.",
+      areaServed: ["TR", "Europe"],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+90-542-189-43-40",
+        contactType: "sales",
+        availableLanguage: ["Turkish", "English", "Romanian"],
+      },
+      address: [
+        {
+          "@type": "PostalAddress",
+          addressLocality: "İstanbul",
+          addressCountry: "TR",
+        },
+        {
+          "@type": "PostalAddress",
+          streetAddress:
+            "Strada MIHAIL KOGĂLNICEANU, Nr. 12, Clădirea C4, Camera 23, Sectorul 5",
+          addressLocality: "Bucureşti",
+          addressCountry: "RO",
+        },
+      ],
+      brand: [
+        { "@type": "Brand", name: "LG Chem" },
+        { "@type": "Brand", name: "Basechem" },
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: SITE_NAME,
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      inLanguage: locale,
+    },
+  ];
+
+  const jsonLd = { "@context": "https://schema.org", "@graph": graph };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
@@ -50,6 +101,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body>
+        <StructuredData locale={locale as Locale} />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

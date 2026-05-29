@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useLocale } from "next-intl";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { buildMetadata, type Locale } from "@/lib/seo";
 import {
   ArrowRight,
   CheckCircle2,
@@ -738,6 +739,11 @@ function GlobalPresence() {
       </div>
     </section>
   );
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildMetadata("home", locale as Locale);
 }
 
 export default function HomePage() {

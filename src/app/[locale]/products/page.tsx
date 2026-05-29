@@ -4,6 +4,12 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { ArrowRight } from "lucide-react";
+import { buildMetadata, type Locale } from "@/lib/seo";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildMetadata("products", locale as Locale);
+}
 
 export default function ProductsPage() {
   const t = useTranslations("products");

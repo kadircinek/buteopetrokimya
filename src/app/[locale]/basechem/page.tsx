@@ -4,6 +4,12 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { ArrowRight, ExternalLink, Star } from "lucide-react";
+import { buildMetadata, type Locale } from "@/lib/seo";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return buildMetadata("basechem", locale as Locale);
+}
 
 /* ─────────────── LOCALE-BASED DATA ─────────────── */
 
