@@ -11,7 +11,8 @@ export type PageKey =
   | "basechem"
   | "sectors"
   | "about"
-  | "contact";
+  | "contact"
+  | "finder";
 
 type SeoEntry = { title: string; description: string; keywords: string[] };
 
@@ -24,6 +25,7 @@ const PATHS: Record<PageKey, string> = {
   sectors: "/sectors",
   about: "/about",
   contact: "/contact",
+  finder: "/finder",
 };
 
 const SEO: Record<PageKey, Record<Locale, SeoEntry>> = {
@@ -145,6 +147,26 @@ const SEO: Record<PageKey, Record<Locale, SeoEntry>> = {
       description:
         "Fondată în 2023, Buteo Petrochemicals este un distribuitor specializat de plastice tehnice. Deservim Turcia și Europa cu sediul din Istanbul și biroul european din România (București).",
       keywords: ["Buteo Petrochemicals", "distribuitor plastice", "companie plastice tehnice", "Buteo Petrochemicals Romania"],
+    },
+  },
+  finder: {
+    tr: {
+      title: "Hammadde Bulucu | Doğru Mühendislik Plastiğini Bulun",
+      description:
+        "Üretim yöntemi, kullanım alanı ve istediğiniz özellikleri seçin; uygulamanıza uygun plastik hammadde ailelerini öğrenin ve satış ekibimizden özel öneri alın.",
+      keywords: ["hammadde bulucu", "plastik malzeme seçimi", "hangi plastik hammadde", "mühendislik plastiği seçimi", "malzeme öneri aracı"],
+    },
+    en: {
+      title: "Material Finder | Find the Right Engineering Plastic",
+      description:
+        "Select your production method, application and required properties to discover suitable plastic material families and get a tailored recommendation from our sales team.",
+      keywords: ["material finder", "plastic material selection", "which plastic material", "engineering plastic selection", "material advisor"],
+    },
+    ro: {
+      title: "Găsitor de Materiale | Găsiți Plasticul Tehnic Potrivit",
+      description:
+        "Selectați metoda de producție, aplicația și proprietățile dorite pentru a descoperi familiile de materiale plastice potrivite și a primi o recomandare personalizată.",
+      keywords: ["găsitor materiale", "selecție material plastic", "ce material plastic", "selecție plastic tehnic"],
     },
   },
   contact: {

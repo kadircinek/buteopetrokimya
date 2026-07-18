@@ -6,6 +6,7 @@
     "sectors": "Sektörler",
     "partners": "İş Ortakları",
     "contact": "İletişim",
+    "finder": "Hammadde Bulucu",
     "getQuote": "Teklif Al"
   },
   "hero": {
@@ -261,6 +262,56 @@
     "statBrands": "Dünya Markası Distribütörlüğü",
     "statGlobalReach": "Ülkede Faaliyet Gösteren Markalar"
   },
+  "finder": {
+    "badge": "Hammadde Bulucu",
+    "title": "Doğru Hammaddeyi",
+    "titleHighlight": "Birlikte Bulalım",
+    "desc": "Üretim yönteminizi, kullanım alanınızı ve istediğiniz özellikleri seçin; uygulamanıza uygun ürün ailelerini görün ve satış ekibimizden özel öneri alın.",
+    "step1": "Üretim Yöntemi",
+    "step2": "Kullanım Alanı / Sektör",
+    "step3": "İstenen Özellikler",
+    "m_injection": "Enjeksiyon",
+    "m_extrusion": "Ekstrüzyon",
+    "m_blow": "Şişirme (Blow)",
+    "m_thermoform": "Termoform",
+    "m_film": "Film / Levha",
+    "m_other": "Diğer",
+    "sec_auto": "Otomotiv",
+    "sec_ee": "Elektrik-Elektronik",
+    "sec_white": "Beyaz Eşya",
+    "sec_pack": "Ambalaj",
+    "sec_medical": "Medikal",
+    "sec_construction": "İnşaat",
+    "sec_other": "Diğer",
+    "p_impact": "Yüksek Darbe",
+    "p_heat": "Isı Direnci",
+    "p_uv": "UV Dayanımı",
+    "p_food": "Gıda Teması",
+    "p_flame": "Alev Geciktirici",
+    "p_transparent": "Şeffaflık",
+    "p_chemical": "Kimyasal Direnç",
+    "p_glassfiber": "Cam Elyaf Takviye",
+    "p_lowcost": "Ekonomik",
+    "propHint": "Lütfen en az bir özellik seçin.",
+    "showBtn": "Uygun Ürünleri Göster",
+    "resultTitle": "Önerilen Ürün Aileleri",
+    "resultNote": "Bu öneriler yönlendirme amaçlıdır. Uygulamanıza en uygun kesin grade için satış ekibimiz size özel öneri sunar.",
+    "leadTitle": "Satış ekibimizden size özel öneri alın",
+    "leadSubmit": "Öneri Talep Et",
+    "success": "Talebiniz alındı. Satış ekibimiz seçtiğiniz kriterlere göre size en uygun grade önerisiyle dönecek."
+  },
+  "support": {
+    "title": "Size nasıl yardımcı olabiliriz?",
+    "whatsapp": "WhatsApp",
+    "connectSales": "Satış Uzmanına Bağlan",
+    "prefill": "Merhaba, Buteo Petrokimya ürünleri hakkında bilgi almak istiyorum."
+  },
+  "search": {
+    "placeholder": "Ürün kodu veya hammadde ara... (ör. ABS, LUPOY, PA6)",
+    "noResults": "Sonuç bulunamadı",
+    "title": "Aradığınız Hammaddeyi Bulun",
+    "hint": "Ürün koduyla arayın, doğrudan ilgili sayfaya gidin."
+  },
   "tds": {
     "viewTds": "TDS'e Eriş",
     "request": "TDS Talep Et",
@@ -284,7 +335,12 @@
     "openTds": "TDS'i Aç",
     "privacy": "Bilgileriniz yalnızca talebinizi yanıtlamak amacıyla kullanılır (KVKK).",
     "close": "Kapat",
-    "errorMsg": "Bir sorun oluştu, lütfen tekrar deneyin."
+    "errorMsg": "Bir sorun oluştu, lütfen tekrar deneyin.",
+    "sampleRequest": "Numune Talep Et",
+    "sampleTitle": "Numune Talebi",
+    "sampleBadge": "NUMUNE",
+    "sampleDesc": "Bu ürün için ücretsiz numune talep edin. Satış ekibimiz sizinle iletişime geçecek.",
+    "sampleSuccess": "Numune talebiniz alındı. Satış ekibimiz en kısa sürede sizinle iletişime geçecek."
   },
   "lgchem": {
     "heroSubtitle": "Ürün Portföyü",

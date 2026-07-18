@@ -10,6 +10,7 @@ const routes: { path: string; priority: number; changeFrequency: MetadataRoute.S
   { path: "/lgchem", priority: 0.9, changeFrequency: "monthly" },
   { path: "/basechem", priority: 0.9, changeFrequency: "monthly" },
   { path: "/sectors", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/finder", priority: 0.8, changeFrequency: "monthly" },
   { path: "/about", priority: 0.7, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.7, changeFrequency: "yearly" },
 ];

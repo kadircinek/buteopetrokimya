@@ -9,6 +9,8 @@ import { WEB3FORMS_ACCESS_KEY, WEB3FORMS_ENDPOINT } from "@/lib/leadConfig";
 type Props = {
   resource: TdsResource;
   productName: string;
+  /** "tds" = TDS erişimi (varsayılan), "sample" = numune talebi. */
+  mode?: "tds" | "sample";
   /** Pill görünümü için (children yoksa). */
   variant?: "light" | "dark";
   /** Tüm hücreyi tetikleyici yapmak için: özel sınıf + içerik. */
@@ -22,6 +24,7 @@ type Status = "idle" | "sending" | "done" | "error";
 export default function TdsGate({
   resource,
   productName,
+  mode = "tds",
   variant = "light",
   cellClassName,
   cellStyle,
@@ -32,7 +35,9 @@ export default function TdsGate({
   const [status, setStatus] = useState<Status>("idle");
   const [form, setForm] = useState({ name: "", email: "", phone: "", company: "" });
 
-  const isOfficial = resource.kind === "official";
+  const isSample = mode === "sample";
+  // Numune modunda TDS açılmaz; yalnızca talep toplanır.
+  const isOfficial = !isSample && resource.kind === "official";
 
   const close = () => {
     setOpen(false);
@@ -58,10 +63,10 @@ export default function TdsGate({
           headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify({
             access_key: WEB3FORMS_ACCESS_KEY,
-            subject: `TDS Talebi: ${productName}`,
-            from_name: "Buteo Petrokimya — TDS Talep Formu",
+            subject: `${isSample ? "Numune Talebi" : "TDS Talebi"}: ${productName}`,
+            from_name: `Buteo Petrokimya — ${isSample ? "Numune" : "TDS"} Talep Formu`,
             product: productName,
-            tds_kind: isOfficial ? "official-link" : "request",
+            request_type: isSample ? "sample" : isOfficial ? "tds-official" : "tds-request",
             name: form.name,
             email: form.email,
             phone: form.phone,
@@ -79,11 +84,23 @@ export default function TdsGate({
 
   const pillBase =
     "inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full transition-all";
-  const pillCls =
-    variant === "dark"
-      ? `${pillBase} bg-white/15 text-white hover:bg-white/25`
-      : `${pillBase} text-white hover:-translate-y-0.5`;
-  const pillStyle = variant === "dark" ? undefined : { backgroundColor: "#1B4332" };
+  let pillCls: string;
+  let pillStyle: CSSProperties | undefined;
+  if (isSample) {
+    // Numune = outline stil (TDS'ten görsel olarak ayrışsın)
+    pillCls =
+      variant === "dark"
+        ? `${pillBase} bg-white/10 border border-white/25 text-white hover:bg-white/20`
+        : `${pillBase} border hover:bg-green-50`;
+    pillStyle = variant === "dark" ? undefined : { borderColor: "#1B4332", color: "#1B4332" };
+  } else {
+    pillCls =
+      variant === "dark"
+        ? `${pillBase} bg-white/15 text-white hover:bg-white/25`
+        : `${pillBase} text-white hover:-translate-y-0.5`;
+    pillStyle = variant === "dark" ? undefined : { backgroundColor: "#1B4332" };
+  }
+  const pillLabel = isSample ? t("sampleRequest") : isOfficial ? t("viewTds") : t("request");
 
   return (
     <>
@@ -93,7 +110,7 @@ export default function TdsGate({
         </button>
       ) : (
         <button type="button" onClick={() => setOpen(true)} className={pillCls} style={pillStyle}>
-          <FileText size={13} /> {isOfficial ? t("viewTds") : t("request")}
+          <FileText size={13} /> {pillLabel}
         </button>
       )}
 
@@ -113,9 +130,9 @@ export default function TdsGate({
                 <X size={20} />
               </button>
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#86efac" }}>
-                <FileText size={14} /> {t("badge")}
+                <FileText size={14} /> {isSample ? t("sampleBadge") : t("badge")}
               </div>
-              <h3 className="text-xl font-bold leading-tight">{t("formTitle")}</h3>
+              <h3 className="text-xl font-bold leading-tight">{isSample ? t("sampleTitle") : t("formTitle")}</h3>
               <div className="mt-2 text-sm text-white/70">
                 <span className="font-semibold text-white">{t("product")}:</span> {productName}
               </div>
@@ -127,7 +144,7 @@ export default function TdsGate({
                   <CheckCircle2 size={30} style={{ color: "#1B4332" }} />
                 </div>
                 <p className="text-gray-700 font-medium mb-5">
-                  {isOfficial ? t("successOfficial") : t("successRequest")}
+                  {isSample ? t("sampleSuccess") : isOfficial ? t("successOfficial") : t("successRequest")}
                 </p>
                 {isOfficial ? (
                   <button
@@ -145,7 +162,7 @@ export default function TdsGate({
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="p-6 space-y-4">
-                <p className="text-sm text-gray-500 leading-relaxed">{t("formDesc")}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{isSample ? t("sampleDesc") : t("formDesc")}</p>
 
                 <div>
                   <label className="block text-xs font-semibold text-gray-600 mb-1.5">{t("fName")}</label>

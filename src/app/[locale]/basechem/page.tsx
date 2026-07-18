@@ -431,8 +431,9 @@ export default function BasechemPage() {
                         ))}
                       </div>
                     </div>
-                    <div className="pt-4 border-t border-gray-100">
+                    <div className="pt-4 border-t border-gray-100 flex flex-wrap gap-2">
                       <TdsGate resource={TDS_REQUEST} productName={product.code} />
+                      <TdsGate resource={TDS_REQUEST} productName={product.code} mode="sample" />
                     </div>
                   </div>
                 </div>

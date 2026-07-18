@@ -6,6 +6,7 @@
     "sectors": "Sectors",
     "partners": "Partners",
     "contact": "Contact",
+    "finder": "Material Finder",
     "getQuote": "Get a Quote"
   },
   "hero": {
@@ -261,6 +262,56 @@
     "statBrands": "Global Brand Distributorships",
     "statGlobalReach": "Countries Our Brands Operate In"
   },
+  "finder": {
+    "badge": "Material Finder",
+    "title": "Let's Find the Right",
+    "titleHighlight": "Material Together",
+    "desc": "Select your production method, application and required properties to see suitable product families and get a tailored recommendation from our sales team.",
+    "step1": "Production Method",
+    "step2": "Application / Sector",
+    "step3": "Required Properties",
+    "m_injection": "Injection Molding",
+    "m_extrusion": "Extrusion",
+    "m_blow": "Blow Molding",
+    "m_thermoform": "Thermoforming",
+    "m_film": "Film / Sheet",
+    "m_other": "Other",
+    "sec_auto": "Automotive",
+    "sec_ee": "Electrical-Electronics",
+    "sec_white": "White Goods",
+    "sec_pack": "Packaging",
+    "sec_medical": "Medical",
+    "sec_construction": "Construction",
+    "sec_other": "Other",
+    "p_impact": "High Impact",
+    "p_heat": "Heat Resistance",
+    "p_uv": "UV Resistance",
+    "p_food": "Food Contact",
+    "p_flame": "Flame Retardant",
+    "p_transparent": "Transparency",
+    "p_chemical": "Chemical Resistance",
+    "p_glassfiber": "Glass Fiber Reinforced",
+    "p_lowcost": "Economical",
+    "propHint": "Please select at least one property.",
+    "showBtn": "Show Suitable Products",
+    "resultTitle": "Suggested Product Families",
+    "resultNote": "These suggestions are for guidance only. For the exact grade best suited to your application, our sales team will provide a tailored recommendation.",
+    "leadTitle": "Get a tailored recommendation from our sales team",
+    "leadSubmit": "Request Recommendation",
+    "success": "Your request was received. Our sales team will get back to you with the most suitable grade based on your criteria."
+  },
+  "support": {
+    "title": "How can we help you?",
+    "whatsapp": "WhatsApp",
+    "connectSales": "Connect to a Sales Expert",
+    "prefill": "Hello, I would like information about Buteo Petrochemicals products."
+  },
+  "search": {
+    "placeholder": "Search product code or material... (e.g. ABS, LUPOY, PA6)",
+    "noResults": "No results found",
+    "title": "Find the Material You Need",
+    "hint": "Search by product code, go straight to the relevant page."
+  },
   "tds": {
     "viewTds": "Access TDS",
     "request": "Request TDS",
@@ -284,7 +335,12 @@
     "openTds": "Open TDS",
     "privacy": "Your information is used solely to respond to your request.",
     "close": "Close",
-    "errorMsg": "Something went wrong, please try again."
+    "errorMsg": "Something went wrong, please try again.",
+    "sampleRequest": "Request Sample",
+    "sampleTitle": "Sample Request",
+    "sampleBadge": "SAMPLE",
+    "sampleDesc": "Request a free sample for this product. Our sales team will contact you.",
+    "sampleSuccess": "Your sample request was received. Our sales team will contact you shortly."
   },
   "lgchem": {
     "heroSubtitle": "Product Portfolio",

@@ -6,6 +6,7 @@
     "sectors": "Sectoare",
     "partners": "Parteneri",
     "contact": "Contact",
+    "finder": "Găsitor Materiale",
     "getQuote": "Obține Ofertă"
   },
   "hero": {
@@ -261,6 +262,56 @@
     "statBrands": "Distribuții de Mărci Globale",
     "statGlobalReach": "Țări în Care Operează Mărcile Noastre"
   },
+  "finder": {
+    "badge": "Găsitor Materiale",
+    "title": "Să Găsim Împreună",
+    "titleHighlight": "Materialul Potrivit",
+    "desc": "Selectați metoda de producție, aplicația și proprietățile dorite pentru a vedea familiile de produse potrivite și a primi o recomandare personalizată de la echipa noastră.",
+    "step1": "Metodă de Producție",
+    "step2": "Aplicație / Sector",
+    "step3": "Proprietăți Dorite",
+    "m_injection": "Injecție",
+    "m_extrusion": "Extrudare",
+    "m_blow": "Suflare (Blow)",
+    "m_thermoform": "Termoformare",
+    "m_film": "Film / Placă",
+    "m_other": "Altele",
+    "sec_auto": "Automotive",
+    "sec_ee": "Electric-Electronic",
+    "sec_white": "Electrocasnice",
+    "sec_pack": "Ambalaje",
+    "sec_medical": "Medical",
+    "sec_construction": "Construcții",
+    "sec_other": "Altele",
+    "p_impact": "Impact Ridicat",
+    "p_heat": "Rezistență Termică",
+    "p_uv": "Rezistență UV",
+    "p_food": "Contact Alimentar",
+    "p_flame": "Retardant Flacără",
+    "p_transparent": "Transparență",
+    "p_chemical": "Rezistență Chimică",
+    "p_glassfiber": "Ranforsat Fibră de Sticlă",
+    "p_lowcost": "Economic",
+    "propHint": "Vă rugăm selectați cel puțin o proprietate.",
+    "showBtn": "Arată Produsele Potrivite",
+    "resultTitle": "Familii de Produse Sugerate",
+    "resultNote": "Aceste sugestii sunt doar pentru orientare. Pentru gradul exact potrivit aplicației dvs., echipa noastră de vânzări vă va oferi o recomandare personalizată.",
+    "leadTitle": "Primiți o recomandare personalizată de la echipa noastră",
+    "leadSubmit": "Solicitați Recomandare",
+    "success": "Solicitarea dvs. a fost primită. Echipa noastră de vânzări vă va contacta cu cel mai potrivit grad pe baza criteriilor dvs."
+  },
+  "support": {
+    "title": "Cum vă putem ajuta?",
+    "whatsapp": "WhatsApp",
+    "connectSales": "Contactați un Expert de Vânzări",
+    "prefill": "Bună ziua, aș dori informații despre produsele Buteo Petrochemicals."
+  },
+  "search": {
+    "placeholder": "Căutați cod produs sau material... (ex. ABS, LUPOY, PA6)",
+    "noResults": "Niciun rezultat găsit",
+    "title": "Găsiți Materialul de Care Aveți Nevoie",
+    "hint": "Căutați după codul produsului, mergeți direct la pagina relevantă."
+  },
   "tds": {
     "viewTds": "Accesează TDS",
     "request": "Solicitați TDS",
@@ -284,7 +335,12 @@
     "openTds": "Deschide TDS",
     "privacy": "Informațiile dvs. sunt folosite exclusiv pentru a răspunde solicitării.",
     "close": "Închide",
-    "errorMsg": "A apărut o problemă, vă rugăm încercați din nou."
+    "errorMsg": "A apărut o problemă, vă rugăm încercați din nou.",
+    "sampleRequest": "Solicitați Mostră",
+    "sampleTitle": "Solicitare Mostră",
+    "sampleBadge": "MOSTRĂ",
+    "sampleDesc": "Solicitați o mostră gratuită pentru acest produs. Echipa noastră de vânzări vă va contacta.",
+    "sampleSuccess": "Solicitarea dvs. de mostră a fost primită. Echipa noastră de vânzări vă va contacta în curând."
   },
   "lgchem": {
     "heroSubtitle": "Portofoliu de Produse",

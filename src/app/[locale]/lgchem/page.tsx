@@ -426,8 +426,9 @@ export default function LGChemPage() {
                         ))}
                       </div>
                     </div>
-                    <div className="pt-4 border-t border-gray-100">
+                    <div className="pt-4 border-t border-gray-100 flex flex-wrap gap-2">
                       <TdsGate resource={tdsForBrand(product.brand)} productName={product.brand} />
+                      <TdsGate resource={tdsForBrand(product.brand)} productName={product.brand} mode="sample" />
                     </div>
                   </div>
                 </div>

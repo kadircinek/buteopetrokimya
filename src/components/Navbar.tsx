@@ -41,6 +41,7 @@ export default function Navbar() {
     { href: `/${locale}/products`, label: t("products") },
     { href: `/${locale}/lgchem`, label: "LG Chem" },
     { href: `/${locale}/basechem`, label: "Basechem" },
+    { href: `/${locale}/finder`, label: t("finder") },
     { href: `/${locale}/sectors`, label: t("sectors") },
     { href: `/${locale}/contact`, label: t("contact") },
   ];

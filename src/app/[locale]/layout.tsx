@@ -5,6 +5,7 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { buildMetadata, SITE_URL, SITE_NAME, type Locale } from "@/lib/seo";
+import FloatingContact from "@/components/FloatingContact";
 import "../globals.css";
 
 type Props = {
@@ -104,6 +105,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <StructuredData locale={locale as Locale} />
         <NextIntlClientProvider messages={messages}>
           {children}
+          <FloatingContact />
         </NextIntlClientProvider>
         <Analytics />
       </body>
