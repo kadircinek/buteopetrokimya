@@ -11,7 +11,7 @@
  * Ortam değişkeni NEXT_PUBLIC_WEB3FORMS_KEY varsa o önceliklidir.
  */
 export const WEB3FORMS_ACCESS_KEY: string =
-  process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "";
+  process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "9044bc91-b884-4154-884d-8d3275d8eefa";
 
 export const LEAD_RECIPIENT = "info@buteopetrokimya.com";
 
