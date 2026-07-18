@@ -3,8 +3,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { useLocale } from "next-intl";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FileText } from "lucide-react";
 import { buildMetadata, type Locale } from "@/lib/seo";
+import { tdsForCode, type TdsResource } from "@/data/tds";
+import TdsGate from "@/components/TdsGate";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -58,6 +60,7 @@ export default function ProductsPage() {
   ];
 
   const additivesItems = t.raw("additivesItems") as string[];
+  const TDS_REQUEST: TdsResource = { kind: "request" };
 
   return (
     <>
@@ -92,10 +95,16 @@ export default function ProductsPage() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {polyolefins.map((p) => (
-                <div key={p.code} className="p-4 rounded-2xl border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all group cursor-pointer">
+                <TdsGate
+                  key={p.code}
+                  resource={tdsForCode(p.code)}
+                  productName={p.code}
+                  cellClassName="relative block w-full text-left p-4 rounded-2xl border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all group cursor-pointer"
+                >
+                  <FileText size={13} className="absolute top-3 right-3 text-gray-300 group-hover:text-green-600 transition-colors" />
                   <div className="text-xl font-bold mb-1 group-hover:text-green-700 transition-colors" style={{color: "#1B4332"}}>{p.code}</div>
                   <div className="text-xs text-gray-400 leading-tight">{p.name}</div>
-                </div>
+                </TdsGate>
               ))}
             </div>
           </div>
@@ -115,10 +124,17 @@ export default function ProductsPage() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {engineering.map((p) => (
-                <div key={p.code} className="p-6 rounded-2xl text-white group hover:-translate-y-1 transition-all cursor-pointer" style={{background: "linear-gradient(135deg, #1B4332, #2D6A4F)"}}>
+                <TdsGate
+                  key={p.code}
+                  resource={tdsForCode(p.code)}
+                  productName={p.code}
+                  cellClassName="relative block w-full text-left p-6 rounded-2xl text-white group hover:-translate-y-1 transition-all cursor-pointer"
+                  cellStyle={{background: "linear-gradient(135deg, #1B4332, #2D6A4F)"}}
+                >
+                  <FileText size={14} className="absolute top-4 right-4 text-white/40 group-hover:text-white transition-colors" />
                   <div className="text-2xl font-bold mb-2">{p.code}</div>
                   <div className="text-xs text-white/70">{p.name}</div>
-                </div>
+                </TdsGate>
               ))}
             </div>
           </div>
@@ -141,10 +157,15 @@ export default function ProductsPage() {
                 </div>
                 <div className="space-y-3">
                   {basechem.map((p) => (
-                    <div key={p.code} className="flex items-center justify-between p-4 rounded-xl border border-gray-100 hover:border-green-200 hover:bg-green-50 transition-all">
+                    <TdsGate
+                      key={p.code}
+                      resource={TDS_REQUEST}
+                      productName={`Basechem ${p.code}`}
+                      cellClassName="flex items-center justify-between w-full text-left p-4 rounded-xl border border-gray-100 hover:border-green-200 hover:bg-green-50 transition-all cursor-pointer"
+                    >
                       <span className="font-bold text-gray-900">{p.code}</span>
                       <span className="text-xs px-3 py-1 rounded-full font-medium" style={{backgroundColor: "#f0fdf4", color: "#1B4332"}}>{p.sub}</span>
-                    </div>
+                    </TdsGate>
                   ))}
                 </div>
               </div>
@@ -162,9 +183,15 @@ export default function ProductsPage() {
                 </div>
                 <div className="space-y-3">
                   {lgchem.map((p) => (
-                    <div key={p.code} className="flex items-center p-4 rounded-xl border border-gray-100 hover:border-red-100 hover:bg-red-50 transition-all">
+                    <TdsGate
+                      key={p.code}
+                      resource={tdsForCode(p.code)}
+                      productName={`LG Chem ${p.code}`}
+                      cellClassName="flex items-center justify-between w-full text-left p-4 rounded-xl border border-gray-100 hover:border-red-100 hover:bg-red-50 transition-all group cursor-pointer"
+                    >
                       <span className="font-bold text-gray-900">{p.code}</span>
-                    </div>
+                      <FileText size={14} className="text-gray-300 group-hover:text-red-500 transition-colors" />
+                    </TdsGate>
                   ))}
                 </div>
               </div>

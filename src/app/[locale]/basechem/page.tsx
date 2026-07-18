@@ -5,6 +5,10 @@ import Link from "next/link";
 import { useLocale } from "next-intl";
 import { ArrowRight, ExternalLink, Star } from "lucide-react";
 import { buildMetadata, type Locale } from "@/lib/seo";
+import TdsGate from "@/components/TdsGate";
+import type { TdsResource } from "@/data/tds";
+
+const TDS_REQUEST: TdsResource = { kind: "request" };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -417,7 +421,7 @@ export default function BasechemPage() {
                       </div>
                     </div>
 
-                    <div>
+                    <div className="mb-4">
                       <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">{t("appAreas")}</div>
                       <div className="flex flex-wrap gap-1.5">
                         {product.applications.map(a => (
@@ -426,6 +430,9 @@ export default function BasechemPage() {
                           </span>
                         ))}
                       </div>
+                    </div>
+                    <div className="pt-4 border-t border-gray-100">
+                      <TdsGate resource={TDS_REQUEST} productName={product.code} />
                     </div>
                   </div>
                 </div>
@@ -514,6 +521,9 @@ export default function BasechemPage() {
                       {product.applications.map(a => (
                         <span key={a} className="text-xs px-3 py-1 rounded-full bg-gray-100 text-gray-600 font-medium">{a}</span>
                       ))}
+                    </div>
+                    <div className="mt-4">
+                      <TdsGate resource={TDS_REQUEST} productName={product.code} />
                     </div>
                   </div>
                 </div>

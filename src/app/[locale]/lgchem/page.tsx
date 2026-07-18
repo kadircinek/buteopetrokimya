@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { ArrowRight, ExternalLink, Star } from "lucide-react";
 import { buildMetadata, type Locale } from "@/lib/seo";
+import TdsGate from "@/components/TdsGate";
+import { tdsForBrand, tdsForCode } from "@/data/tds";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -416,13 +418,16 @@ export default function LGChemPage() {
                         )}
                       </div>
                     </div>
-                    <div>
+                    <div className="mb-4">
                       <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">{t("appAreas")}</div>
                       <div className="flex flex-wrap gap-1.5">
                         {product.applications.map(a => (
                           <span key={a} className="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 font-medium">{a}</span>
                         ))}
                       </div>
+                    </div>
+                    <div className="pt-4 border-t border-gray-100">
+                      <TdsGate resource={tdsForBrand(product.brand)} productName={product.brand} />
                     </div>
                   </div>
                 </div>
@@ -443,11 +448,12 @@ export default function LGChemPage() {
                     </div>
                   </div>
                   <p className="text-xs text-gray-500 leading-relaxed mb-3">{product.desc}</p>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-1 mb-3">
                     {product.highlights.slice(0, 2).map(h => (
                       <span key={h} className="text-xs px-2 py-0.5 rounded-full font-medium" style={{backgroundColor: "#f0fdf4", color: "#1B4332"}}>{h}</span>
                     ))}
                   </div>
+                  <TdsGate resource={tdsForBrand(product.brand)} productName={product.brand} />
                 </div>
               ))}
             </div>
@@ -479,11 +485,12 @@ export default function LGChemPage() {
                       ))}
                     </div>
                     <div className="text-xs font-bold uppercase tracking-wider text-white/50 mb-2">{t("gradesLabel")}</div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-5">
                       {product.grades.map(g => (
                         <span key={g} className="text-xs font-mono px-2.5 py-1 rounded-lg bg-white/10 text-white/80">{g}</span>
                       ))}
                     </div>
+                    <TdsGate resource={tdsForBrand(product.brand)} productName={product.brand} variant="dark" />
                   </div>
                 </div>
               ))}
@@ -512,10 +519,13 @@ export default function LGChemPage() {
                         <div className="text-4xl font-black tracking-tight mb-1">{product.code}</div>
                         <div className="text-white/75 text-sm font-medium">{product.fullName}</div>
                       </div>
-                      <div className="flex flex-wrap gap-2">
-                        {product.highlights.map(h => (
-                          <span key={h} className="text-xs px-3 py-1 rounded-full font-medium bg-white/15 text-white/90">{h}</span>
-                        ))}
+                      <div className="flex flex-col items-start sm:items-end gap-2">
+                        <div className="flex flex-wrap gap-2">
+                          {product.highlights.map(h => (
+                            <span key={h} className="text-xs px-3 py-1 rounded-full font-medium bg-white/15 text-white/90">{h}</span>
+                          ))}
+                        </div>
+                        <TdsGate resource={tdsForCode(product.code)} productName={product.code} variant="dark" />
                       </div>
                     </div>
                     <p className="relative text-white/80 text-sm leading-relaxed mt-4 max-w-3xl">{product.desc}</p>

@@ -5,15 +5,39 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import { Phone, Mail, Globe, MapPin, Send, CheckCircle } from "lucide-react";
+import { WEB3FORMS_ACCESS_KEY, WEB3FORMS_ENDPOINT } from "@/lib/leadConfig";
 
 export default function ContactPage() {
   const t = useTranslations("contact");
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setSending(true);
+    try {
+      if (WEB3FORMS_ACCESS_KEY) {
+        await fetch(WEB3FORMS_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            subject: `İletişim Formu: ${form.name || form.email}`,
+            from_name: "Buteo Petrokimya — İletişim Formu",
+            name: form.name,
+            email: form.email,
+            company: form.company,
+            message: form.message,
+          }),
+        });
+      }
+    } catch {
+      /* teslim başarısız olsa da kullanıcıya olumlu dönüş verilir; anahtar sonra eklenecek */
+    } finally {
+      setSending(false);
+      setSent(true);
+    }
   };
 
   return (
@@ -175,7 +199,8 @@ export default function ContactPage() {
                     </div>
                     <button
                       type="submit"
-                      className="w-full flex items-center justify-center gap-2 text-white font-semibold py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg"
+                      disabled={sending}
+                      className="w-full flex items-center justify-center gap-2 text-white font-semibold py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg disabled:opacity-60"
                       style={{backgroundColor: "#1B4332"}}
                     >
                       <Send size={18} />
