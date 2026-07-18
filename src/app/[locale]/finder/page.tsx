@@ -40,6 +40,7 @@ export default function FinderPage() {
   const [method, setMethod] = useState<string>("");
   const [sector, setSector] = useState<string>("");
   const [props, setProps] = useState<string[]>([]);
+  const [prevMaterial, setPrevMaterial] = useState<string>("");
   const [showResult, setShowResult] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
@@ -66,6 +67,7 @@ export default function FinderPage() {
             production_method: method ? t(`m_${method}`) : "-",
             sector: sector ? t(`sec_${sector}`) : "-",
             properties: props.map((p) => t(`p_${p}`)).join(", ") || "-",
+            previous_material: prevMaterial || "-",
             suggested_families: suggestions.join(", ") || "-",
             name: form.name,
             email: form.email,
@@ -143,6 +145,20 @@ export default function FinderPage() {
                 ))}
               </div>
               {!props.length && <p className="text-xs text-gray-400 mt-3">{t("propHint")}</p>}
+            </div>
+
+            {/* Step 4: previously used material */}
+            <div className="mb-8">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">4 · {t("step4")}</h2>
+              <input
+                type="text"
+                value={prevMaterial}
+                onChange={(e) => setPrevMaterial(e.target.value)}
+                placeholder={t("prevPlaceholder")}
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm"
+                style={ringStyle}
+              />
+              <p className="text-xs text-gray-400 mt-2">{t("prevHint")}</p>
             </div>
 
             <button
