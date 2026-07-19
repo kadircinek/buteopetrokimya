@@ -4,7 +4,7 @@ import { useState, type CSSProperties } from "react";
 import { useTranslations } from "next-intl";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Wand2, CheckCircle2, Loader2, ArrowRight, FlaskConical } from "lucide-react";
+import { Wand2, CheckCircle2, Loader2, ArrowRight, FlaskConical, Search, ExternalLink } from "lucide-react";
 import { WEB3FORMS_ACCESS_KEY, WEB3FORMS_ENDPOINT } from "@/lib/leadConfig";
 
 const METHODS = ["injection", "extrusion", "blow", "thermoform", "film", "other"] as const;
@@ -41,6 +41,16 @@ export default function FinderPage() {
   const [sector, setSector] = useState<string>("");
   const [props, setProps] = useState<string[]>([]);
   const [prevMaterial, setPrevMaterial] = useState<string>("");
+  const [certs, setCerts] = useState<string[]>([]);
+  const [note, setNote] = useState<string>("");
+
+  const CERTS = ["RoHS", "REACH", "FDA", "UL-94"];
+  const toggleCert = (c: string) =>
+    setCerts((prev) => (prev.includes(c) ? prev.filter((x) => x !== c) : [...prev, c]));
+
+  // Herhangi bir malzemenin (sattığımız/satmadığımız) TDS'ini güvenilir veritabanlarında aratır.
+  const tdsSearchUrl = (mat: string) =>
+    `https://www.google.com/search?q=${encodeURIComponent(`${mat} technical data sheet TDS filetype:pdf`)}`;
   const [showResult, setShowResult] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
@@ -68,6 +78,8 @@ export default function FinderPage() {
             sector: sector ? t(`sec_${sector}`) : "-",
             properties: props.map((p) => t(`p_${p}`)).join(", ") || "-",
             previous_material: prevMaterial || "-",
+            certifications: certs.join(", ") || "-",
+            note: note || "-",
             suggested_families: suggestions.join(", ") || "-",
             name: form.name,
             email: form.email,
@@ -159,6 +171,43 @@ export default function FinderPage() {
                 style={ringStyle}
               />
               <p className="text-xs text-gray-400 mt-2">{t("prevHint")}</p>
+              {prevMaterial.trim().length > 1 && (
+                <div className="mt-3">
+                  <a
+                    href={tdsSearchUrl(prevMaterial)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full border transition-all hover:bg-green-50"
+                    style={{ borderColor: "#1B4332", color: "#1B4332" }}
+                  >
+                    <Search size={15} /> {t("tdsSearchBtn")} <ExternalLink size={13} />
+                  </a>
+                  <p className="text-xs text-gray-400 mt-2">{t("tdsSearchHint")}</p>
+                </div>
+              )}
+            </div>
+
+            {/* Step 5: certifications */}
+            <div className="mb-8">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">5 · {t("certTitle")}</h2>
+              <div className="flex flex-wrap gap-2.5">
+                {CERTS.map((c) => (
+                  <OptionBtn key={c} active={certs.includes(c)} onClick={() => toggleCert(c)} label={c} />
+                ))}
+              </div>
+            </div>
+
+            {/* Step 6: free note */}
+            <div className="mb-8">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">6 · {t("noteTitle")}</h2>
+              <textarea
+                rows={3}
+                value={note}
+                onChange={(e) => setNote(e.target.value)}
+                placeholder={t("notePlaceholder")}
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:border-transparent text-sm resize-none"
+                style={ringStyle}
+              />
             </div>
 
             <button
