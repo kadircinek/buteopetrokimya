@@ -110,7 +110,7 @@ export default function AboutPage() {
                 </div>
                 <div className="space-y-3 text-sm text-gray-600">
                   <div><span className="font-semibold text-gray-800">{t("companyLabel")}:</span> Buteo Petrokimya</div>
-                  <div><span className="font-semibold text-gray-800">{t("locationLabel")}:</span> İstanbul, Türkiye</div>
+                  <div><span className="font-semibold text-gray-800">{c("addressLabel")}:</span> {c("trAddress")}</div>
                   <div><span className="font-semibold text-gray-800">{t("warehousesLabel")}:</span> {t("warehousesValue")}</div>
                   <div><span className="font-semibold text-gray-800">{c("phone")}:</span> +90 542 189 43 40</div>
                   <div><span className="font-semibold text-gray-800">{t("webLabel")}:</span> www.buteopetrokimya.com</div>
@@ -128,8 +128,7 @@ export default function AboutPage() {
                 </div>
                 <div className="space-y-3 text-sm text-gray-600">
                   <div><span className="font-semibold text-gray-800">{t("companyLabel")}:</span> BUTEO PETROCHEMICALS ROMANIA S.R.L.</div>
-                  <div><span className="font-semibold text-gray-800">{t("addressLabel")}:</span> Bucureşti Sectorul 5, Strada MIHAIL KOGĂLNICEANU, Nr. 12, Clădirea C4, Camera 23</div>
-                  <div><span className="font-semibold text-gray-800">{t("cityLabel")}:</span> Bucureşti, România</div>
+                  <div><span className="font-semibold text-gray-800">{t("addressLabel")}:</span> {c("roAddress")}</div>
                 </div>
               </div>
             </div>

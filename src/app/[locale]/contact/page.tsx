@@ -105,6 +105,15 @@ export default function ContactPage() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded-xl flex items-center justify-center text-white flex-shrink-0 mt-0.5" style={{backgroundColor: "#1B4332"}}>
+                        <MapPin size={16} />
+                      </div>
+                      <div>
+                        <div className="text-xs text-gray-400">{t("addressLabel")}</div>
+                        <div className="font-medium text-gray-800 text-sm leading-relaxed">{t("trAddress")}</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
                       <div className="w-9 h-9 rounded-xl flex items-center justify-center text-white flex-shrink-0 mt-0.5" style={{backgroundColor: "#52B788"}}>
                         <MapPin size={16} />
                       </div>

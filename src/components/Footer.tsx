@@ -52,7 +52,7 @@ export default function Footer() {
                   <span className="text-[10px] font-bold uppercase tracking-widest text-green-400">{t("footer.hqOffice")}</span>
                 </div>
                 <div className="text-sm font-semibold text-white leading-snug">Buteo Petrokimya</div>
-                <div className="text-xs text-gray-400 mt-0.5">İstanbul, Türkiye</div>
+                <div className="text-xs text-gray-400 mt-1 leading-relaxed">{t("contact.trAddress")}</div>
               </div>
               <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
                 <div className="flex items-center gap-2 mb-1.5">
@@ -60,7 +60,7 @@ export default function Footer() {
                   <span className="text-[10px] font-bold uppercase tracking-widest text-green-400">{t("footer.europeOffice")}</span>
                 </div>
                 <div className="text-sm font-semibold text-white leading-snug">BUTEO PETROCHEMICALS ROMANIA S.R.L.</div>
-                <div className="text-xs text-gray-400 mt-0.5">Bucureşti, România</div>
+                <div className="text-xs text-gray-400 mt-1 leading-relaxed">{t("contact.roAddress")}</div>
               </div>
             </div>
           </div>
