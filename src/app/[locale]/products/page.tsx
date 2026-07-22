@@ -212,11 +212,24 @@ export default function ProductsPage() {
               </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {(t.raw("additivesItems") as string[]).map((item, i) => (
-                <div key={i} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all">
-                  <div className="font-bold text-gray-900">{item}</div>
-                </div>
-              ))}
+              {(t.raw("additivesItems") as string[]).map((item, i) => {
+                // Belirli katkı maddelerine ait grade'ler (indeks 0 = Darbe Dayanımı Arttırıcı)
+                const grades: Record<number, string[]> = { 0: ["Vistamaxx 6102", "Vistamaxx 6202"] };
+                return (
+                  <div key={i} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all">
+                    <div className="font-bold text-gray-900">{item}</div>
+                    {grades[i] && (
+                      <div className="mt-3 flex flex-wrap gap-1.5">
+                        {grades[i].map((g) => (
+                          <span key={g} className="text-xs font-medium px-2.5 py-1 rounded-full" style={{backgroundColor: "#f0fdf4", color: "#1B4332"}}>
+                            {g}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>

@@ -53,20 +53,20 @@ const SEO: Record<PageKey, Record<Locale, SeoEntry>> = {
     tr: {
       title: "Ürünler | Plastik Hammadde Çeşitleri — PP, PE, ABS, PC, PBT",
       description:
-        "Polipropilen (PP), polietilen (HDPE/LDPE), ABS, polikarbonat (PC), PBT, GPPS, HIPS ve mühendislik polimerleri dahil geniş plastik hammadde portföyümüzü keşfedin. Türkiye geneline hızlı tedarik.",
-      keywords: ["plastik hammadde çeşitleri", "polipropilen tedarik", "polietilen", "ABS hammadde", "polikarbonat", "PBT", "mühendislik polimerleri", "GPPS", "HIPS", "TPU", "EVA"],
+        "Polipropilen (PP), polietilen (HDPE/LDPE), ABS, polikarbonat (PC), PBT, GPPS, HIPS, mühendislik polimerleri ve katkı maddeleri (darbe dayanımı arttırıcı Vistamaxx 6102 / 6202, masterbatch) dahil geniş plastik hammadde portföyümüzü keşfedin. Türkiye geneline hızlı tedarik.",
+      keywords: ["plastik hammadde çeşitleri", "polipropilen tedarik", "polietilen", "ABS hammadde", "polikarbonat", "PBT", "mühendislik polimerleri", "GPPS", "HIPS", "TPU", "EVA", "darbe dayanımı arttırıcı", "Vistamaxx", "Vistamaxx 6102", "Vistamaxx 6202", "impact modifier"],
     },
     en: {
       title: "Products | Plastic Raw Materials — PP, PE, ABS, PC, PBT",
       description:
-        "Explore our wide portfolio of plastic raw materials including polypropylene (PP), polyethylene (HDPE/LDPE), ABS, polycarbonate (PC), PBT, GPPS, HIPS and engineering polymers. Fast supply across Turkey.",
-      keywords: ["plastic raw materials", "polypropylene supplier", "polyethylene", "ABS", "polycarbonate", "PBT", "engineering polymers", "GPPS", "HIPS"],
+        "Explore our wide portfolio of plastic raw materials including polypropylene (PP), polyethylene (HDPE/LDPE), ABS, polycarbonate (PC), PBT, GPPS, HIPS, engineering polymers and additives (impact modifier Vistamaxx 6102 / 6202, masterbatch). Fast supply across Turkey.",
+      keywords: ["plastic raw materials", "polypropylene supplier", "polyethylene", "ABS", "polycarbonate", "PBT", "engineering polymers", "GPPS", "HIPS", "impact modifier", "Vistamaxx", "Vistamaxx 6102", "Vistamaxx 6202"],
     },
     ro: {
       title: "Produse | Materii Prime Plastice — PP, PE, ABS, PC, PBT",
       description:
-        "Descoperiți portofoliul nostru larg de materii prime plastice: polipropilenă (PP), polietilenă (HDPE/LDPE), ABS, policarbonat (PC), PBT, GPPS, HIPS și polimeri tehnici. Aprovizionare rapidă.",
-      keywords: ["materii prime plastice", "polipropilenă", "polietilenă", "ABS", "policarbonat", "PBT", "polimeri tehnici"],
+        "Descoperiți portofoliul nostru larg de materii prime plastice: polipropilenă (PP), polietilenă (HDPE/LDPE), ABS, policarbonat (PC), PBT, GPPS, HIPS, polimeri tehnici și aditivi (modificator de impact Vistamaxx 6102 / 6202, masterbatch). Aprovizionare rapidă.",
+      keywords: ["materii prime plastice", "polipropilenă", "polietilenă", "ABS", "policarbonat", "PBT", "polimeri tehnici", "modificator de impact", "Vistamaxx", "Vistamaxx 6102", "Vistamaxx 6202"],
     },
   },
   lgchem: {
