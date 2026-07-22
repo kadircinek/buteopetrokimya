@@ -262,12 +262,12 @@ function getPoliolefinProducts(locale: string) {
 }
 
 const engineeringPlasticsMeta = [
-  { brand: "LUPOY",     base: "PC (Polycarbonate)",            color: "#1a3a5c", grades: ["LUPOY GN-1001P", "LUPOY GP-1000M", "LUPOY HF-1000M", "LUPOY FR-1000"], featured: true },
-  { brand: "LUPOX / LUMAX", base: "PBT (Polybutylene Terephthalate)", color: "#2D6A4F", grades: ["LUPOX GP-1000", "LUPOX HV-1010", "LUMAX HP-1030", "LUPOX FR-1005"], featured: true },
+  { brand: "LUPOY",     base: "PC (Polycarbonate)",            color: "#1a3a5c", grades: ["LUPOY GN2403FT", "LUPOY GN2503FT", "LUPOY GN3001EF", "LUPOY GN3101EF", "LUPOY GN8010F"], featured: true },
+  { brand: "LUPOX / LUMAX", base: "PBT (Polybutylene Terephthalate)", color: "#2D6A4F", grades: ["LUPOX EE2306F", "LUPOX GP1000K", "LUPOX GP1000KM", "LUPOX GP1000M", "LUPOX GP1000S"], featured: true },
   { brand: "LUPOL",     base: "PP (Polypropylene)",            color: "#40916C", grades: ["LUPOL GC-3000H", "LUPOL LF-3500", "LUPOL SF-3300"], featured: false },
   { brand: "LUPOS",     base: "Styrenics Compound",            color: "#52B788", grades: ["LUPOS SG-1000", "LUPOS HH-1010"], featured: false },
-  { brand: "LUMID / LUXY", base: "PA6 / PA66 (Polyamide)",    color: "#1B4332", grades: ["LUMID GP-1000F", "LUMID HP-1020G", "LUXY SE-1000", "LUMID FR-1030"], featured: true },
-  { brand: "LUMILOY",   base: "mPPO (Modified PPO/PPE)",       color: "#0d2b1a", grades: ["LUMILOY GN-1000", "LUMILOY FN-1010", "LUMILOY SX-1200"], featured: true },
+  { brand: "LUMID / LUXY", base: "PA6 / PA66 (Polyamide)",    color: "#1B4332", grades: ["LUMID GN2259AFL", "LUMID GN2301AF", "LUMID GP2259AFL", "LUMID HI5006A", "LUMID HI5063A"], featured: true },
+  { brand: "LUMILOY",   base: "mPPO (Modified PPO/PPE)",       color: "#0d2b1a", grades: ["LUMILOY FB2106F", "LUMILOY GN1106FJ", "LUMILOY GN1301FH", "LUMILOY GN1301FJ", "LUMILOY GN2101F"], featured: true },
   { brand: "LUMIPLAS",  base: "PC-based Light Diffusion",      color: "#2D6A4F", grades: ["LUMIPLAS LD-1000", "LUMIPLAS OP-1010"], featured: false },
   { brand: "LUCEL",     base: "POM (Polyoxymethylene)",        color: "#40916C", grades: ["LUCEL MH-2000", "LUCEL GF-2020", "LUCEL LF-2010"], featured: false },
   { brand: "LUCON",     base: "Conductive Engineering Plastic",color: "#1B4332", grades: ["LUCON CR-1000", "LUCON EM-1020"], featured: false },
