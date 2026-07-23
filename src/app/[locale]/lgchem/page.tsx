@@ -264,19 +264,19 @@ function getPoliolefinProducts(locale: string) {
 const engineeringPlasticsMeta = [
   { brand: "LUPOY",     base: "PC (Polycarbonate)",            color: "#1a3a5c", grades: ["LUPOY GN2403FT", "LUPOY GN2503FT", "LUPOY GN3001EF", "LUPOY GN3101EF", "LUPOY GN8010F"], featured: true },
   { brand: "LUPOX / LUMAX", base: "PBT (Polybutylene Terephthalate)", color: "#2D6A4F", grades: ["LUPOX EE2306F", "LUPOX GP1000K", "LUPOX GP1000KM", "LUPOX GP1000M", "LUPOX GP1000S"], featured: true },
-  { brand: "LUPOL",     base: "PP (Polypropylene)",            color: "#40916C", grades: ["LUPOL GC-3000H", "LUPOL LF-3500", "LUPOL SF-3300"], featured: false },
-  { brand: "LUPOS",     base: "Styrenics Compound",            color: "#52B788", grades: ["LUPOS SG-1000", "LUPOS HH-1010"], featured: false },
+  { brand: "LUPOL",     base: "PP (Polypropylene)",            color: "#40916C", grades: ["LUPOL ED1045D", "LUPOL ED1045DA", "LUPOL EI5002", "LUPOL EI5002L", "LUPOL GN2300F"], featured: false },
+  { brand: "LUPOS",     base: "Styrenics Compound",            color: "#52B788", grades: ["LUPOS GP2080H", "LUPOS GP2100", "LUPOS GP2106F", "LUPOS GP2200", "LUPOS GP2200G"], featured: false },
   { brand: "LUMID / LUXY", base: "PA6 / PA66 (Polyamide)",    color: "#1B4332", grades: ["LUMID GN2259AFL", "LUMID GN2301AF", "LUMID GP2259AFL", "LUMID HI5006A", "LUMID HI5063A"], featured: true },
   { brand: "LUMILOY",   base: "mPPO (Modified PPO/PPE)",       color: "#0d2b1a", grades: ["LUMILOY FB2106F", "LUMILOY GN1106FJ", "LUMILOY GN1301FH", "LUMILOY GN1301FJ", "LUMILOY GN2101F"], featured: true },
-  { brand: "LUMIPLAS",  base: "PC-based Light Diffusion",      color: "#2D6A4F", grades: ["LUMIPLAS LD-1000", "LUMIPLAS OP-1010"], featured: false },
-  { brand: "LUCEL",     base: "POM (Polyoxymethylene)",        color: "#40916C", grades: ["LUCEL MH-2000", "LUCEL GF-2020", "LUCEL LF-2010"], featured: false },
-  { brand: "LUCON",     base: "Conductive Engineering Plastic",color: "#1B4332", grades: ["LUCON CR-1000", "LUCON EM-1020"], featured: false },
-  { brand: "LUSEP",     base: "PPS / SPS Compound",            color: "#0d2b1a", grades: ["LUSEP SG-2000", "LUSEP GF-2030"], featured: false },
+  { brand: "LUMIPLAS",  base: "PC-based Light Diffusion",      color: "#2D6A4F", grades: ["LUMIPLAS LD7000FB", "LUMIPLAS LD7000FH", "LUMIPLAS LD7550", "LUMIPLAS LD7550I", "LUMIPLAS LD7600"], featured: false },
+  { brand: "LUCEL",     base: "POM (Polyoxymethylene)",        color: "#40916C", grades: ["LUCEL N109LD", "LUCEL GC225"], featured: false },
+  { brand: "LUCON",     base: "Conductive Engineering Plastic",color: "#1B4332", grades: ["LUCON CP6010EM", "LUCON CP6062", "LUCON PA6110EM", "LUCON PA6132EM", "LUCON PN9025"], featured: false },
+  { brand: "LUSEP",     base: "PPS / SPS Compound",            color: "#0d2b1a", grades: ["LUSEP GP2400", "LUSEP GP2400CD", "LUSEP GP2400E", "LUSEP GP2500", "LUSEP GP4600"], featured: false },
 ];
 
 const elastomersMeta = [
-  { brand: "KEYFLEX BT", base: "TPE / Thermoplastic Elastomer",    grades: ["KEYFLEX BT 990A", "KEYFLEX BT 101A", "KEYFLEX BT 701A"], featured: true },
-  { brand: "KEYFLEX TO", base: "TPO / Thermoplastic Polyolefin",   grades: ["KEYFLEX TO 300D", "KEYFLEX TO 500D"], featured: false },
+  { brand: "KEYFLEX BT", base: "TPC-ET / Thermoplastic Elastomer",  grades: ["KEYFLEX BT1028D", "KEYFLEX BT1030D", "KEYFLEX BT1033D", "KEYFLEX BT1035D", "KEYFLEX BT1040D"], featured: true },
+  { brand: "KEYFLEX TO", base: "TPO / Thermoplastic Polyolefin",   grades: [], featured: false },
 ];
 
 const poliolefinCodes = ["ABS", "PC", "ASA", "PP"];
@@ -454,6 +454,16 @@ export default function LGChemPage() {
                       <span key={h} className="text-xs px-2 py-0.5 rounded-full font-medium" style={{backgroundColor: "#f0fdf4", color: "#1B4332"}}>{h}</span>
                     ))}
                   </div>
+                  {product.grades.length > 0 && (
+                    <div className="mb-3">
+                      <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">{t("sampleGrades")}</div>
+                      <div className="flex flex-wrap gap-1">
+                        {product.grades.map(g => (
+                          <span key={g} className="text-[11px] font-mono px-2 py-0.5 rounded bg-gray-50 border border-gray-100 text-gray-600">{g}</span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                   <TdsGate resource={tdsForBrand(product.brand)} productName={product.brand} />
                 </div>
               ))}
@@ -485,12 +495,16 @@ export default function LGChemPage() {
                         <span key={h} className="text-xs px-2.5 py-1 rounded-full font-medium bg-white/15 text-white/90">{h}</span>
                       ))}
                     </div>
-                    <div className="text-xs font-bold uppercase tracking-wider text-white/50 mb-2">{t("gradesLabel")}</div>
-                    <div className="flex flex-wrap gap-2 mb-5">
-                      {product.grades.map(g => (
-                        <span key={g} className="text-xs font-mono px-2.5 py-1 rounded-lg bg-white/10 text-white/80">{g}</span>
-                      ))}
-                    </div>
+                    {product.grades.length > 0 && (
+                      <>
+                        <div className="text-xs font-bold uppercase tracking-wider text-white/50 mb-2">{t("gradesLabel")}</div>
+                        <div className="flex flex-wrap gap-2 mb-5">
+                          {product.grades.map(g => (
+                            <span key={g} className="text-xs font-mono px-2.5 py-1 rounded-lg bg-white/10 text-white/80">{g}</span>
+                          ))}
+                        </div>
+                      </>
+                    )}
                     <TdsGate resource={tdsForBrand(product.brand)} productName={product.brand} variant="dark" />
                   </div>
                 </div>
