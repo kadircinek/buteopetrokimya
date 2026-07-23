@@ -71,22 +71,22 @@ const SEO: Record<PageKey, Record<Locale, SeoEntry>> = {
   },
   lgchem: {
     tr: {
-      title: "LG Chem Ürünleri | LUPOY, LUPOX, LUMID — Türkiye Distribütörü",
+      title: "LG Chem Ürünleri | LUPOY LUPOX LUMID LUMILOY LUSEP — Türkiye",
       description:
-        "LG Chem mühendislik plastikleri ve petrokimya ürünlerinin Türkiye distribütörü Buteo Petrokimya. LUPOY (PC), LUPOX (PBT), LUMID (PA), KEYFLEX (TPE) ve daha fazlası için teklif alın.",
-      keywords: ["LG Chem distribütörü", "LG Chem Türkiye", "LUPOY", "LUPOX", "LUMID", "KEYFLEX", "PC compound", "LG Chem mühendislik plastiği"],
+        "LG Chem mühendislik plastikleri Türkiye distribütörü Buteo Petrokimya. LUPOY (PC), LUPOX (PBT), LUMID (PA6/PA66), LUMILOY (mPPE), LUSEP (PPS), LUCON (iletken), LUMIPLAS, LUCEL (POM), LUPOL (PP), LUPOS ve KEYFLEX BT (TPE) — gerçek grade'ler ve TDS için teklif alın.",
+      keywords: ["LG Chem distribütörü", "LG Chem Türkiye", "LUPOY", "LUPOX", "LUMID", "LUMILOY", "LUSEP", "LUCON", "LUMIPLAS", "LUCEL", "LUPOL", "LUPOS", "KEYFLEX BT", "PC compound", "PBT compound", "mPPE", "PPS compound", "POM", "LG Chem mühendislik plastiği grade"],
     },
     en: {
-      title: "LG Chem Products | LUPOY, LUPOX, LUMID — Turkey Distributor",
+      title: "LG Chem Products | LUPOY LUPOX LUMID LUMILOY LUSEP — Turkey",
       description:
-        "Buteo Petrochemicals, the Turkey distributor of LG Chem engineering plastics and petrochemicals. Request a quote for LUPOY (PC), LUPOX (PBT), LUMID (PA), KEYFLEX (TPE) and more.",
-      keywords: ["LG Chem distributor", "LG Chem Turkey", "LUPOY", "LUPOX", "LUMID", "KEYFLEX", "PC compound", "LG Chem engineering plastics"],
+        "Buteo Petrochemicals, the Turkey distributor of LG Chem engineering plastics. LUPOY (PC), LUPOX (PBT), LUMID (PA6/PA66), LUMILOY (mPPE), LUSEP (PPS), LUCON (conductive), LUMIPLAS, LUCEL (POM), LUPOL (PP), LUPOS and KEYFLEX BT (TPE) — request real grades and TDS.",
+      keywords: ["LG Chem distributor", "LG Chem Turkey", "LUPOY", "LUPOX", "LUMID", "LUMILOY", "LUSEP", "LUCON", "LUMIPLAS", "LUCEL", "LUPOL", "LUPOS", "KEYFLEX BT", "PC compound", "PBT compound", "mPPE", "PPS compound", "POM", "LG Chem grade"],
     },
     ro: {
-      title: "Produse LG Chem | LUPOY, LUPOX, LUMID — Distribuitor Turcia",
+      title: "Produse LG Chem | LUPOY LUPOX LUMID LUMILOY LUSEP — Turcia",
       description:
-        "Buteo Petrochemicals, distribuitorul din Turcia al plasticelor tehnice și produselor petrochimice LG Chem. Solicitați ofertă pentru LUPOY (PC), LUPOX (PBT), LUMID (PA), KEYFLEX (TPE).",
-      keywords: ["distribuitor LG Chem", "LG Chem Turcia", "LUPOY", "LUPOX", "LUMID", "KEYFLEX", "compound PC"],
+        "Buteo Petrochemicals, distribuitorul din Turcia al plasticelor tehnice LG Chem. LUPOY (PC), LUPOX (PBT), LUMID (PA6/PA66), LUMILOY (mPPE), LUSEP (PPS), LUCON (conductiv), LUMIPLAS, LUCEL (POM), LUPOL (PP), LUPOS și KEYFLEX BT (TPE) — solicitați grade reale și TDS.",
+      keywords: ["distribuitor LG Chem", "LG Chem Turcia", "LUPOY", "LUPOX", "LUMID", "LUMILOY", "LUSEP", "LUCON", "LUMIPLAS", "LUCEL", "LUPOL", "LUPOS", "KEYFLEX BT", "compound PC", "compound PBT", "mPPE", "POM"],
     },
   },
   basechem: {
