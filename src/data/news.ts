@@ -32,9 +32,9 @@ export const NEWS: NewsItem[] = [
       ro: "Ne Vedem la Plast Eurasia Istanbul 2026",
     },
     desc: {
-      tr: "Buteo Petrokimya, 2–5 Aralık 2026 tarihlerinde Tüyap Fuar ve Kongre Merkezi'nde düzenlenecek Plast Eurasia İstanbul fuarında katılımcı olarak yer alacak. Standımızda LG Chem ve Basechem ürün portföyümüzü ve mühendislik plastiği çözümlerimizi keşfedin. (Salon ve stant no bilgisi yakında paylaşılacaktır.)",
-      en: "Buteo Petrochemicals will exhibit at Plast Eurasia Istanbul, held on 2–5 December 2026 at the Tüyap Fair and Congress Center. Discover our LG Chem and Basechem product portfolio and engineering plastics solutions at our booth. (Hall and booth number to be announced soon.)",
-      ro: "Buteo Petrochemicals va participa la Plast Eurasia Istanbul, în perioada 2–5 Decembrie 2026, la Centrul Expozițional Tüyap. Descoperiți portofoliul nostru LG Chem și Basechem și soluțiile de plastice tehnice la standul nostru. (Sala și numărul standului vor fi anunțate în curând.)",
+      tr: "Buteo Petrokimya, 2–5 Aralık 2026 tarihlerinde Tüyap Fuar ve Kongre Merkezi'nde düzenlenecek Plast Eurasia İstanbul fuarında katılımcı olarak yer alacak. Salon 1, Stand 114B'deki standımızda LG Chem ve Basechem ürün portföyümüzü ve mühendislik plastiği çözümlerimizi keşfedin.",
+      en: "Buteo Petrochemicals will exhibit at Plast Eurasia Istanbul, held on 2–5 December 2026 at the Tüyap Fair and Congress Center. Discover our LG Chem and Basechem product portfolio and engineering plastics solutions at our booth — Hall 1, Stand 114B.",
+      ro: "Buteo Petrochemicals va participa la Plast Eurasia Istanbul, în perioada 2–5 Decembrie 2026, la Centrul Expozițional Tüyap. Descoperiți portofoliul nostru LG Chem și Basechem și soluțiile de plastice tehnice la standul nostru — Sala 1, Stand 114B.",
     },
   },
   {
