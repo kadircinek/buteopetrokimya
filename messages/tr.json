@@ -309,6 +309,12 @@
     "leadSubmit": "Öneri Talep Et",
     "success": "Talebiniz alındı. Satış ekibimiz seçtiğiniz kriterlere göre size en uygun grade önerisiyle dönecek."
   },
+  "news": {
+    "badge": "Haberler",
+    "title": "Güncel",
+    "titleHighlight": "Haberler & Duyurular",
+    "subtitle": "Fuarlar, ürün gelişmeleri ve şirket haberlerimiz"
+  },
   "support": {
     "title": "Size nasıl yardımcı olabiliriz?",
     "whatsapp": "WhatsApp",

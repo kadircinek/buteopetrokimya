@@ -309,6 +309,12 @@
     "leadSubmit": "Solicitați Recomandare",
     "success": "Solicitarea dvs. a fost primită. Echipa noastră de vânzări vă va contacta cu cel mai potrivit grad pe baza criteriilor dvs."
   },
+  "news": {
+    "badge": "Noutăți",
+    "title": "Ultimele",
+    "titleHighlight": "Noutăți & Anunțuri",
+    "subtitle": "Târguri, actualizări de produse și noutăți despre companie"
+  },
   "support": {
     "title": "Cum vă putem ajuta?",
     "whatsapp": "WhatsApp",

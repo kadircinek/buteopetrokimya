@@ -5,6 +5,7 @@ import { useLocale } from "next-intl";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductSearch from "@/components/ProductSearch";
+import NewsSection from "@/components/NewsSection";
 import { buildMetadata, type Locale } from "@/lib/seo";
 import {
   ArrowRight,
@@ -755,6 +756,7 @@ export default function HomePage() {
         <HeroSection />
         <ProductSearch />
         <AboutSection />
+        <NewsSection />
         <GlobalPresence />
         <LGChemBanner />
         <BasechemBanner />

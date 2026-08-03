@@ -309,6 +309,12 @@
     "leadSubmit": "Request Recommendation",
     "success": "Your request was received. Our sales team will get back to you with the most suitable grade based on your criteria."
   },
+  "news": {
+    "badge": "News",
+    "title": "Latest",
+    "titleHighlight": "News & Announcements",
+    "subtitle": "Trade fairs, product updates and company news"
+  },
   "support": {
     "title": "How can we help you?",
     "whatsapp": "WhatsApp",
