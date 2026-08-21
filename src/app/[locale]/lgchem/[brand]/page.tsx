@@ -26,7 +26,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!data) return {};
 
   const path = `/lgchem/${brand}`;
-  const gradeList = data.grades.join(", ");
+  // Açıklama 160 karakteri aşmasın diye en fazla 3 grade örneği gösterilir.
+  const shown = data.grades.slice(0, 3);
+  const more: Record<string, string> = { tr: " ve daha fazlası", en: " and more", ro: " și altele" };
+  const gradeList = shown.join(", ") + (data.grades.length > shown.length ? (more[locale] || more.tr) : "");
 
   const titles: Record<string, string> = {
     tr: `${data.brand} ${data.base} | Türkiye Distribütörü — Buteo`,
@@ -34,11 +37,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ro: `${data.brand} ${data.base} | Distribuitor Turcia — Buteo`,
   };
 
-  const descs: Record<string, string> = {
-    tr: `${data.brand} (${data.base}) Türkiye distribütörü Buteo Petrokimya.${data.grades.length ? ` Grade'ler: ${gradeList}.` : ""} TDS ve fiyat teklifi için hemen ulaşın.`,
-    en: `${data.brand} (${data.base}) Turkey distributor Buteo Petrochemicals.${data.grades.length ? ` Grades: ${gradeList}.` : ""} Request TDS and pricing today.`,
-    ro: `Distribuitor Turcia ${data.brand} (${data.base}) — Buteo Petrochemicals.${data.grades.length ? ` Grade: ${gradeList}.` : ""} Solicitați TDS și preț.`,
+  // Gövde + CTA ayrı: CTA yalnızca 158 karaktere sığıyorsa eklenir (yarım cümle kalmasın).
+  const bodies: Record<string, string> = {
+    tr: `${data.brand} ${data.base} Türkiye distribütörü Buteo Petrokimya.${data.grades.length ? ` Grade'ler: ${gradeList}.` : ""}`,
+    en: `${data.brand} ${data.base} Turkey distributor Buteo Petrochemicals.${data.grades.length ? ` Grades: ${gradeList}.` : ""}`,
+    ro: `Distribuitor Turcia ${data.brand} ${data.base} — Buteo Petrochemicals.${data.grades.length ? ` Grade: ${gradeList}.` : ""}`,
   };
+  const ctas: Record<string, string> = {
+    tr: " TDS ve fiyat teklifi için ulaşın.",
+    en: " Request TDS and pricing.",
+    ro: " Solicitați TDS și preț.",
+  };
+  const body = bodies[locale] || bodies.tr;
+  const cta = ctas[locale] || ctas.tr;
+  const description = body.length + cta.length <= 158 ? body + cta : body;
 
   const keywords = [
     data.brand,
@@ -51,9 +63,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     "LG Chem",
   ];
 
+  // Kelime ortasından kesmemek için son boşluktan kırp.
+  const clamp = (s: string, max = 158) => {
+    if (s.length <= max) return s;
+    const cut = s.slice(0, max);
+    return cut.slice(0, cut.lastIndexOf(" ")).replace(/[.,;:]$/, "") + "…";
+  };
+
   return {
     title: titles[locale] || titles.tr,
-    description: (descs[locale] || descs.tr).slice(0, 165),
+    description: clamp(description),
     keywords,
     alternates: {
       canonical: `${SITE_URL}/${locale}${path}`,
@@ -69,7 +88,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: SITE_NAME,
       url: `${SITE_URL}/${locale}${path}`,
       title: titles[locale] || titles.tr,
-      description: (descs[locale] || descs.tr).slice(0, 165),
+      description: clamp(description),
     },
   };
 }
