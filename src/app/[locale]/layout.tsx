@@ -78,6 +78,47 @@ function StructuredData({ locale }: { locale: Locale }) {
       publisher: { "@id": `${SITE_URL}/#organization` },
       inLanguage: locale,
     },
+    // Yerel arama (Google Haritalar / "plastik hammadde İstanbul") için iki ofis
+    {
+      "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#office-istanbul`,
+      name: "Buteo Petrokimya — İstanbul",
+      parentOrganization: { "@id": `${SITE_URL}/#organization` },
+      url: SITE_URL,
+      image: `${SITE_URL}/logo.png`,
+      telephone: "+90-542-189-43-40",
+      email: "info@buteopetrokimya.com",
+      priceRange: "$$",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Küçükbakkalköy Mah., Ali Ay Sk. No:19",
+        addressLocality: "Ataşehir",
+        addressRegion: "İstanbul",
+        postalCode: "34750",
+        addressCountry: "TR",
+      },
+      areaServed: { "@type": "Country", name: "Türkiye" },
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#office-bucharest`,
+      name: "BUTEO PETROCHEMICALS ROMANIA S.R.L.",
+      parentOrganization: { "@id": `${SITE_URL}/#organization` },
+      url: SITE_URL,
+      image: `${SITE_URL}/logo.png`,
+      telephone: "+90-542-189-43-40",
+      email: "info@buteopetrokimya.com",
+      priceRange: "$$",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Strada Mihail Kogălniceanu Nr. 12, Clădirea C4, Camera 23, Etaj parter",
+        addressLocality: "Bucureşti",
+        addressRegion: "Sectorul 5",
+        postalCode: "030167",
+        addressCountry: "RO",
+      },
+      areaServed: { "@type": "Place", name: "Europe" },
+    },
   ];
 
   const jsonLd = { "@context": "https://schema.org", "@graph": graph };

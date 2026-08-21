@@ -80,7 +80,12 @@
     "group3": "Katkılar & Masterbatch",
     "viewAll": "Tüm Ürünleri Gör",
     "requestInfo": "Bilgi İste",
-    "additivesItems": ["Darbe Dayanımı Arttırıcı", "UV Masterbatch", "Bağlayıcı", "Çöküntü Giderici"],
+    "additivesItems": [
+      "Darbe Dayanımı Arttırıcı",
+      "UV Masterbatch",
+      "Bağlayıcı",
+      "Çöküntü Giderici"
+    ],
     "pageTitle": "Ürünlerimiz",
     "pageDesc": "Plastik hammadde sektöründe geniş ürün yelpazemizle müşterilerimizin ihtiyaçlarına çözüm sunuyoruz.",
     "polyolefins": "Poliolefin & Elastomerik Ürünler",
@@ -309,6 +314,25 @@
     "leadSubmit": "Öneri Talep Et",
     "success": "Talebiniz alındı. Satış ekibimiz seçtiğiniz kriterlere göre size en uygun grade önerisiyle dönecek."
   },
+  "brand": {
+    "home": "Ana Sayfa",
+    "lgchem": "LG Chem",
+    "distributorBadge": "Türkiye Distribütörü",
+    "gradesTitle": "Mevcut Grade'ler",
+    "gradesDesc": "Aşağıdaki grade'ler için teknik veri sayfası (TDS) ve fiyat teklifi talep edebilirsiniz.",
+    "gradeCount": "grade",
+    "noGrades": "Bu ürün ailesi için grade bilgisi talep üzerine paylaşılmaktadır.",
+    "highlightsTitle": "Öne Çıkan Özellikler",
+    "appsTitle": "Uygulama Alanları",
+    "aboutTitle": "Ürün Hakkında",
+    "otherBrandsTitle": "Diğer LG Chem Ürün Aileleri",
+    "backToAll": "Tüm LG Chem Ürünleri",
+    "ctaTitle": "için Teklif Alın",
+    "ctaDesc": "Grade seçimi, teknik veri sayfası ve fiyat teklifi için satış ekibimizle iletişime geçin.",
+    "ctaBtn": "Teklif İste",
+    "supplyTitle": "Türkiye ve Avrupa'da Tedarik",
+    "supplyDesc": "Buteo Petrokimya olarak İstanbul'daki iki depomuz ve Bükreş Avrupa ofisimizle bu ürün ailesini Türkiye ve Avrupa geneline tedarik ediyoruz. İstanbul il sınırları içinde aynı gün sevkiyat imkânı sunuyoruz."
+  },
   "news": {
     "badge": "Haberler",
     "title": "Güncel",
@@ -392,7 +416,8 @@
     "why4Desc": "Hyundai, GM, Tesla, Samsung, LG gibi global devlerle stratejik iş birlikleri.",
     "ctaTitle": "LG Chem Ürünleri İçin Teklif Alın",
     "ctaDesc": "Mühendislik plastikleri, petrokim ürünleri veya katkı maddeleri için fiyat teklifi ve teknik datasheet talep edin.",
-    "ctaCta": "Teklif İste"
+    "ctaCta": "Teklif İste",
+    "detailsBtn": "Detaylar"
   },
   "basechem": {
     "heroDistributorBadge": "Türkiye Distribütörü",
@@ -438,5 +463,10 @@
     "ctaTitle": "Basechem Ürünleri İçin Teklif Alın",
     "ctaDesc": "ABS, PC, PBT, PC/ABS, PPO/PPE veya PA ürünleri için fiyat teklifi ve teknik datasheet talep edin.",
     "ctaBtn": "Teklif İste"
+  },
+  "faq": {
+    "badge": "SSS",
+    "title": "Sıkça Sorulan Sorular",
+    "subtitle": "Ürünler, TDS, numune ve teslimat hakkında merak edilenler"
   }
 }

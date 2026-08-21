@@ -80,7 +80,12 @@
     "group3": "Aditivi & Masterbatch",
     "viewAll": "Vezi Toate Produsele",
     "requestInfo": "Solicită Informații",
-    "additivesItems": ["Modificator de Impact", "UV Masterbatch", "Agent de Cuplare", "Eliminator Tasare"],
+    "additivesItems": [
+      "Modificator de Impact",
+      "UV Masterbatch",
+      "Agent de Cuplare",
+      "Eliminator Tasare"
+    ],
     "pageTitle": "Produsele Noastre",
     "pageDesc": "Oferim soluții pentru nevoile clienților noștri cu o gamă largă de produse în sectorul materiilor prime din plastic.",
     "polyolefins": "Produse Poliolefinice & Elastomerice",
@@ -309,6 +314,25 @@
     "leadSubmit": "Solicitați Recomandare",
     "success": "Solicitarea dvs. a fost primită. Echipa noastră de vânzări vă va contacta cu cel mai potrivit grad pe baza criteriilor dvs."
   },
+  "brand": {
+    "home": "Acasă",
+    "lgchem": "LG Chem",
+    "distributorBadge": "Distribuitor Turcia",
+    "gradesTitle": "Grade Disponibile",
+    "gradesDesc": "Puteți solicita fișa tehnică (TDS) și ofertă de preț pentru gradele de mai jos.",
+    "gradeCount": "grade",
+    "noGrades": "Informațiile despre grade pentru această familie de produse se transmit la cerere.",
+    "highlightsTitle": "Proprietăți Cheie",
+    "appsTitle": "Domenii de Aplicație",
+    "aboutTitle": "Despre Produs",
+    "otherBrandsTitle": "Alte Familii de Produse LG Chem",
+    "backToAll": "Toate Produsele LG Chem",
+    "ctaTitle": "— Solicitați Ofertă",
+    "ctaDesc": "Contactați echipa noastră de vânzări pentru selecția gradului, fișe tehnice și prețuri.",
+    "ctaBtn": "Solicitați Ofertă",
+    "supplyTitle": "Aprovizionare în Turcia și Europa",
+    "supplyDesc": "Ca Buteo Petrochemicals, furnizăm această familie de produse în Turcia și Europa prin cele două depozite din Istanbul și biroul nostru din București. Expediere în aceeași zi în limitele orașului Istanbul."
+  },
   "news": {
     "badge": "Noutăți",
     "title": "Ultimele",
@@ -392,7 +416,8 @@
     "why4Desc": "Parteneriate strategice cu giganți globali precum Hyundai, GM, Tesla, Samsung și LG.",
     "ctaTitle": "Obțineți o Ofertă pentru Produsele LG Chem",
     "ctaDesc": "Solicitați o ofertă de preț și fișă tehnică pentru materiale plastice tehnice, produse petrochimice sau aditivi.",
-    "ctaCta": "Solicitați Ofertă"
+    "ctaCta": "Solicitați Ofertă",
+    "detailsBtn": "Detalii"
   },
   "basechem": {
     "heroDistributorBadge": "Distribuitor Turcia",
@@ -438,5 +463,10 @@
     "ctaTitle": "Obțineți o Ofertă pentru Produsele Basechem",
     "ctaDesc": "Solicitați o ofertă de preț și fișă tehnică pentru produse ABS, PC, PBT, PC/ABS, PPO/PPE sau PA.",
     "ctaBtn": "Solicită Ofertă"
+  },
+  "faq": {
+    "badge": "Întrebări",
+    "title": "Întrebări Frecvente",
+    "subtitle": "Întrebări despre produse, TDS, mostre și livrare"
   }
 }

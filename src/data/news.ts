@@ -13,6 +13,15 @@ export type NewsItem = {
   title: Record<Locale, string>;
   desc: Record<Locale, string>;
   featured?: boolean;
+  /** Fuar/etkinlik haberleri için — schema.org Event verisi üretilir. */
+  event?: {
+    startDate: string; // ISO
+    endDate: string;   // ISO
+    venue: string;
+    city: string;
+    country: string;
+    url?: string;
+  };
 };
 
 export const NEWS: NewsItem[] = [
@@ -20,6 +29,13 @@ export const NEWS: NewsItem[] = [
     id: "plast-eurasia-2026",
     date: "2026-12-02",
     featured: true,
+    event: {
+      startDate: "2026-12-02",
+      endDate: "2026-12-05",
+      venue: "Tüyap Fuar ve Kongre Merkezi",
+      city: "İstanbul",
+      country: "TR",
+    },
     dateLabel: {
       tr: "2–5 Aralık 2026",
       en: "2–5 December 2026",

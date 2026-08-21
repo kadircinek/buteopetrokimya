@@ -80,7 +80,12 @@
     "group3": "Additives & Masterbatch",
     "viewAll": "View All Products",
     "requestInfo": "Request Info",
-    "additivesItems": ["Impact Modifier", "UV Masterbatch", "Coupling Agent", "Sink Mark Eliminator"],
+    "additivesItems": [
+      "Impact Modifier",
+      "UV Masterbatch",
+      "Coupling Agent",
+      "Sink Mark Eliminator"
+    ],
     "pageTitle": "Our Products",
     "pageDesc": "We provide solutions for our customers' needs with a wide product range in the plastic raw materials sector.",
     "polyolefins": "Polyolefins & Elastomeric Products",
@@ -309,6 +314,25 @@
     "leadSubmit": "Request Recommendation",
     "success": "Your request was received. Our sales team will get back to you with the most suitable grade based on your criteria."
   },
+  "brand": {
+    "home": "Home",
+    "lgchem": "LG Chem",
+    "distributorBadge": "Turkey Distributor",
+    "gradesTitle": "Available Grades",
+    "gradesDesc": "You can request a technical data sheet (TDS) and price quote for the grades below.",
+    "gradeCount": "grades",
+    "noGrades": "Grade information for this product family is shared on request.",
+    "highlightsTitle": "Key Properties",
+    "appsTitle": "Application Areas",
+    "aboutTitle": "About the Product",
+    "otherBrandsTitle": "Other LG Chem Product Families",
+    "backToAll": "All LG Chem Products",
+    "ctaTitle": "— Request a Quote",
+    "ctaDesc": "Contact our sales team for grade selection, technical data sheets and pricing.",
+    "ctaBtn": "Request Quote",
+    "supplyTitle": "Supply Across Turkey and Europe",
+    "supplyDesc": "As Buteo Petrochemicals, we supply this product family across Turkey and Europe through our two warehouses in Istanbul and our Bucharest office. Same-day dispatch is available within Istanbul city limits."
+  },
   "news": {
     "badge": "News",
     "title": "Latest",
@@ -392,7 +416,8 @@
     "why4Desc": "Strategic partnerships with global giants like Hyundai, GM, Tesla, Samsung and LG.",
     "ctaTitle": "Get a Quote for LG Chem Products",
     "ctaDesc": "Request a price quote and technical datasheet for engineering plastics, petrochemical products or additives.",
-    "ctaCta": "Request Quote"
+    "ctaCta": "Request Quote",
+    "detailsBtn": "Details"
   },
   "basechem": {
     "heroDistributorBadge": "Turkey Distributor",
@@ -438,5 +463,10 @@
     "ctaTitle": "Get a Quote for Basechem Products",
     "ctaDesc": "Request a price quote and technical datasheet for ABS, PC, PBT, PC/ABS, PPO/PPE or PA products.",
     "ctaBtn": "Request Quote"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Common questions about products, TDS, samples and delivery"
   }
 }

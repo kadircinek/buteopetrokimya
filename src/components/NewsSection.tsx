@@ -1,6 +1,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { Calendar, ArrowRight } from "lucide-react";
 import { NEWS, type Locale } from "@/data/news";
+import { SITE_URL, SITE_NAME } from "@/lib/seo";
 
 export default function NewsSection() {
   const t = useTranslations("news");
@@ -8,8 +9,39 @@ export default function NewsSection() {
 
   const items = [...NEWS].sort((a, b) => b.date.localeCompare(a.date));
 
+  // Fuar haberleri için schema.org Event — Google etkinlik sonuçlarında çıkabilir
+  const events = items.filter((i) => i.event);
+  const eventJsonLd = events.length
+    ? {
+        "@context": "https://schema.org",
+        "@graph": events.map((i) => ({
+          "@type": "ExhibitionEvent",
+          name: i.title[locale],
+          description: i.desc[locale],
+          startDate: i.event!.startDate,
+          endDate: i.event!.endDate,
+          eventStatus: "https://schema.org/EventScheduled",
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          location: {
+            "@type": "Place",
+            name: i.event!.venue,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: i.event!.city,
+              addressCountry: i.event!.country,
+            },
+          },
+          organizer: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+          performer: { "@type": "Organization", name: SITE_NAME },
+        })),
+      }
+    : null;
+
   return (
     <section className="py-24 bg-white">
+      {eventJsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }} />
+      )}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
           <div>

@@ -7,6 +7,7 @@ import { ArrowRight, FileText } from "lucide-react";
 import { buildMetadata, type Locale } from "@/lib/seo";
 import { tdsForCode, type TdsResource } from "@/data/tds";
 import TdsGate from "@/components/TdsGate";
+import FaqSection from "@/components/FaqSection";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -233,6 +234,9 @@ export default function ProductsPage() {
             </div>
           </div>
         </section>
+
+        {/* SSS — içerik derinliği + FAQPage şeması */}
+        <FaqSection />
 
         {/* CTA */}
         <section className="py-20" style={{background: "#1B4332"}}>

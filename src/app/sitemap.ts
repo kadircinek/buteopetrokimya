@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { ALL_BRAND_SLUGS } from "@/data/lgchemBrands";
 
 const BASE_URL = "https://www.buteopetrokimya.com";
 const locales = ["tr", "en", "ro"] as const;
@@ -13,6 +14,12 @@ const routes: { path: string; priority: number; changeFrequency: MetadataRoute.S
   { path: "/finder", priority: 0.8, changeFrequency: "monthly" },
   { path: "/about", priority: 0.7, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.7, changeFrequency: "yearly" },
+  // LG Chem marka detay sayfaları (her marka ayrı sıralanabilir sayfa)
+  ...ALL_BRAND_SLUGS.map((slug) => ({
+    path: `/lgchem/${slug}`,
+    priority: 0.85,
+    changeFrequency: "monthly" as const,
+  })),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
