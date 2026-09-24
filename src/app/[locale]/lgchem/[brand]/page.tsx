@@ -8,7 +8,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TdsGate from "@/components/TdsGate";
 import { tdsForBrand } from "@/data/tds";
-import { getBrandBySlug, ALL_BRAND_SLUGS, BRAND_SLUGS } from "@/data/lgchemBrands";
+import { getBrandBySlug, ALL_BRAND_SLUGS, BRAND_SLUGS, gradeSlug } from "@/data/lgchemBrands";
+import { getBrandContent } from "@/data/brandContent";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
 
@@ -102,6 +103,13 @@ export default function BrandPage({ params }: Props) {
   if (!data) notFound();
 
   const others = ALL_BRAND_SLUGS.filter((s) => s !== brand).slice(0, 6);
+  const content = getBrandContent(brand, locale);
+
+  // Marka bazlı SSS — hem içerik derinliği hem FAQPage zengin sonucu için.
+  const faq = [1, 2, 3, 4].map((n) => ({
+    q: t(`faqQ${n}`, { brand: data.brand }),
+    a: t(`faqA${n}`, { brand: data.brand }),
+  }));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -131,6 +139,14 @@ export default function BrandPage({ params }: Props) {
           { "@type": "ListItem", position: 2, name: "LG Chem", item: `${SITE_URL}/${locale}/lgchem` },
           { "@type": "ListItem", position: 3, name: data.brand, item: `${SITE_URL}/${locale}/lgchem/${brand}` },
         ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faq.map((x) => ({
+          "@type": "Question",
+          name: x.q,
+          acceptedAnswer: { "@type": "Answer", text: x.a },
+        })),
       },
     ],
   };
@@ -195,7 +211,10 @@ export default function BrandPage({ params }: Props) {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {data.grades.map((g) => (
                   <div key={g} className="p-5 rounded-2xl border border-gray-100 hover:shadow-lg hover:-translate-y-0.5 transition-all">
-                    <div className="font-mono font-black text-lg mb-3" style={{ color: data.color }}>{g}</div>
+                    <Link href={`/${locale}/lgchem/${brand}/${gradeSlug(g)}`} className="group flex items-center justify-between gap-2 mb-3">
+                      <span className="font-mono font-black text-lg" style={{ color: data.color }}>{g}</span>
+                      <ArrowRight size={16} className="text-gray-300 group-hover:text-green-600 transition-colors flex-shrink-0" />
+                    </Link>
                     <div className="flex flex-wrap gap-2">
                       <TdsGate resource={tdsForBrand(data.brand)} productName={g} />
                       <TdsGate resource={tdsForBrand(data.brand)} productName={g} mode="sample" />
@@ -229,6 +248,58 @@ export default function BrandPage({ params }: Props) {
                   </span>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Ürün ailesi hakkında — içerik derinliği (polimer bilgisi) */}
+        {content && (
+          <section className="py-16 bg-white">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">{t("aboutTitle")}</h2>
+              <div className="space-y-5">
+                {content.about.map((p, i) => (
+                  <p key={i} className="text-gray-600 leading-relaxed text-lg">{p}</p>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Grade seçim rehberi */}
+        {content && (
+          <section className="py-16" style={{ background: "#f8fafc" }}>
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">{t("selectionTitle")}</h2>
+              <p className="text-gray-500 mb-8">{t("selectionDesc")}</p>
+              <ul className="space-y-3">
+                {content.selection.map((x, i) => (
+                  <li key={i} className="flex items-start gap-3 bg-white p-4 rounded-2xl border border-gray-100">
+                    <span className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5" style={{ backgroundColor: "#40916C" }}>
+                      {i + 1}
+                    </span>
+                    <span className="text-gray-700">{x}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {/* Marka bazlı SSS — FAQPage zengin sonucu */}
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">{t("faqTitle", { brand: data.brand })}</h2>
+            <div className="space-y-3">
+              {faq.map((x, i) => (
+                <details key={i} className="group rounded-2xl border border-gray-100 overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer font-semibold text-gray-900 hover:bg-gray-50 transition-colors list-none">
+                    {x.q}
+                    <ChevronRight size={18} className="text-gray-400 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  </summary>
+                  <div className="px-5 pb-5 text-gray-600 leading-relaxed">{x.a}</div>
+                </details>
+              ))}
             </div>
           </div>
         </section>

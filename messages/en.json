@@ -7,7 +7,8 @@
     "partners": "Partners",
     "contact": "Contact",
     "finder": "Material Finder",
-    "getQuote": "Get a Quote"
+    "getQuote": "Get a Quote",
+    "blog": "Technical Guide"
   },
   "hero": {
     "badge": "LG Chem & Basechem Turkey Distributor",
@@ -116,7 +117,8 @@
     "pbtEngName": "Polybutylene Terephthalate",
     "sanName": "Styrene Acrylonitrile",
     "ppoName": "Polyphenyl Ether (Noryl)",
-    "paName": "Polyamide"
+    "paName": "Polyamide",
+    "detailsLink": "Details"
   },
   "sectors": {
     "badge": "Our Sectors",
@@ -331,7 +333,18 @@
     "ctaDesc": "Contact our sales team for grade selection, technical data sheets and pricing.",
     "ctaBtn": "Request Quote",
     "supplyTitle": "Supply Across Turkey and Europe",
-    "supplyDesc": "As Buteo Petrochemicals, we supply this product family across Turkey and Europe through our two warehouses in Istanbul and our Bucharest office. Same-day dispatch is available within Istanbul city limits."
+    "supplyDesc": "As Buteo Petrochemicals, we supply this product family across Turkey and Europe through our two warehouses in Istanbul and our Bucharest office. Same-day dispatch is available within Istanbul city limits.",
+    "selectionTitle": "What to Consider When Selecting a Grade",
+    "selectionDesc": "Clarifying the questions below is enough to narrow down the right grade — our technical team works through the rest with you.",
+    "faqTitle": "Frequently Asked Questions About {brand}",
+    "faqQ1": "Who supplies {brand} in Türkiye?",
+    "faqA1": "Buteo Petrochemicals is the LG Chem distributor for Türkiye and supplies the entire {brand} product family across Türkiye and Europe. From our two warehouses in Istanbul we offer same-day delivery within the city.",
+    "faqQ2": "How can I obtain the {brand} technical data sheet (TDS)?",
+    "faqA2": "Click \"Access TDS\" on the page of the grade you are interested in and leave your email and phone number. Your request reaches our sales team and the official LG Chem TDS is shared by email as soon as possible.",
+    "faqQ3": "Can I request a sample of {brand}?",
+    "faqA3": "Yes. You can request samples for trial production and commissioning. Simply use the \"Request Sample\" button on the grade pages and leave your contact details.",
+    "faqQ4": "The {brand} grade I need is not listed — what should I do?",
+    "faqA4": "We list the featured grades on our site, but we have access to the full LG Chem portfolio. Send us the grade code you are looking for and we will check availability and lead time and get back to you."
   },
   "news": {
     "badge": "News",
@@ -462,11 +475,798 @@
     "oemDesc": "Basechem's compound products, supplied to Korea's largest manufacturers for years, offer certified quality meeting global OEM standards.",
     "ctaTitle": "Get a Quote for Basechem Products",
     "ctaDesc": "Request a price quote and technical datasheet for ABS, PC, PBT, PC/ABS, PPO/PPE or PA products.",
-    "ctaBtn": "Request Quote"
+    "ctaBtn": "Request Quote",
+    "detailsLink": "Details"
   },
   "faq": {
     "badge": "FAQ",
     "title": "Frequently Asked Questions",
     "subtitle": "Common questions about products, TDS, samples and delivery"
+  },
+  "grade": {
+    "home": "Home",
+    "lgchem": "LG Chem",
+    "badge": "Authorized Distributor Stock",
+    "familyLabel": "Product Family",
+    "baseLabel": "Polymer Type",
+    "intro": "{grade} is a {base} based engineering plastic grade from LG Chem's {brand} product family. As the LG Chem Turkey distributor, Buteo Petrochemicals supplies this grade across Türkiye and Europe.",
+    "dataTitle": "Technical Data",
+    "dataDesc": "All technical values for this grade — melt flow index, density, tensile strength, thermal properties and processing conditions — are published in LG Chem's official technical data sheet (TDS). We do not publish estimated values; request the current, accurate TDS using the form below.",
+    "dataNote": "Your TDS request reaches our sales team and is shared by email as soon as possible.",
+    "sampleTitle": "Sample Request",
+    "sampleDesc": "Request a sample for commissioning and trial production.",
+    "highlightsTitle": "Key Properties of the {brand} Family",
+    "appsTitle": "Typical Applications",
+    "siblingsTitle": "Other Grades in the {brand} Family",
+    "siblingsDesc": "If this grade does not fully match your requirements, explore alternatives from the same family.",
+    "backToBrand": "All {brand} Grades",
+    "supplyTitle": "Supply in Türkiye and Europe",
+    "supplyDesc": "From our two warehouses on the European and Anatolian sides of Istanbul we offer same-day delivery within Istanbul, and supply Europe through our Bucharest office. Contact our sales team for stock and lead time.",
+    "ctaTitle": "Request a Quote for {grade}",
+    "ctaDesc": "Contact our sales team for quantity, lead time and pricing.",
+    "ctaBtn": "Request Quote",
+    "notFoundHint": "If the grade you need is not listed, write to us — we have access to the full LG Chem portfolio."
+  },
+  "blog": {
+    "navLabel": "Technical Guide",
+    "home": "Home",
+    "badge": "Technical Guide",
+    "title": "Engineering Plastics",
+    "titleHighlight": "Technical Guide",
+    "pageDesc": "Practical guides on material selection, processing conditions and industry applications, written for purchasing and engineering teams.",
+    "readTime": "min read",
+    "allPosts": "All Articles",
+    "relatedTitle": "Related Product Families",
+    "backToBlog": "Back to Technical Guide",
+    "publishedOn": "Published",
+    "ctaTitle": "Let's identify the right material for your application together",
+    "ctaDesc": "Our technical team supports you in material selection, grade comparison and sampling.",
+    "ctaBtn": "Contact Us",
+    "disclaimer": "This article contains general material information. Numerical technical values vary by grade and appear only in the official technical data sheet (TDS)."
+  },
+  "privacy": {
+    "navLabel": "Privacy Policy",
+    "home": "Home",
+    "badge": "Legal Notice",
+    "title": "Personal Data Protection and",
+    "titleHighlight": "Privacy Policy",
+    "updated": "Last updated: 10 September 2026",
+    "intro": "At Buteo Petrochemicals we take the protection of the personal data you share with us through our website seriously. This notice explains which data we process and for what purpose, under Turkish Personal Data Protection Law No. 6698 (KVKK).",
+    "s1t": "1. Data Controller",
+    "s1a": "Your personal data is processed by Buteo Petrochemicals as data controller, within the scope described below.",
+    "s1b": "Address: Küçükbakkalköy, Ali Ay Sk. No:19, 34750 Ataşehir / Istanbul, Türkiye",
+    "s1c": "Email: info@buteopetrokimya.com · Phone: +90 542 189 43 40",
+    "s2t": "2. Personal Data Processed",
+    "s2i": "The following data is processed through the contact form, technical data sheet (TDS) request, sample request and material finder forms on our website:",
+    "s2l1": "Identity data: first and last name",
+    "s2l2": "Contact data: email address, phone number",
+    "s2l3": "Professional data: company name (when optionally provided)",
+    "s2l4": "Request content: the product/grade you are interested in and the information in your message",
+    "s2n": "No third-party analytics or advertising cookies are used for visitor tracking on our website.",
+    "s3t": "3. Purposes of Processing",
+    "s3l1": "Responding to your requests and getting back to you",
+    "s3l2": "Delivering technical data sheets (TDS) and sample requests",
+    "s3l3": "Providing product, price and lead time information",
+    "s3l4": "Providing pre-sales and after-sales technical support",
+    "s3l5": "Fulfilling legal obligations",
+    "s4t": "4. Legal Basis",
+    "s4a": "Your personal data is processed by automated means when you submit a form, based on the legal grounds of \"being directly related to the establishment or performance of a contract\" and \"processing being necessary for the legitimate interests of the data controller\" under Article 5 of the KVKK.",
+    "s5t": "5. Transfer of Data",
+    "s5a": "Your form submissions are delivered to our company email address through the infrastructure of our email delivery service provider (Web3Forms). Our website is hosted on Vercel infrastructure.",
+    "s5b": "Your personal data is not shared with third parties except where legally required, and is never sold or rented for marketing purposes.",
+    "s6t": "6. Retention Period",
+    "s6a": "Your data is retained for as long as required to fulfil your request and for the duration required by the commercial relationship; where a statutory retention obligation exists, for the period prescribed by the relevant legislation. At the end of these periods your data is deleted, destroyed or anonymised.",
+    "s7t": "7. Your Rights Under the KVKK",
+    "s7i": "Under Article 11 of the KVKK you have the following rights:",
+    "s7l1": "To learn whether your personal data is being processed",
+    "s7l2": "To request information if it has been processed",
+    "s7l3": "To learn the purpose of processing and whether it is used accordingly",
+    "s7l4": "To request correction of incomplete or inaccurately processed data",
+    "s7l5": "To request erasure or destruction within the conditions set out in the law",
+    "s7l6": "To request that these actions be notified to third parties to whom the data was transferred",
+    "s7l7": "To claim compensation if you suffer damage due to unlawful processing",
+    "s8t": "8. Applications",
+    "s8a": "You can submit requests regarding the rights above by emailing info@buteopetrokimya.com or by written application to the address stated above. Applications are concluded within 30 days at the latest.",
+    "s9t": "9. Cookies",
+    "s9a": "Our website uses only the technical cookies necessary for the site to function. Settings such as your language preference are stored in your browser. No cookies are used for advertising tracking or profiling.",
+    "s10t": "10. Changes",
+    "s10a": "This notice may be updated when necessary. The current version is always published on this page and can be tracked via the update date above.",
+    "contactTitle": "For your questions",
+    "contactDesc": "You can reach us with any question or request regarding your personal data.",
+    "contactBtn": "Contact Us"
+  },
+  "bcDetail": {
+    "home": "Home",
+    "basechem": "Basechem",
+    "distributorBadge": "Turkey Distributor",
+    "variantsTitle": "Available Variants",
+    "variantsDesc": "You can request a technical data sheet (TDS) and pricing for the variants below.",
+    "variantUnit": "variants",
+    "highlightsTitle": "Key Properties",
+    "appsTitle": "Applications",
+    "oemTitle": "OEM Approved Production",
+    "oemDesc": "With over 30 years of experience, Basechem is an approved supplier to global OEMs such as Samsung, LG and Hyundai. Its UL and RoHS certified production infrastructure meets the quality expectations of the automotive and electronics sectors.",
+    "supplyTitle": "Supply in Türkiye and Europe",
+    "supplyDesc": "At Buteo Petrochemicals we supply this product group across Türkiye and Europe from our two warehouses in Istanbul and our Bucharest office. Contact our sales team for custom colour and formulation requests.",
+    "otherTitle": "Other Basechem Products",
+    "backToAll": "All Basechem Products",
+    "ctaTitle": "— Request a Quote",
+    "ctaDesc": "Contact our sales team for variant selection, technical data sheets and pricing.",
+    "ctaBtn": "Request Quote",
+    "detailsLink": "Details"
+  },
+  "sectorDetail": {
+    "home": "Home",
+    "sectors": "Sectors",
+    "badge": "Industry Solutions",
+    "partsTitle": "Typical Application Parts",
+    "criteriaTitle": "Material Selection Criteria",
+    "criteriaDesc": "When determining the right raw material for this sector, we recommend clarifying the following points first.",
+    "brandsTitle": "Recommended LG Chem Product Families for This Sector",
+    "basechemTitle": "Basechem Compounds for This Sector",
+    "linkNote": "Click the product families below to view their grade lists and request TDS.",
+    "otherTitle": "Other Sectors",
+    "backToAll": "All Sectors",
+    "supplyTitle": "Supply in Türkiye and Europe",
+    "supplyDesc": "From our two warehouses on the European and Anatolian sides of Istanbul we offer same-day delivery within the city, and supply Europe through our Bucharest office.",
+    "ctaTitle": "Let's Determine the Right Raw Material for Your Sector",
+    "ctaDesc": "Tell us about your application and our technical team will identify suitable grades and provide TDS and sample support.",
+    "ctaBtn": "Request Quote",
+    "finderBtn": "Material Finder",
+    "s1intro1": "The automotive sector is where demand for plastic raw materials is both highest and technically most demanding. Continuous high temperature under the hood, the surface quality expected in interior trim and the UV resistance required for exterior parts call for very different material properties.",
+    "s1intro2": "Weight reduction targets have accelerated the replacement of metal parts with engineering plastics. With the spread of electric vehicles, demand has risen markedly for flame retardant compounds with high electrical insulation for battery components, charging systems and high-voltage connectors.",
+    "s1parts": [
+      "Under-the-hood parts",
+      "Interior and exterior trim",
+      "Headlamp and lighting diffusers",
+      "Connectors and electrical parts",
+      "Door and seat mechanisms",
+      "Suspension boots",
+      "Battery and charging system components",
+      "Bumper and body parts"
+    ],
+    "s1criteria": [
+      "Continuous service temperature",
+      "Impact strength (including low temperature)",
+      "UV and weather resistance",
+      "Flame retardancy and electrical insulation",
+      "Oil, fuel and chemical resistance",
+      "Weight and cost targets"
+    ],
+    "s2intro1": "In the electrical and electronics sector, material selection usually starts with certification. The UL-94 flammability class, CTI value and RoHS compliance are preconditions for part approval.",
+    "s2intro2": "The trend towards miniaturisation requires high flow and flame retardancy at thin sections. Halogen-free flame retardant systems are increasingly requested due to environmental regulations and customer policies.",
+    "s2parts": [
+      "Connectors and sockets",
+      "Relays and coil bobbins",
+      "Electronic housings and enclosures",
+      "Circuit breaker components",
+      "Photovoltaic junction boxes",
+      "Charger and adapter housings",
+      "ESD/EMI protected carriers",
+      "Switch and socket bodies"
+    ],
+    "s2criteria": [
+      "UL-94 class and the thickness it applies to",
+      "Halogen-free flame retardant requirement",
+      "Electrical insulation (CTI)",
+      "Dimensional stability and moisture uptake",
+      "Flow for thin walls",
+      "Heat ageing performance"
+    ],
+    "s3intro1": "Home appliances demand visible surface quality and long-term mechanical performance at the same time. On visible parts such as panels and covers, surface gloss and colour stability are decisive.",
+    "s3intro2": "For refrigerator interiors, washing machine components and parts around ovens, temperature resistance, detergent resistance and food contact suitability become critical. Using very different material families within the same product is therefore common.",
+    "s3parts": [
+      "Panels and front covers",
+      "Refrigerator interior parts",
+      "Washing and dishwashing machine components",
+      "Buttons, handles and mechanisms",
+      "Fan and motor parts",
+      "Electronic control housings"
+    ],
+    "s3criteria": [
+      "Surface quality and colour stability",
+      "Heat deflection temperature",
+      "Detergent and chemical resistance",
+      "Food contact suitability",
+      "Impact strength",
+      "Dimensional stability"
+    ],
+    "s4intro1": "In construction and infrastructure the decisive criterion is longevity. Parts used on facades are exposed to UV, temperature swings and precipitation for years, and the material is expected to retain its mechanical properties throughout.",
+    "s4intro2": "Fire safety regulations are also decisive for building elements. In transparent roof and facade applications, impact strength and light transmission must be achieved together.",
+    "s4parts": [
+      "Transparent roof and facade panels",
+      "Pipes and fittings",
+      "Cable trunking and installation parts",
+      "Window and door components",
+      "Lighting fixture bodies",
+      "Waterproofing and drainage elements"
+    ],
+    "s4criteria": [
+      "Long-term UV and weather resistance",
+      "Fire safety class",
+      "Impact strength",
+      "Light transmission (transparent applications)",
+      "Chemical and water resistance",
+      "Dimensional stability"
+    ],
+    "s5intro1": "In medical applications material selection must be considered together with the sterilisation method. Steam (autoclave), gamma and ethylene oxide sterilisation affect materials differently; some polymers can yellow or become brittle after gamma exposure.",
+    "s5intro2": "Transparency is critical in devices where fluid level must be visible. Biocompatibility and conformity with the relevant standards are preconditions for use in healthcare, so approval status must always be verified during grade selection.",
+    "s5parts": [
+      "Device bodies and housings",
+      "Transparent chambers and reservoirs",
+      "Surgical instrument bodies",
+      "Dialysis and infusion components",
+      "Laboratory equipment",
+      "Moving mechanism parts"
+    ],
+    "s5criteria": [
+      "Suitability for the sterilisation method",
+      "Biocompatibility and relevant approvals",
+      "Transparency requirement",
+      "Chemical and disinfectant resistance",
+      "Impact strength",
+      "Colour stability (after gamma)"
+    ],
+    "s6intro1": "In furniture and household goods the material is usually visible and touched, so surface quality, colour consistency and tactile expectations matter as much as technical properties.",
+    "s6intro2": "For moving parts such as fittings, rails and hinges, friction resistance and fatigue strength come to the fore. Kitchenware in contact with food requires compliance approval.",
+    "s6parts": [
+      "Furniture fittings",
+      "Rails, hinges and sliding mechanisms",
+      "Handles and knobs",
+      "Kitchenware",
+      "Storage containers",
+      "Decorative trim parts"
+    ],
+    "s6criteria": [
+      "Surface quality and colour consistency",
+      "Friction and wear resistance",
+      "Fatigue strength (repeated motion)",
+      "Food contact suitability",
+      "Scratch resistance",
+      "Cost balance"
+    ],
+    "s7intro1": "In defence and aerospace applications the expectation is to reduce weight without compromising performance. Metal replacement is the strongest motivation in this sector.",
+    "s7intro2": "Stability across a wide temperature range, fire safety and resistance to harsh environments are fundamental requirements. Depending on the application, electromagnetic shielding or static control may also be required.",
+    "s7parts": [
+      "Lightweight structural components",
+      "Electronic housings and connectors",
+      "EMI shielded parts",
+      "Fuel and hydraulic system components",
+      "Cabin interior parts",
+      "Fasteners and fixings"
+    ],
+    "s7criteria": [
+      "Weight-to-strength ratio",
+      "Stability across a wide temperature range",
+      "Fire safety and smoke behaviour",
+      "Chemical and fuel resistance",
+      "EMI shielding / ESD control",
+      "Dimensional precision"
+    ],
+    "s8intro1": "In agricultural applications the material stays outdoors for long periods. Continuous UV exposure, temperature swings and contact with agricultural chemicals fatigue the material, making UV stabilisation the most critical requirement.",
+    "s8intro2": "Irrigation systems additionally require continuous water contact and dimensional stability under pressure. Resistance to chemicals such as fertilisers and pesticides directly determines part life.",
+    "s8parts": [
+      "Irrigation fittings",
+      "Drip system parts",
+      "Valves and gear mechanisms",
+      "Greenhouse connectors",
+      "Agricultural machinery components",
+      "Storage and handling equipment"
+    ],
+    "s8criteria": [
+      "UV stabilisation and outdoor life",
+      "Resistance to agricultural chemicals",
+      "Water contact and hydrolytic stability",
+      "Dimensional stability under pressure",
+      "Low-temperature impact strength",
+      "Cost"
+    ],
+    "s9intro1": "In marine applications salt water is one of the most aggressive environments. Engineering plastics that replace metal parts because of corrosion offer a clear advantage in this sector.",
+    "s9intro2": "Continuous sun exposure brings UV resistance to the fore, while water contact highlights hydrolytic stability. In transport vehicles, fire safety and interior material regulations become decisive.",
+    "s9parts": [
+      "Deck and exterior hardware",
+      "Fasteners and fixings",
+      "Pump and valve components",
+      "Cable trunking and housings",
+      "Interior trim parts",
+      "Lighting bodies"
+    ],
+    "s9criteria": [
+      "Salt water and corrosion resistance",
+      "UV and weather resistance",
+      "Hydrolytic stability",
+      "Fire safety class",
+      "Impact strength",
+      "Weight"
+    ],
+    "s10intro1": "In the toy sector safety comes before everything. The material is expected to comply with the relevant toy safety regulations, be free of heavy metals and meet contact conditions similar to food contact.",
+    "s10intro2": "Vivid colours, good surface quality and impact strength also matter; toys are dropped and stressed. The compatibility of colour pigments with the material is another point to watch.",
+    "s10parts": [
+      "Toy bodies and casings",
+      "Moving mechanism parts",
+      "Decorative components",
+      "Construction toy parts",
+      "Outdoor play equipment"
+    ],
+    "s10criteria": [
+      "Compliance with toy safety regulations",
+      "Impact strength",
+      "Colour vividness and pigment compatibility",
+      "Surface quality and absence of flash",
+      "UV resistance (outdoor)",
+      "Cost"
+    ],
+    "s11intro1": "In lighting applications LED technology has changed material expectations. Light diffusion materials were developed to convert point-source light into homogeneous surface illumination.",
+    "s11intro2": "In energy applications, electrical insulation, flame retardancy and outdoor durability come to the fore. Photovoltaic junction boxes and energy storage systems have increased demand for halogen-free flame retardant and hydrolytically stable materials.",
+    "s11parts": [
+      "LED luminaire diffusers",
+      "Lighting bodies and housings",
+      "Photovoltaic junction boxes",
+      "Energy storage components",
+      "Electrical panel elements",
+      "Backlit panels"
+    ],
+    "s11criteria": [
+      "Balance of light transmission and diffusion",
+      "Stability under thermal load",
+      "Flame retardancy (including halogen-free)",
+      "Electrical insulation",
+      "UV and outdoor durability",
+      "Dimensional stability"
+    ]
+  },
+  "polymer": {
+    "home": "Home",
+    "products": "Products",
+    "badge": "Plastic Raw Material",
+    "aboutTitle": "About This Raw Material",
+    "propsTitle": "Key Properties",
+    "appsTitle": "Typical Applications",
+    "brandsTitle": "Related Product Families in Our Portfolio",
+    "brandsDesc": "The brands and compounds we supply in this material type — click for grade lists and TDS requests.",
+    "basechemTitle": "Related Basechem Compounds",
+    "noBrands": "We supply this material type on request. Tell us your requirement and we will come back with sourcing and lead time.",
+    "tdsTitle": "Technical Data Sheet",
+    "tdsDesc": "The information on this page describes the general properties of the polymer type. Numerical values such as melt flow index, density and strength vary by grade and appear only in the official TDS — we do not publish estimated values.",
+    "supplyTitle": "Supply in Türkiye and Europe",
+    "supplyDesc": "From our two warehouses on the European and Anatolian sides of Istanbul we offer same-day delivery within the city, and supply Europe through our Bucharest office.",
+    "otherTitle": "Other Raw Material Types",
+    "backToAll": "All Products",
+    "ctaTitle": "— Request a Quote",
+    "ctaDesc": "Contact our sales team for quantity, lead time and pricing.",
+    "ctaBtn": "Request Quote",
+    "groupPoly": "Polyolefins & Standard Polymers",
+    "groupEng": "Engineering Plastics",
+    "pp_homopolimer_name": "Polypropylene Homopolymer (PPH)",
+    "pp_homopolimer_intro1": "Polypropylene homopolymer is the stiffest type in the PP family with the highest heat deflection temperature. Produced from a single monomer, it has a high degree of crystallinity, which brings strength and hardness advantages.",
+    "pp_homopolimer_intro2": "Thanks to its low density, broad chemical resistance and favourable cost, it is used across a very wide range from packaging to industrial parts. However, its low-temperature impact strength is limited compared with copolymer types, which should be considered for cold environment applications.",
+    "pp_homopolimer_props": [
+      "High stiffness",
+      "High heat deflection temperature",
+      "Broad chemical resistance",
+      "Low density",
+      "Good surface hardness"
+    ],
+    "pp_homopolimer_apps": [
+      "Packaging and containers",
+      "Industrial parts",
+      "Household goods",
+      "Textile fibre",
+      "Injection moulded parts"
+    ],
+    "pp_kopolimer_name": "Polypropylene Block Copolymer (PPC)",
+    "pp_kopolimer_intro1": "Block copolymer polypropylene is produced by adding an ethylene phase to the homopolymer structure. This addition markedly increases impact strength, particularly at low temperature.",
+    "pp_kopolimer_intro2": "Toughness is gained at the expense of some stiffness. This balance is preferred for crates operating in cold environments, automotive parts and industrial components.",
+    "pp_kopolimer_props": [
+      "High impact strength",
+      "Low-temperature toughness",
+      "Chemical resistance",
+      "Low density",
+      "Good processability"
+    ],
+    "pp_kopolimer_apps": [
+      "Crates and boxes",
+      "Automotive interior parts",
+      "Industrial components",
+      "Cold chain packaging",
+      "Household goods"
+    ],
+    "pp_random_name": "Polypropylene Random Copolymer (PPRC)",
+    "pp_random_intro1": "In random copolymer polypropylene the ethylene units are distributed randomly along the chain. This structure lowers crystallinity and gives the material clarity and flexibility.",
+    "pp_random_intro2": "It is preferred in packaging applications where transparency matters and in pipe systems requiring flexibility. It has a lower melting temperature than the homopolymer.",
+    "pp_random_props": [
+      "High clarity",
+      "Flexibility",
+      "Good impact strength",
+      "Chemical resistance",
+      "Weldability"
+    ],
+    "pp_random_apps": [
+      "Transparent packaging",
+      "Pipe systems",
+      "Medical packaging",
+      "Storage containers",
+      "Injection moulded parts"
+    ],
+    "hdpe_name": "High Density Polyethylene (HDPE)",
+    "hdpe_intro1": "Thanks to its linear chain structure, HDPE offers high crystallinity and consequently high stiffness and strength. It is the most durable member of the polyethylene family.",
+    "hdpe_intro2": "Its excellent chemical resistance and low moisture permeability make it the standard material for liquid storage, pipe systems and packaging. Being easily recyclable is also an advantage for sustainability.",
+    "hdpe_props": [
+      "High tensile strength",
+      "Excellent chemical resistance",
+      "Low moisture permeability",
+      "Good impact strength",
+      "Recyclability"
+    ],
+    "hdpe_apps": [
+      "Pipes and fittings",
+      "Liquid packaging",
+      "Storage tanks",
+      "Industrial containers",
+      "Blow moulded parts"
+    ],
+    "ldpe_name": "Low Density Polyethylene (LDPE)",
+    "ldpe_intro1": "LDPE has low crystallinity due to its branched chain structure, which makes it soft, flexible and easy to process.",
+    "ldpe_intro2": "It is the base material for film applications; high elongation and good heat sealing are decisive in the packaging sector. It also offers good chemical resistance and electrical insulation performance.",
+    "ldpe_props": [
+      "High flexibility",
+      "Good heat sealing",
+      "High elongation",
+      "Chemical resistance",
+      "Electrical insulation"
+    ],
+    "ldpe_apps": [
+      "Packaging film",
+      "Stretch and shrink film",
+      "Cable coating",
+      "Flexible containers",
+      "Coating applications"
+    ],
+    "gpps_name": "General Purpose Polystyrene (GPPS)",
+    "gpps_intro1": "GPPS is a rigid, dimensionally very stable amorphous thermoplastic with glass-like clarity. Its low shrinkage is an advantage for tight-tolerance parts.",
+    "gpps_intro2": "Its easy processing and favourable cost make it widespread in consumer products. However, due to its brittle nature, HIPS or other impact-modified types should be considered for parts under impact loading.",
+    "gpps_props": [
+      "Glass-like clarity",
+      "High stiffness",
+      "Dimensional stability",
+      "Easy processing",
+      "Low shrinkage"
+    ],
+    "gpps_apps": [
+      "Transparent packaging",
+      "CD/DVD cases",
+      "Disposable products",
+      "Display items",
+      "Laboratory consumables"
+    ],
+    "hips_name": "High Impact Polystyrene (HIPS)",
+    "hips_intro1": "HIPS is produced by adding a rubber phase to polystyrene. This modification removes clarity but very markedly increases impact strength.",
+    "hips_intro2": "Its thermoformability and good surface quality make it prominent in refrigerator liners and packaging applications. It is easy to paint and print on.",
+    "hips_props": [
+      "High impact strength",
+      "Thermoformability",
+      "Good surface quality",
+      "Paintability",
+      "Dimensional stability"
+    ],
+    "hips_apps": [
+      "Refrigerator liners",
+      "Food packaging",
+      "Electronic housings",
+      "Toy parts",
+      "Signage and displays"
+    ],
+    "tpe_name": "Thermoplastic Elastomer (TPE)",
+    "tpe_intro1": "TPEs are a material class that combines the flexibility of rubber with the processability of thermoplastics. As they require no vulcanisation, they can be injection moulded in series production and recycled.",
+    "tpe_intro2": "Being available at different hardness levels lets a single material family serve very different applications. Through two-component moulding they can be bonded to rigid plastics to create soft-touch grip surfaces.",
+    "tpe_props": [
+      "Rubber-like flexibility",
+      "Recyclability",
+      "Wide hardness range",
+      "Good fatigue resistance",
+      "Suitable for two-shot moulding"
+    ],
+    "tpe_apps": [
+      "Gaskets and seals",
+      "Cable jackets",
+      "Grip surfaces",
+      "Automotive bellows",
+      "Hoses and tubing"
+    ],
+    "tpu_name": "Thermoplastic Polyurethane (TPU)",
+    "tpu_intro1": "TPU is one of the strongest elastomers in terms of abrasion resistance and mechanical strength. It shows very good tear and scratch resistance while retaining high elasticity.",
+    "tpu_intro2": "Thanks to its oil and fuel resistance it is preferred in industrial and automotive applications. With hard and soft types it offers a wide hardness range.",
+    "tpu_props": [
+      "Outstanding abrasion resistance",
+      "High tear strength",
+      "Oil and fuel resistance",
+      "Wide hardness range",
+      "Good elasticity"
+    ],
+    "tpu_apps": [
+      "Industrial hoses",
+      "Shoe soles",
+      "Conveyor belts",
+      "Automotive components",
+      "Protective coatings"
+    ],
+    "eva_name": "Ethylene Vinyl Acetate (EVA)",
+    "eva_intro1": "EVA is a copolymer of ethylene and vinyl acetate. As the vinyl acetate content rises the material becomes softer, clearer and more adhesive.",
+    "eva_intro2": "Its flexibility and impact damping in foam applications make it widespread in footwear and sports equipment. It is also the base material for solar panel encapsulation films.",
+    "eva_props": [
+      "High flexibility",
+      "Good adhesion",
+      "Impact damping",
+      "Low-temperature flexibility",
+      "Clarity (high VA)"
+    ],
+    "eva_apps": [
+      "Shoe soles and foam",
+      "Solar panel encapsulation",
+      "Adhesives and hot-melt",
+      "Packaging film",
+      "Sports equipment"
+    ],
+    "abs_name": "Acrylonitrile Butadiene Styrene (ABS)",
+    "abs_intro1": "ABS is an amorphous engineering plastic formed from three monomers: acrylonitrile provides chemical resistance, butadiene toughness, and styrene processability and surface quality.",
+    "abs_intro2": "Being platable and paintable is a major advantage for visible surface parts. Its low shrinkage and dimensional stability make it preferred for tight-tolerance parts. Flame retardant and glass fibre reinforced compound types are available.",
+    "abs_props": [
+      "Good impact strength",
+      "Excellent surface quality",
+      "Platability",
+      "Dimensional stability",
+      "Easy processing"
+    ],
+    "abs_apps": [
+      "Electronic housings",
+      "Appliance panels",
+      "Automotive interior parts",
+      "Toys",
+      "IT equipment"
+    ],
+    "polikarbonat_name": "Polycarbonate (PC)",
+    "polikarbonat_intro1": "Polycarbonate has one of the highest impact strengths among engineering plastics and can combine this with glass-like optical clarity. It retains its mechanical properties across a wide temperature range.",
+    "polikarbonat_intro2": "With flame retardant, UV stable, glass fibre reinforced and light-diffusing special types, it is used from automotive lighting to medical devices. As it is hygroscopic, drying before processing is critical.",
+    "polikarbonat_props": [
+      "Very high impact strength",
+      "Optical clarity",
+      "High heat resistance",
+      "Dimensional stability",
+      "Flame retardant types"
+    ],
+    "polikarbonat_apps": [
+      "Automotive headlamps",
+      "Electronic enclosures",
+      "Medical devices",
+      "Safety glazing",
+      "LED lighting"
+    ],
+    "pmma_name": "Polymethyl Methacrylate (PMMA / Acrylic)",
+    "pmma_intro1": "PMMA has the highest optical clarity among plastics, with light transmission even higher than glass. Thanks to its inherent UV resistance it can remain outdoors for long periods without yellowing.",
+    "pmma_intro2": "Its surface hardness and scratch resistance are better than polycarbonate; however, its impact strength is markedly lower. It is therefore preferred where visual quality is the priority and impact loading is limited.",
+    "pmma_props": [
+      "Highest optical clarity",
+      "Inherent UV resistance",
+      "Surface hardness",
+      "Scratch resistance",
+      "Colour stability"
+    ],
+    "pmma_apps": [
+      "Lighting diffusers",
+      "Signage and displays",
+      "Automotive tail lamps",
+      "Architectural applications",
+      "Optical parts"
+    ],
+    "pbt_name": "Polybutylene Terephthalate (PBT)",
+    "pbt_intro1": "PBT is a semi-crystalline polyester that stands out among engineering plastics for its electrical insulation performance. Its fast crystallisation allows moulding at short cycle times.",
+    "pbt_intro2": "Much lower moisture uptake than polyamides and superior dimensional stability are the main reasons it is preferred for precision electrical parts. Flame retardant and glass fibre reinforced types are widespread.",
+    "pbt_props": [
+      "Superior electrical insulation",
+      "Low moisture uptake",
+      "Dimensional stability",
+      "Chemical resistance",
+      "Fast crystallisation"
+    ],
+    "pbt_apps": [
+      "Connectors and sockets",
+      "Relays and coil bobbins",
+      "Automotive electrics",
+      "Appliance components",
+      "Switch bodies"
+    ],
+    "san_name": "Styrene Acrylonitrile (SAN)",
+    "san_intro1": "SAN is a copolymer of styrene and acrylonitrile. The acrylonitrile content provides markedly better chemical resistance and thermal performance than polystyrene while preserving clarity.",
+    "san_intro2": "With high stiffness and dimensional stability it is used where transparent yet durable parts are required. It is harder but more brittle than ABS.",
+    "san_props": [
+      "Clarity",
+      "Good chemical resistance",
+      "High stiffness",
+      "Dimensional stability",
+      "Thermal performance (vs PS)"
+    ],
+    "san_apps": [
+      "Kitchenware",
+      "Cosmetic packaging",
+      "Small appliance parts",
+      "Transparent housings",
+      "Display items"
+    ],
+    "pc_abs_name": "PC/ABS Alloy",
+    "pc_abs_intro1": "PC/ABS alloys bring together the impact strength and thermal performance of polycarbonate with the processability and cost advantage of ABS. The balance can be tuned to the application by changing the alloy ratio.",
+    "pc_abs_intro2": "They are very common in automotive interior trim and electronic housings. They mould more easily than neat polycarbonate and offer markedly higher thermal and mechanical performance than neat ABS.",
+    "pc_abs_props": [
+      "High impact strength",
+      "Good processability",
+      "Thermal performance",
+      "Dimensional stability",
+      "Flame retardant types"
+    ],
+    "pc_abs_apps": [
+      "Automotive interior trim",
+      "Electronic housings",
+      "IT equipment",
+      "Appliance components",
+      "Charging systems"
+    ],
+    "ppo_ppe_name": "Modified PPO / PPE",
+    "ppo_ppe_intro1": "Modified PPO/PPE alloys are among the lowest density groups within engineering plastics and absorb virtually no moisture. This translates into outstanding dimensional stability.",
+    "ppo_ppe_intro2": "Thanks to halogen-free flame retardant formulations and hydrolytic stability, they are preferred in photovoltaic junction boxes, battery components and parts in contact with hot water.",
+    "ppo_ppe_props": [
+      "Very low moisture uptake",
+      "Outstanding dimensional stability",
+      "Halogen-free flame retardancy",
+      "Hydrolytic stability",
+      "Low density"
+    ],
+    "ppo_ppe_apps": [
+      "Photovoltaic junction boxes",
+      "Battery components",
+      "Electric vehicle parts",
+      "Plumbing components",
+      "Electrical panel elements"
+    ],
+    "pa6_pa66_name": "Polyamide (PA6 / PA66 / Nylon)",
+    "pa6_pa66_intro1": "Polyamides are the most widely used family of engineering plastics, offering high mechanical strength, wear resistance and thermal performance. PA66 has a higher melting temperature than PA6.",
+    "pa6_pa66_intro2": "Glass fibre reinforcement markedly raises stiffness and heat deflection temperature. Polyamides are highly hygroscopic; since moisture uptake affects dimensions and mechanical properties, drying and storage conditions must be followed strictly.",
+    "pa6_pa66_props": [
+      "High mechanical strength",
+      "Wear and friction resistance",
+      "High thermal performance",
+      "Glass fibre reinforced types",
+      "Flame retardant types"
+    ],
+    "pa6_pa66_apps": [
+      "Under-the-hood parts",
+      "Gears and bearings",
+      "Electrical and electronic components",
+      "Structural parts",
+      "Agriculture and irrigation"
+    ]
+  },
+  "nobreak": {
+    "home": "Home",
+    "products": "Products",
+    "badge": "No Break PP",
+    "catTitle": "No Break PP",
+    "catHighlight": "High Impact Polypropylene",
+    "catDesc": "Ultra high impact PP block copolymer grades for parts that must not break. We supply products from SK Geo Centric, Hanwha TotalEnergies and Borealis / Borouge from stock and to order.",
+    "intro1": "Known in the industry as \"no break\", these are ultra high toughness PP types that offer markedly higher impact strength than standard block copolymer polypropylene. By optimising the ratio and distribution of the rubber phase, the part is designed to deform rather than break under impact.",
+    "intro2": "These grades are used particularly where breakage is unacceptable — crates, heavy duty pails, juvenile care products, appliance components and automotive parts. In applications operating at low temperature, cold impact strength becomes the decisive criterion.",
+    "intro3": "Since toughness is gained at the expense of some stiffness, the right grade must be selected according to the impact-versus-stiffness balance of the application. The flow (MFI) choice relates directly to part wall thickness and mould filling distance.",
+    "gradesTitle": "No Break PP Grades We Supply",
+    "gradesDesc": "You can request a technical data sheet (TDS), samples and pricing for each grade.",
+    "makerLabel": "Manufacturer",
+    "seriesLabel": "Series",
+    "selectionTitle": "What to Consider When Selecting a Grade",
+    "selectionDesc": "Clarifying the points below is enough to determine the right no break grade.",
+    "sel1": "At what temperature will the part take impact? (room temperature or cold)",
+    "sel2": "What is the wall thickness and mould filling distance? (flow selection)",
+    "sel3": "Is stiffness or toughness the priority?",
+    "sel4": "Is food or child contact approval required?",
+    "sel5": "Will it be compounded or moulded directly?",
+    "sel6": "Will colouring or masterbatch be used?",
+    "supplyTitle": "Supply and Stock",
+    "supplyDesc": "We supply no break PP grades from our warehouses in Istanbul and to order. Contact our sales team for current stock, lead time and volume-based pricing.",
+    "supplyNote": "Note: these products fall outside the scope of our LG Chem and Basechem distributorships; we supply them by sourcing from the respective manufacturers.",
+    "faqTitle": "Frequently Asked Questions About No Break PP",
+    "faqQ1": "What is no break PP and how does it differ from standard PPC?",
+    "faqA1": "No break PP is the common industry name for ultra high toughness types that offer much higher impact strength than standard block copolymer polypropylene (PPC). By optimising the ratio and distribution of the rubber phase, the part deforms rather than breaks under impact. In return, some stiffness is given up.",
+    "faqQ2": "Which no break PP grades do you supply?",
+    "faqA2": "We supply SK Geo Centric YUPLENE BH3500 and BH3820, Hanwha TotalEnergies BI6300 and BI7300, and Borealis / Borouge BD265MO. You can also write to us for a grade not listed — we will check availability and get back to you.",
+    "faqQ3": "How can I obtain the TDS for these grades?",
+    "faqA3": "Click \"Access TDS\" on the page of the grade you are interested in and leave your email and phone number. Your request reaches our sales team and the manufacturer's official technical data sheet is shared by email as soon as possible.",
+    "faqQ4": "Can I request a sample?",
+    "faqA4": "Yes. You can request samples for trial production and commissioning. Simply use the \"Request Sample\" button on the grade pages and leave your contact details.",
+    "otherTitle": "Other No Break Grades",
+    "backToCat": "All No Break PP Grades",
+    "relatedTitle": "Related Raw Material Types",
+    "ctaTitle": "— Request a Quote",
+    "ctaDesc": "Contact our sales team for quantity, lead time and pricing.",
+    "ctaBtn": "Request Quote",
+    "aboutTitle": "About This Grade",
+    "propsTitle": "Key Properties",
+    "appsTitle": "Typical Applications",
+    "tdsNote": "No numerical technical values are published on this page. Values such as melt flow index, Izod impact strength, density and processing conditions appear in the manufacturer's official TDS — we do not share estimated values.",
+    "sk_bh3500_tag": "Ultra High Impact Strength",
+    "sk_bh3500_desc": "An ultra high impact polypropylene block copolymer from SK Geo Centric's YUPLENE series. Alongside impact strength it stands out for its balance of stiffness, flow and heat resistance.",
+    "sk_bh3500_props": [
+      "Ultra high impact strength",
+      "High stiffness",
+      "Good flow",
+      "Heat resistance",
+      "Suitable for compounding"
+    ],
+    "sk_bh3500_apps": [
+      "Automotive parts",
+      "Electrical home appliances",
+      "Large size containers",
+      "Thin wall injection",
+      "Very high speed injection"
+    ],
+    "sk_bh3820_tag": "High Flow + Impact",
+    "sk_bh3820_desc": "The ultra high impact, high flow block copolymer type in SK Geo Centric's YUPLENE series. Developed for thin wall and very high speed injection moulding applications.",
+    "sk_bh3820_props": [
+      "Ultra high impact strength",
+      "High flow",
+      "Stiffness",
+      "Heat resistance",
+      "Suitable for thin walls"
+    ],
+    "sk_bh3820_apps": [
+      "Electrical home appliances",
+      "Large size containers",
+      "Automotive parts",
+      "Industrial parts",
+      "Thin wall injection"
+    ],
+    "hanwha_total_bi6300_tag": "High Impact Block Copolymer",
+    "hanwha_total_bi6300_desc": "A high impact polypropylene block copolymer developed by Hanwha TotalEnergies for injection applications. Its high isotactic PP base and optimised rubber phase deliver a balance of stiffness and toughness.",
+    "hanwha_total_bi6300_props": [
+      "High impact strength",
+      "Stiffness-toughness balance",
+      "Good processability",
+      "High isotactic PP base",
+      "Suitable for injection"
+    ],
+    "hanwha_total_bi6300_apps": [
+      "Household goods",
+      "Industrial parts",
+      "Automotive components",
+      "Crates and boxes",
+      "General injection moulding"
+    ],
+    "hanwha_total_bi7300_tag": "Super Impact Resistance",
+    "hanwha_total_bi7300_desc": "Hanwha TotalEnergies' super impact resistance injection grade block PP. With high flowability and processability it is developed for automotive composite base, household goods parts and industrial material applications.",
+    "hanwha_total_bi7300_props": [
+      "Super impact resistance",
+      "High flowability",
+      "Excellent processability",
+      "Stiffness-toughness balance",
+      "Suitable for injection"
+    ],
+    "hanwha_total_bi7300_apps": [
+      "Automotive composite base",
+      "Household goods parts",
+      "Industrial material components",
+      "Crates and boxes",
+      "General injection moulding"
+    ],
+    "borealis_bd265mo_tag": "Low-Temperature Impact + Food Approved",
+    "borealis_bd265mo_desc": "A very high impact heterophasic copolymer produced with Borstar Nucleation Technology (BNT). It shows excellent impact strength even at low temperatures and is approved for food and child contact.",
+    "borealis_bd265mo_props": [
+      "Very high impact strength",
+      "Low-temperature impact performance",
+      "Good processability",
+      "Stiffness",
+      "Food and child contact approval"
+    ],
+    "borealis_bd265mo_apps": [
+      "Juvenile care products",
+      "Toys",
+      "Crates and boxes",
+      "Heavy duty pails",
+      "Cold chain applications"
+    ]
   }
 }

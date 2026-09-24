@@ -333,3 +333,47 @@ export function slugForBrand(brand: string): string | null {
   const entry = Object.entries(BRAND_SLUGS).find(([, name]) => name === brand);
   return entry ? entry[0] : null;
 }
+
+/* ─────────────── GRADE SAYFASI YARDIMCILARI ─────────────── */
+
+/** Grade kodundan URL slug'ı üretir: "LUPOY GN2403FT" -> "gn2403ft" */
+export function gradeSlug(grade: string): string {
+  return grade.trim().split(/\s+/).slice(1).join("-").toLowerCase();
+}
+
+export type GradeDetail = {
+  grade: string;        // "LUPOY GN2403FT"
+  code: string;         // "GN2403FT"
+  gradeSlug: string;    // "gn2403ft"
+  brandSlug: string;    // "lupoy"
+  brand: BrandDetail;   // bağlı olduğu marka verisi
+  siblings: string[];   // aynı ailedeki diğer grade'ler
+};
+
+/** Marka slug + grade slug ile tam grade verisini döndürür (yoksa null). */
+export function getGradeBySlug(brandSlugParam: string, slug: string, locale: string): GradeDetail | null {
+  const brand = getBrandBySlug(brandSlugParam, locale);
+  if (!brand) return null;
+
+  const grade = brand.grades.find((g) => gradeSlug(g) === slug.toLowerCase());
+  if (!grade) return null;
+
+  return {
+    grade,
+    code: grade.trim().split(/\s+/).slice(1).join(" "),
+    gradeSlug: gradeSlug(grade),
+    brandSlug: brandSlugParam,
+    brand,
+    siblings: brand.grades.filter((g) => g !== grade),
+  };
+}
+
+/** Tüm (marka, grade) slug çiftleri — generateStaticParams ve sitemap için. */
+export const ALL_GRADE_PATHS: { brand: string; grade: string }[] = [
+  ...engineeringPlasticsMeta,
+  ...elastomersMeta,
+].flatMap((m) => {
+  const bSlug = slugForBrand(m.brand);
+  if (!bSlug) return [];
+  return m.grades.map((g) => ({ brand: bSlug, grade: gradeSlug(g) }));
+});

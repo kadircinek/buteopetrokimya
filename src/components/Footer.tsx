@@ -16,6 +16,7 @@ export default function Footer() {
     { href: `/${locale}/lgchem`, label: "LG Chem Ürünleri" },
     { href: `/${locale}/basechem`, label: "Basechem Ürünleri" },
     { href: `/${locale}/sectors`, label: t("nav.sectors") },
+    { href: `/${locale}/blog`, label: t("nav.blog") },
     { href: `/${locale}/contact`, label: t("nav.contact") },
   ];
 
@@ -120,6 +121,10 @@ export default function Footer() {
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Buteo Petrokimya. {t("footer.rights")}
+            {" · "}
+            <Link href={`/${locale}/privacy`} className="hover:text-green-400 transition-colors underline underline-offset-2">
+              {t("privacy.navLabel")}
+            </Link>
           </p>
           <div className="flex gap-2">
             {["tr", "en", "ro"].map((loc) => (

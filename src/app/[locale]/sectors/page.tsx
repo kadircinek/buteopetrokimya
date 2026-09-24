@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { SECTORS } from "@/data/sectorContent";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -54,10 +55,11 @@ export default function SectorsPage() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {sectorKeys.map((key) => (
-                <div
+              {sectorKeys.map((key, i) => (
+                <Link
                   key={key}
-                  className="group p-8 rounded-3xl border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer"
+                  href={`/${locale}/sectors/${SECTORS[i].slug}`}
+                  className="group block p-8 rounded-3xl border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all"
                 >
                   <div className="flex items-start gap-5">
                     <div className="text-5xl flex-shrink-0">{sectorIcons[key]}</div>
@@ -70,7 +72,7 @@ export default function SectorsPage() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

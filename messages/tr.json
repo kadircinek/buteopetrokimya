@@ -7,7 +7,8 @@
     "partners": "İş Ortakları",
     "contact": "İletişim",
     "finder": "Hammadde Bulucu",
-    "getQuote": "Teklif Al"
+    "getQuote": "Teklif Al",
+    "blog": "Teknik Rehber"
   },
   "hero": {
     "badge": "LG Chem & Basechem Türkiye Distribütörü",
@@ -116,7 +117,8 @@
     "pbtEngName": "Polibutilen Terafitalat",
     "sanName": "Stiren Akrilonitril",
     "ppoName": "Polyfenil Eter (Noryl)",
-    "paName": "Poliamid"
+    "paName": "Poliamid",
+    "detailsLink": "Detaylar"
   },
   "sectors": {
     "badge": "Sektörlerimiz",
@@ -331,7 +333,18 @@
     "ctaDesc": "Grade seçimi, teknik veri sayfası ve fiyat teklifi için satış ekibimizle iletişime geçin.",
     "ctaBtn": "Teklif İste",
     "supplyTitle": "Türkiye ve Avrupa'da Tedarik",
-    "supplyDesc": "Buteo Petrokimya olarak İstanbul'daki iki depomuz ve Bükreş Avrupa ofisimizle bu ürün ailesini Türkiye ve Avrupa geneline tedarik ediyoruz. İstanbul il sınırları içinde aynı gün sevkiyat imkânı sunuyoruz."
+    "supplyDesc": "Buteo Petrokimya olarak İstanbul'daki iki depomuz ve Bükreş Avrupa ofisimizle bu ürün ailesini Türkiye ve Avrupa geneline tedarik ediyoruz. İstanbul il sınırları içinde aynı gün sevkiyat imkânı sunuyoruz.",
+    "selectionTitle": "Grade Seçiminde Nelere Dikkat Edilmeli?",
+    "selectionDesc": "Doğru grade'i belirlemek için aşağıdaki soruları netleştirmeniz yeterli — gerisini teknik ekibimiz sizinle birlikte çözer.",
+    "faqTitle": "{brand} Hakkında Sık Sorulan Sorular",
+    "faqQ1": "{brand} Türkiye'de kimden tedarik edilir?",
+    "faqA1": "Buteo Petrokimya, LG Chem'in Türkiye distribütörüdür ve {brand} ürün ailesinin tamamını Türkiye ve Avrupa geneline tedarik etmektedir. İstanbul'daki iki depomuzdan il sınırları içinde aynı gün sevkiyat imkânı sunuyoruz.",
+    "faqQ2": "{brand} teknik veri sayfasını (TDS) nasıl alabilirim?",
+    "faqA2": "İlgilendiğiniz grade'in sayfasındaki \"TDS'e Eriş\" butonuna tıklayıp e-posta ve telefon bilginizi bırakmanız yeterli. Talebiniz satış ekibimize iletilir ve resmî LG Chem TDS'i en kısa sürede e-posta ile paylaşılır.",
+    "faqQ3": "{brand} için numune alabilir miyim?",
+    "faqA3": "Evet. Deneme üretimi ve devreye alma çalışmaları için numune talep edebilirsiniz. Grade sayfalarındaki \"Numune Talep Et\" butonundan iletişim bilgilerinizi bırakmanız yeterlidir.",
+    "faqQ4": "Aradığım {brand} grade'i listede yok, ne yapmalıyım?",
+    "faqA4": "Sitemizde öne çıkan grade'leri listeliyoruz; LG Chem portföyünün tamamına erişimimiz var. Aradığınız grade kodunu bize iletirseniz temin edilebilirliğini ve termin süresini kontrol edip size dönüş yaparız."
   },
   "news": {
     "badge": "Haberler",
@@ -462,11 +475,798 @@
     "oemDesc": "Kore'nin en büyük üreticilerine yıllardır tedarik eden Basechem'in compound ürünleri, global OEM standartlarını karşılayan güvenceli kalitede.",
     "ctaTitle": "Basechem Ürünleri İçin Teklif Alın",
     "ctaDesc": "ABS, PC, PBT, PC/ABS, PPO/PPE veya PA ürünleri için fiyat teklifi ve teknik datasheet talep edin.",
-    "ctaBtn": "Teklif İste"
+    "ctaBtn": "Teklif İste",
+    "detailsLink": "Detaylar"
   },
   "faq": {
     "badge": "SSS",
     "title": "Sıkça Sorulan Sorular",
     "subtitle": "Ürünler, TDS, numune ve teslimat hakkında merak edilenler"
+  },
+  "grade": {
+    "home": "Ana Sayfa",
+    "lgchem": "LG Chem",
+    "badge": "Yetkili Distribütör Stoğu",
+    "familyLabel": "Ürün Ailesi",
+    "baseLabel": "Polimer Tipi",
+    "intro": "{grade}, LG Chem'in {brand} ürün ailesine ait {base} bazlı bir mühendislik plastiği grade'idir. Buteo Petrokimya, LG Chem Türkiye distribütörü olarak bu grade'i Türkiye ve Avrupa geneline tedarik etmektedir.",
+    "dataTitle": "Teknik Veriler",
+    "dataDesc": "Bu grade'e ait akış indeksi, yoğunluk, çekme dayanımı, ısıl özellikler ve işleme koşulları gibi tüm teknik değerler LG Chem'in resmî teknik veri sayfasında (TDS) yer alır. Değerleri tahmini olarak yayınlamıyoruz — güncel ve doğru TDS'i aşağıdaki formdan talep edebilirsiniz.",
+    "dataNote": "TDS talebiniz satış ekibimize iletilir ve en kısa sürede e-posta ile paylaşılır.",
+    "sampleTitle": "Numune Talebi",
+    "sampleDesc": "Devreye alma ve deneme üretimi için numune talep edebilirsiniz.",
+    "highlightsTitle": "{brand} Ailesinin Öne Çıkan Özellikleri",
+    "appsTitle": "Tipik Uygulama Alanları",
+    "siblingsTitle": "{brand} Ailesindeki Diğer Grade'ler",
+    "siblingsDesc": "Aradığınız özellikleri tam karşılamıyorsa aynı aileden alternatif grade'lere göz atın.",
+    "backToBrand": "Tüm {brand} Grade'leri",
+    "supplyTitle": "Türkiye ve Avrupa'da Tedarik",
+    "supplyDesc": "İstanbul Avrupa ve Anadolu Yakası'ndaki iki depomuzdan İstanbul il sınırları içinde aynı gün sevkiyat, Bükreş ofisimiz üzerinden Avrupa'ya tedarik sağlıyoruz. Stok durumu ve termin için satış ekibimize ulaşın.",
+    "ctaTitle": "{grade} için Teklif Alın",
+    "ctaDesc": "Miktar, termin ve fiyat bilgisi için satış ekibimizle iletişime geçin.",
+    "ctaBtn": "Teklif İste",
+    "notFoundHint": "Aradığınız grade listede yoksa bize yazın — LG Chem portföyünün tamamına erişimimiz var."
+  },
+  "blog": {
+    "navLabel": "Teknik Rehber",
+    "home": "Ana Sayfa",
+    "badge": "Teknik Rehber",
+    "title": "Mühendislik Plastikleri",
+    "titleHighlight": "Teknik Rehberi",
+    "pageDesc": "Malzeme seçimi, işleme koşulları ve sektörel uygulamalar hakkında satın alma ve mühendislik ekipleri için hazırlanmış pratik rehberler.",
+    "readTime": "dk okuma",
+    "allPosts": "Tüm Yazılar",
+    "relatedTitle": "İlgili Ürün Aileleri",
+    "backToBlog": "Teknik Rehbere Dön",
+    "publishedOn": "Yayın tarihi",
+    "ctaTitle": "Uygulamanız için doğru malzemeyi birlikte belirleyelim",
+    "ctaDesc": "Teknik ekibimiz malzeme seçimi, grade karşılaştırması ve numune süreçlerinde size destek olur.",
+    "ctaBtn": "Bize Ulaşın",
+    "disclaimer": "Bu yazı genel malzeme bilgisi içerir. Sayısal teknik değerler grade'e göre değişir ve yalnızca resmî teknik veri sayfasında (TDS) yer alır."
+  },
+  "privacy": {
+    "navLabel": "KVKK & Gizlilik",
+    "home": "Ana Sayfa",
+    "badge": "Yasal Bilgilendirme",
+    "title": "KVKK Aydınlatma Metni ve",
+    "titleHighlight": "Gizlilik Politikası",
+    "updated": "Son güncelleme: 10 Eylül 2026",
+    "intro": "Buteo Petrokimya olarak, web sitemiz üzerinden bizimle paylaştığınız kişisel verilerin korunmasına önem veriyoruz. Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında hangi verileri hangi amaçla işlediğimizi açıklamak üzere hazırlanmıştır.",
+    "s1t": "1. Veri Sorumlusu",
+    "s1a": "Kişisel verileriniz, veri sorumlusu sıfatıyla Buteo Petrokimya tarafından aşağıda açıklanan kapsamda işlenmektedir.",
+    "s1b": "Adres: Küçükbakkalköy, Ali Ay Sk. No:19, 34750 Ataşehir / İstanbul, Türkiye",
+    "s1c": "E-posta: info@buteopetrokimya.com · Telefon: +90 542 189 43 40",
+    "s2t": "2. İşlenen Kişisel Veriler",
+    "s2i": "Web sitemizdeki iletişim formu, teknik veri sayfası (TDS) talebi, numune talebi ve hammadde bulucu formları aracılığıyla aşağıdaki veriler işlenmektedir:",
+    "s2l1": "Kimlik bilgisi: ad ve soyad",
+    "s2l2": "İletişim bilgisi: e-posta adresi, telefon numarası",
+    "s2l3": "Mesleki bilgi: şirket adı (isteğe bağlı olarak paylaşıldığında)",
+    "s2l4": "Talep içeriği: ilgilendiğiniz ürün/grade bilgisi ve mesajınızda ilettiğiniz bilgiler",
+    "s2n": "Web sitemizde ziyaretçi takibi amacıyla üçüncü taraf analitik veya reklam çerezi kullanılmamaktadır.",
+    "s3t": "3. İşleme Amaçları",
+    "s3l1": "Taleplerinizin karşılanması ve size geri dönüş yapılması",
+    "s3l2": "Teknik veri sayfası (TDS) ve numune taleplerinin iletilmesi",
+    "s3l3": "Ürün, fiyat ve termin bilgisi sunulması",
+    "s3l4": "Satış öncesi ve sonrası teknik destek sağlanması",
+    "s3l5": "Yasal yükümlülüklerin yerine getirilmesi",
+    "s4t": "4. Hukuki Sebep",
+    "s4a": "Kişisel verileriniz, KVKK'nın 5. maddesi uyarınca \"bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması\" ve \"veri sorumlusunun meşru menfaatleri için veri işlenmesinin zorunlu olması\" hukuki sebeplerine dayanılarak, formu doldurarak talebinizi iletmeniz suretiyle otomatik yollarla işlenmektedir.",
+    "s5t": "5. Verilerin Aktarılması",
+    "s5a": "Form gönderimleriniz, e-posta iletimini sağlayan hizmet sağlayıcımız (Web3Forms) altyapısı üzerinden şirket e-posta adresimize iletilir. Web sitemiz Vercel altyapısında barındırılmaktadır.",
+    "s5b": "Kişisel verileriniz, yasal zorunluluklar dışında üçüncü kişilerle paylaşılmaz, pazarlama amacıyla satılmaz veya kiralanmaz.",
+    "s6t": "6. Saklama Süresi",
+    "s6a": "Verileriniz, talebinizin karşılanması ve ticari ilişkinin gerektirdiği süre boyunca; yasal saklama yükümlülüğü bulunan hallerde ise ilgili mevzuatta öngörülen süre boyunca saklanır. Bu sürelerin sonunda verileriniz silinir, yok edilir veya anonim hale getirilir.",
+    "s7t": "7. KVKK Kapsamındaki Haklarınız",
+    "s7i": "KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:",
+    "s7l1": "Kişisel verilerinizin işlenip işlenmediğini öğrenme",
+    "s7l2": "İşlenmişse buna ilişkin bilgi talep etme",
+    "s7l3": "İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme",
+    "s7l4": "Eksik veya yanlış işlenmiş verilerin düzeltilmesini isteme",
+    "s7l5": "Kanunda öngörülen şartlar çerçevesinde silinmesini veya yok edilmesini isteme",
+    "s7l6": "Bu işlemlerin verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme",
+    "s7l7": "Kanuna aykırı işleme sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme",
+    "s8t": "8. Başvuru",
+    "s8a": "Yukarıdaki haklarınıza ilişkin taleplerinizi info@buteopetrokimya.com adresine e-posta göndererek veya yukarıda belirtilen adrese yazılı olarak başvurarak iletebilirsiniz. Başvurularınız en geç 30 gün içinde sonuçlandırılır.",
+    "s9t": "9. Çerezler",
+    "s9a": "Web sitemiz, yalnızca sitenin çalışması için gerekli olan teknik çerezleri kullanır. Dil tercihiniz gibi ayarlar tarayıcınızda saklanır. Reklam takibi veya profilleme amacıyla çerez kullanılmamaktadır.",
+    "s10t": "10. Değişiklikler",
+    "s10a": "Bu metin gerektiğinde güncellenebilir. Güncel sürüm her zaman bu sayfada yayımlanır ve yukarıdaki güncelleme tarihi ile takip edilebilir.",
+    "contactTitle": "Sorularınız için",
+    "contactDesc": "Kişisel verilerinizle ilgili her türlü soru ve talebiniz için bize ulaşabilirsiniz.",
+    "contactBtn": "İletişime Geç"
+  },
+  "bcDetail": {
+    "home": "Ana Sayfa",
+    "basechem": "Basechem",
+    "distributorBadge": "Türkiye Distribütörü",
+    "variantsTitle": "Mevcut Varyantlar",
+    "variantsDesc": "Aşağıdaki varyantlar için teknik veri sayfası (TDS) ve fiyat teklifi talep edebilirsiniz.",
+    "variantUnit": "varyant",
+    "highlightsTitle": "Öne Çıkan Özellikler",
+    "appsTitle": "Uygulama Alanları",
+    "oemTitle": "OEM Onaylı Üretim",
+    "oemDesc": "Basechem, 30 yılı aşkın deneyimiyle Samsung, LG ve Hyundai gibi küresel OEM üreticilerinin onaylı tedarikçisidir. UL ve RoHS sertifikalı üretim altyapısıyla otomotiv ve elektronik sektörünün kalite beklentilerini karşılar.",
+    "supplyTitle": "Türkiye ve Avrupa'da Tedarik",
+    "supplyDesc": "Buteo Petrokimya olarak İstanbul'daki iki depomuz ve Bükreş Avrupa ofisimizle bu ürün grubunu Türkiye ve Avrupa geneline tedarik ediyoruz. Özel renk ve formülasyon talepleriniz için satış ekibimize ulaşın.",
+    "otherTitle": "Diğer Basechem Ürünleri",
+    "backToAll": "Tüm Basechem Ürünleri",
+    "ctaTitle": "için Teklif Alın",
+    "ctaDesc": "Varyant seçimi, teknik veri sayfası ve fiyat teklifi için satış ekibimizle iletişime geçin.",
+    "ctaBtn": "Teklif İste",
+    "detailsLink": "Detaylar"
+  },
+  "sectorDetail": {
+    "home": "Ana Sayfa",
+    "sectors": "Sektörler",
+    "badge": "Sektörel Çözümler",
+    "partsTitle": "Tipik Uygulama Parçaları",
+    "criteriaTitle": "Malzeme Seçim Kriterleri",
+    "criteriaDesc": "Bu sektörde doğru hammaddeyi belirlerken öncelikle aşağıdaki başlıkları netleştirmenizi öneriyoruz.",
+    "brandsTitle": "Bu Sektör için Önerilen LG Chem Ürün Aileleri",
+    "basechemTitle": "Bu Sektör için Basechem Compound'ları",
+    "linkNote": "Aşağıdaki ürün ailelerine tıklayarak grade listelerini ve TDS taleplerini görüntüleyebilirsiniz.",
+    "otherTitle": "Diğer Sektörler",
+    "backToAll": "Tüm Sektörler",
+    "supplyTitle": "Türkiye ve Avrupa'da Tedarik",
+    "supplyDesc": "İstanbul Avrupa ve Anadolu Yakası'ndaki iki depomuzdan il sınırları içinde aynı gün sevkiyat, Bükreş ofisimiz üzerinden Avrupa'ya tedarik sağlıyoruz.",
+    "ctaTitle": "Sektörünüz için Doğru Hammaddeyi Belirleyelim",
+    "ctaDesc": "Uygulamanızı bize aktarın; teknik ekibimiz uygun grade'leri belirleyip TDS ve numune desteği sağlasın.",
+    "ctaBtn": "Teklif İste",
+    "finderBtn": "Hammadde Bulucu",
+    "s1intro1": "Otomotiv sektörü, plastik hammadde talebinin hem en yüksek hem de teknik olarak en zorlu olduğu alandır. Motor bölmesindeki sürekli yüksek sıcaklık, iç trimde aranan yüzey kalitesi ve dış parçalarda beklenen UV dayanımı birbirinden çok farklı malzeme özellikleri gerektirir.",
+    "s1intro2": "Ağırlık azaltma hedefleri, metal parçaların mühendislik plastikleriyle ikame edilmesini hızlandırmıştır. Elektrikli araçların yaygınlaşmasıyla birlikte batarya bileşenleri, şarj sistemleri ve yüksek voltaj konnektörleri için alev geciktirici ve elektriksel yalıtımı yüksek compound talebi belirgin şekilde artmıştır.",
+    "s1parts": [
+      "Motor bölmesi parçaları",
+      "İç ve dış trim",
+      "Far ve aydınlatma difüzörleri",
+      "Konnektör ve elektrik aksamı",
+      "Kapı ve koltuk mekanizmaları",
+      "Süspansiyon körükleri",
+      "Batarya ve şarj sistemi bileşenleri",
+      "Tampon ve kaporta parçaları"
+    ],
+    "s1criteria": [
+      "Sürekli çalışma sıcaklığı",
+      "Darbe dayanımı (düşük sıcaklık dahil)",
+      "UV ve hava koşullarına dayanım",
+      "Alev geciktiricilik ve elektriksel yalıtım",
+      "Yağ, yakıt ve kimyasal direnç",
+      "Ağırlık ve maliyet hedefleri"
+    ],
+    "s2intro1": "Elektrik-elektronik sektöründe malzeme seçimi çoğu zaman sertifikasyonla başlar. UL-94 yanmazlık sınıfı, CTI değeri ve RoHS uyumu, parçanın onay alabilmesi için ön koşuldur.",
+    "s2intro2": "Minyatürleşme eğilimi ince cidarlı parçalarda yüksek akışkanlık ve ince kesitte alev geciktiricilik gerektirir. Halojensiz alev geciktirici sistemler, çevresel düzenlemeler ve müşteri politikaları nedeniyle giderek daha fazla talep edilmektedir.",
+    "s2parts": [
+      "Konnektör ve soket",
+      "Röle ve bobin karkası",
+      "Elektronik muhafaza ve kasa",
+      "Devre kesici bileşenleri",
+      "Fotovoltaik bağlantı kutuları",
+      "Şarj cihazı ve adaptör gövdeleri",
+      "ESD/EMI korumalı taşıyıcılar",
+      "Anahtar ve priz gövdeleri"
+    ],
+    "s2criteria": [
+      "UL-94 sınıfı ve geçerli olduğu kalınlık",
+      "Halojensiz alev geciktirici gerekliliği",
+      "Elektriksel yalıtım (CTI)",
+      "Boyutsal kararlılık ve nem alımı",
+      "İnce cidar için akışkanlık",
+      "Isıl yaşlanma performansı"
+    ],
+    "s3intro1": "Beyaz eşya, görünen yüzey kalitesi ile uzun ömürlü mekanik performansı aynı anda talep eden bir sektördür. Panel ve kapak gibi görünen parçalarda yüzey parlaklığı ve renk kararlılığı belirleyicidir.",
+    "s3intro2": "Buzdolabı iç aksamı, çamaşır makinesi bileşenleri ve fırın çevresi parçalarında ise sıcaklık dayanımı, deterjan ve gıda temasına uygunluk kritik hale gelir. Aynı üründe birbirinden çok farklı malzeme ailelerinin kullanılması bu nedenle yaygındır.",
+    "s3parts": [
+      "Panel ve ön kapaklar",
+      "Buzdolabı iç aksamı",
+      "Çamaşır ve bulaşık makinesi bileşenleri",
+      "Düğme, kulp ve mekanizmalar",
+      "Fan ve motor parçaları",
+      "Elektronik kontrol muhafazaları"
+    ],
+    "s3criteria": [
+      "Yüzey kalitesi ve renk kararlılığı",
+      "Isıl deformasyon sıcaklığı",
+      "Deterjan ve kimyasal direnç",
+      "Gıda teması uygunluğu",
+      "Darbe dayanımı",
+      "Boyutsal kararlılık"
+    ],
+    "s4intro1": "İnşaat ve altyapı uygulamalarında en belirleyici kriter uzun ömürdür. Dış cephede kullanılan parçalar yıllarca UV, sıcaklık değişimi ve yağışa maruz kalır; malzemenin bu koşullar altında mekanik özelliklerini koruması beklenir.",
+    "s4intro2": "Yapı elemanlarında ayrıca yangın güvenliği düzenlemeleri belirleyicidir. Şeffaf çatı ve cephe uygulamalarında ise darbe dayanımı ile ışık geçirgenliğinin birlikte sağlanması gerekir.",
+    "s4parts": [
+      "Şeffaf çatı ve cephe panelleri",
+      "Boru ve bağlantı elemanları",
+      "Kablo kanalı ve tesisat parçaları",
+      "Pencere ve kapı bileşenleri",
+      "Aydınlatma armatür gövdeleri",
+      "Su yalıtım ve drenaj elemanları"
+    ],
+    "s4criteria": [
+      "UV ve hava koşullarına uzun süreli dayanım",
+      "Yangın güvenliği sınıfı",
+      "Darbe dayanımı",
+      "Işık geçirgenliği (şeffaf uygulamalar)",
+      "Kimyasal ve su direnci",
+      "Boyutsal kararlılık"
+    ],
+    "s5intro1": "Medikal uygulamalarda malzeme seçimi, sterilizasyon yöntemiyle birlikte düşünülmelidir. Buhar (otoklav), gama ışını ve etilen oksit sterilizasyonu malzemeyi farklı biçimde etkiler; bazı polimerler gama sonrası sararabilir veya kırılganlaşabilir.",
+    "s5intro2": "Şeffaflık, sıvı seviyesinin görülmesi gereken cihazlarda kritiktir. Ayrıca biyouyumluluk ve ilgili standartlara uygunluk, malzemenin sağlık uygulamasında kullanılabilmesi için ön koşuldur; bu nedenle grade seçiminde onay durumu mutlaka doğrulanmalıdır.",
+    "s5parts": [
+      "Cihaz gövde ve muhafazaları",
+      "Şeffaf hazne ve rezervuarlar",
+      "Cerrahi alet gövdeleri",
+      "Diyaliz ve infüzyon bileşenleri",
+      "Laboratuvar ekipmanları",
+      "Hareketli mekanizma parçaları"
+    ],
+    "s5criteria": [
+      "Sterilizasyon yöntemine uygunluk",
+      "Biyouyumluluk ve ilgili onaylar",
+      "Şeffaflık gerekliliği",
+      "Kimyasal ve dezenfektan direnci",
+      "Darbe dayanımı",
+      "Renk kararlılığı (gama sonrası)"
+    ],
+    "s6intro1": "Mobilya ve ev gereçlerinde malzeme çoğu zaman doğrudan görünür ve dokunulur; bu nedenle yüzey kalitesi, renk tutarlılığı ve his (tactile) beklentileri teknik özellikler kadar önemlidir.",
+    "s6intro2": "Bağlantı elemanları, ray ve menteşe gibi hareketli parçalarda ise sürtünme direnci ve yorulma dayanımı öne çıkar. Gıda ile temas eden mutfak gereçlerinde uygunluk onayı gereklidir.",
+    "s6parts": [
+      "Mobilya bağlantı elemanları",
+      "Ray, menteşe ve kayar mekanizmalar",
+      "Kulp ve düğmeler",
+      "Mutfak gereçleri",
+      "Depolama ve saklama kapları",
+      "Dekoratif kaplama parçaları"
+    ],
+    "s6criteria": [
+      "Yüzey kalitesi ve renk tutarlılığı",
+      "Sürtünme ve aşınma direnci",
+      "Yorulma dayanımı (tekrarlı hareket)",
+      "Gıda teması uygunluğu",
+      "Çizilme direnci",
+      "Maliyet dengesi"
+    ],
+    "s7intro1": "Savunma ve havacılık uygulamalarında malzemeden beklenen, ağırlık azaltırken performanstan ödün vermemektir. Metal ikamesi bu sektörde en güçlü motivasyondur.",
+    "s7intro2": "Geniş sıcaklık aralığında kararlılık, yangın güvenliği ve zorlu çevre koşullarına dayanım temel gereksinimlerdir. Uygulamaya göre elektromanyetik ekranlama veya statik yük kontrolü de gerekebilir.",
+    "s7parts": [
+      "Yapısal hafif bileşenler",
+      "Elektronik muhafaza ve konnektörler",
+      "EMI ekranlamalı parçalar",
+      "Yakıt ve hidrolik sistem bileşenleri",
+      "İç kabin parçaları",
+      "Bağlantı ve tespit elemanları"
+    ],
+    "s7criteria": [
+      "Ağırlık / dayanım oranı",
+      "Geniş sıcaklık aralığında kararlılık",
+      "Yangın güvenliği ve duman davranışı",
+      "Kimyasal ve yakıt direnci",
+      "EMI ekranlama / ESD kontrolü",
+      "Boyutsal hassasiyet"
+    ],
+    "s8intro1": "Tarım uygulamalarında malzeme, açık havada uzun süre kalır. Sürekli UV maruziyeti, sıcaklık değişimleri ve tarımsal kimyasallarla temas malzemeyi yorar; UV stabilizasyonu bu nedenle en kritik gerekliliktir.",
+    "s8intro2": "Sulama sistemlerinde ayrıca sürekli su teması ve basınç altında boyutsal kararlılık gerekir. Gübre ve ilaç gibi kimyasallara direnç, parçanın ömrünü doğrudan belirler.",
+    "s8parts": [
+      "Sulama bağlantı elemanları",
+      "Damlama sistemi parçaları",
+      "Vana ve dişli mekanizmalar",
+      "Sera bağlantı elemanları",
+      "Tarım makinesi bileşenleri",
+      "Depolama ve taşıma ekipmanları"
+    ],
+    "s8criteria": [
+      "UV stabilizasyonu ve dış ortam ömrü",
+      "Tarımsal kimyasallara direnç",
+      "Su teması ve hidrolitik kararlılık",
+      "Basınç altında boyutsal kararlılık",
+      "Düşük sıcaklıkta darbe dayanımı",
+      "Maliyet"
+    ],
+    "s9intro1": "Denizcilik uygulamalarında tuzlu su, en agresif çevre koşullarından biridir. Korozyon nedeniyle metal parçaların yerini alan mühendislik plastikleri, bu sektörde belirgin bir avantaj sağlar.",
+    "s9intro2": "Sürekli güneş maruziyeti UV dayanımını, su teması ise hidrolitik kararlılığı öne çıkarır. Ulaşım araçlarında ise yangın güvenliği ve iç mekân malzemelerine ilişkin düzenlemeler belirleyici olur.",
+    "s9parts": [
+      "Güverte ve dış donanım parçaları",
+      "Bağlantı ve tespit elemanları",
+      "Pompa ve valf bileşenleri",
+      "Kablo kanalı ve muhafazalar",
+      "İç mekân trim parçaları",
+      "Aydınlatma gövdeleri"
+    ],
+    "s9criteria": [
+      "Tuzlu su ve korozyon direnci",
+      "UV ve hava koşullarına dayanım",
+      "Hidrolitik kararlılık",
+      "Yangın güvenliği sınıfı",
+      "Darbe dayanımı",
+      "Ağırlık"
+    ],
+    "s10intro1": "Oyuncak sektöründe güvenlik her şeyin önündedir. Malzemenin ilgili oyuncak güvenliği düzenlemelerine uygun olması, ağır metal içermemesi ve gıda teması benzeri temas koşullarını karşılaması beklenir.",
+    "s10intro2": "Bunun yanında canlı renkler, iyi yüzey kalitesi ve darbe dayanımı önemlidir; oyuncaklar düşürülmeye ve zorlanmaya maruz kalır. Renk pigmentlerinin malzeme ile uyumu da dikkat edilmesi gereken bir konudur.",
+    "s10parts": [
+      "Oyuncak gövde ve kasaları",
+      "Hareketli mekanizma parçaları",
+      "Dekoratif bileşenler",
+      "Yapı-inşa oyuncak parçaları",
+      "Dış mekân oyun ekipmanları"
+    ],
+    "s10criteria": [
+      "Oyuncak güvenliği düzenlemelerine uygunluk",
+      "Darbe dayanımı",
+      "Renk canlılığı ve pigment uyumu",
+      "Yüzey kalitesi ve çapak oluşmaması",
+      "UV dayanımı (dış mekân)",
+      "Maliyet"
+    ],
+    "s11intro1": "Aydınlatma uygulamalarında LED teknolojisi, malzeme beklentilerini değiştirdi. Nokta kaynaklı ışığın homojen bir yüzey aydınlatmasına dönüştürülmesi için ışık difüzyon malzemeleri geliştirildi.",
+    "s11intro2": "Enerji uygulamalarında ise elektriksel yalıtım, alev geciktiricilik ve dış ortam dayanımı öne çıkar. Fotovoltaik bağlantı kutuları ve enerji depolama sistemleri, halojensiz alev geciktirici ve hidrolitik olarak kararlı malzeme talebini artırmıştır.",
+    "s11parts": [
+      "LED armatür difüzörleri",
+      "Aydınlatma gövde ve muhafazaları",
+      "Fotovoltaik bağlantı kutuları",
+      "Enerji depolama bileşenleri",
+      "Elektrik pano elemanları",
+      "Arkadan aydınlatmalı paneller"
+    ],
+    "s11criteria": [
+      "Işık geçirgenliği ve difüzyon dengesi",
+      "Isıl yük altında kararlılık",
+      "Alev geciktiricilik (halojensiz dahil)",
+      "Elektriksel yalıtım",
+      "UV ve dış ortam dayanımı",
+      "Boyutsal kararlılık"
+    ]
+  },
+  "polymer": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "badge": "Plastik Hammadde",
+    "aboutTitle": "Bu Hammadde Hakkında",
+    "propsTitle": "Öne Çıkan Özellikler",
+    "appsTitle": "Tipik Uygulama Alanları",
+    "brandsTitle": "Portföyümüzdeki İlgili Ürün Aileleri",
+    "brandsDesc": "Bu hammadde tipinde tedarik ettiğimiz marka ve compound'lar — grade listeleri ve TDS talepleri için tıklayın.",
+    "basechemTitle": "İlgili Basechem Compound'ları",
+    "noBrands": "Bu hammadde tipini talep üzerine tedarik ediyoruz. İhtiyacınızı iletin, uygun kaynak ve termin bilgisiyle size dönelim.",
+    "tdsTitle": "Teknik Veri Sayfası",
+    "tdsDesc": "Bu sayfadaki bilgiler polimer tipinin genel özelliklerini anlatır. Akış indeksi, yoğunluk ve dayanım gibi sayısal değerler grade'e göre değişir ve yalnızca resmî TDS'te yer alır — tahmini değer yayınlamıyoruz.",
+    "supplyTitle": "Türkiye ve Avrupa'da Tedarik",
+    "supplyDesc": "İstanbul Avrupa ve Anadolu Yakası'ndaki iki depomuzdan il sınırları içinde aynı gün sevkiyat, Bükreş ofisimiz üzerinden Avrupa'ya tedarik sağlıyoruz.",
+    "otherTitle": "Diğer Hammadde Tipleri",
+    "backToAll": "Tüm Ürünler",
+    "ctaTitle": "için Teklif Alın",
+    "ctaDesc": "Miktar, termin ve fiyat bilgisi için satış ekibimizle iletişime geçin.",
+    "ctaBtn": "Teklif İste",
+    "groupPoly": "Poliolefinler & Standart Polimerler",
+    "groupEng": "Mühendislik Plastikleri",
+    "pp_homopolimer_name": "Polipropilen Homopolimer (PPH)",
+    "pp_homopolimer_intro1": "Polipropilen homopolimer, PP ailesinin en rijit ve en yüksek ısıl deformasyon sıcaklığına sahip tipidir. Tek monomerden üretildiği için kristallik derecesi yüksektir; bu da mukavemet ve sertlik avantajı sağlar.",
+    "pp_homopolimer_intro2": "Düşük yoğunluğu, geniş kimyasal direnci ve uygun maliyeti sayesinde ambalajdan endüstriyel parçalara kadar çok geniş bir alanda kullanılır. Ancak düşük sıcaklıkta darbe dayanımı kopolimer tiplerine göre sınırlıdır; soğuk ortam uygulamalarında bu husus dikkate alınmalıdır.",
+    "pp_homopolimer_props": [
+      "Yüksek rijitlik",
+      "Yüksek ısıl deformasyon sıcaklığı",
+      "Geniş kimyasal direnç",
+      "Düşük yoğunluk",
+      "İyi yüzey sertliği"
+    ],
+    "pp_homopolimer_apps": [
+      "Ambalaj ve kap",
+      "Endüstriyel parçalar",
+      "Ev gereçleri",
+      "Tekstil elyafı",
+      "Enjeksiyon parçaları"
+    ],
+    "pp_kopolimer_name": "Polipropilen Blok Kopolimer (PPC)",
+    "pp_kopolimer_intro1": "Blok kopolimer polipropilen, homopolimer yapıya etilen fazının eklenmesiyle üretilir. Bu ilave, özellikle düşük sıcaklıkta darbe dayanımını belirgin şekilde artırır.",
+    "pp_kopolimer_intro2": "Rijitlikten bir miktar ödün verilerek tokluk kazanılır. Soğuk ortamda çalışan taşıma kasaları, otomotiv parçaları ve endüstriyel bileşenlerde bu denge tercih edilir.",
+    "pp_kopolimer_props": [
+      "Yüksek darbe dayanımı",
+      "Düşük sıcaklıkta tokluk",
+      "Kimyasal direnç",
+      "Düşük yoğunluk",
+      "İyi işlenebilirlik"
+    ],
+    "pp_kopolimer_apps": [
+      "Taşıma kasaları",
+      "Otomotiv iç parçaları",
+      "Endüstriyel bileşenler",
+      "Soğuk zincir ambalajı",
+      "Ev gereçleri"
+    ],
+    "pp_random_name": "Polipropilen Random Kopolimer (PPRC)",
+    "pp_random_intro1": "Random kopolimer polipropilende etilen birimleri zincir boyunca rastgele dağılmıştır. Bu yapı kristalliği düşürür ve malzemeye berraklık ile esneklik kazandırır.",
+    "pp_random_intro2": "Şeffaflığın önemli olduğu ambalaj uygulamalarında ve esneklik gerektiren boru sistemlerinde tercih edilir. Homopolimere göre daha düşük erime sıcaklığına sahiptir.",
+    "pp_random_props": [
+      "Yüksek berraklık",
+      "Esneklik",
+      "İyi darbe dayanımı",
+      "Kimyasal direnç",
+      "Kaynaklanabilirlik"
+    ],
+    "pp_random_apps": [
+      "Şeffaf ambalaj",
+      "Boru sistemleri",
+      "Tıbbi ambalaj",
+      "Saklama kapları",
+      "Enjeksiyon parçaları"
+    ],
+    "hdpe_name": "Yüksek Yoğunluklu Polietilen (HDPE)",
+    "hdpe_intro1": "HDPE, doğrusal zincir yapısı sayesinde yüksek kristallik ve buna bağlı olarak yüksek rijitlik ile mukavemet sunar. Polietilen ailesinin en dayanıklı üyesidir.",
+    "hdpe_intro2": "Mükemmel kimyasal direnci ve düşük nem geçirgenliği, onu sıvı depolama, boru sistemleri ve ambalaj uygulamalarının standart malzemesi yapar. Ayrıca kolay geri dönüştürülebilir olması sürdürülebilirlik açısından avantaj sağlar.",
+    "hdpe_props": [
+      "Yüksek çekme mukavemeti",
+      "Mükemmel kimyasal direnç",
+      "Düşük nem geçirgenliği",
+      "İyi darbe dayanımı",
+      "Geri dönüştürülebilirlik"
+    ],
+    "hdpe_apps": [
+      "Boru ve bağlantı",
+      "Sıvı ambalajı",
+      "Depolama tankları",
+      "Endüstriyel kaplar",
+      "Şişirme kalıplama parçaları"
+    ],
+    "ldpe_name": "Alçak Yoğunluklu Polietilen (LDPE)",
+    "ldpe_intro1": "LDPE, dallanmış zincir yapısı nedeniyle düşük kristalliğe sahiptir. Bu da onu yumuşak, esnek ve kolay işlenebilir kılar.",
+    "ldpe_intro2": "Film uygulamalarının temel malzemesidir; yüksek uzama kabiliyeti ve iyi ısıl yapışma özelliği ambalaj sektöründe belirleyicidir. Ayrıca kimyasal direnci ve elektriksel yalıtım performansı iyidir.",
+    "ldpe_props": [
+      "Yüksek esneklik",
+      "İyi ısıl yapışma",
+      "Yüksek uzama",
+      "Kimyasal direnç",
+      "Elektriksel yalıtım"
+    ],
+    "ldpe_apps": [
+      "Ambalaj filmi",
+      "Streç ve shrink film",
+      "Kablo kaplaması",
+      "Esnek kaplar",
+      "Kaplama uygulamaları"
+    ],
+    "gpps_name": "Genel Amaçlı Polistiren (GPPS)",
+    "gpps_intro1": "GPPS, cam benzeri berraklığa sahip, rijit ve boyutsal olarak çok kararlı amorf bir termoplastiktir. Düşük çekme oranı hassas toleranslı parçalarda avantaj sağlar.",
+    "gpps_intro2": "Kolay işlenebilirliği ve uygun maliyeti sayesinde tüketici ürünlerinde yaygındır. Ancak kırılgan yapısı nedeniyle darbe yükü altında çalışan parçalarda HIPS veya diğer tokluk katkılı tipler değerlendirilmelidir.",
+    "gpps_props": [
+      "Cam benzeri berraklık",
+      "Yüksek rijitlik",
+      "Boyutsal kararlılık",
+      "Kolay işlenebilirlik",
+      "Düşük çekme oranı"
+    ],
+    "gpps_apps": [
+      "Şeffaf ambalaj",
+      "CD/DVD kutuları",
+      "Tek kullanımlık ürünler",
+      "Sergileme ürünleri",
+      "Laboratuvar sarf malzemesi"
+    ],
+    "hips_name": "Yüksek Darbe Dayanımlı Polistiren (HIPS)",
+    "hips_intro1": "HIPS, polistirene kauçuk fazı eklenerek üretilir. Bu modifikasyon berraklığı ortadan kaldırır ancak darbe dayanımını çok belirgin şekilde artırır.",
+    "hips_intro2": "Termoform edilebilirliği ve iyi yüzey kalitesi, buzdolabı iç kaplamaları ve ambalaj uygulamalarında öne çıkmasını sağlar. Kolay boyanabilir ve baskı alabilir.",
+    "hips_props": [
+      "Yüksek darbe dayanımı",
+      "Termoform edilebilirlik",
+      "İyi yüzey kalitesi",
+      "Boyanabilirlik",
+      "Boyutsal kararlılık"
+    ],
+    "hips_apps": [
+      "Buzdolabı iç kaplamaları",
+      "Gıda ambalajı",
+      "Elektronik muhafazalar",
+      "Oyuncak parçaları",
+      "Tabela ve sergileme"
+    ],
+    "tpe_name": "Termoplastik Elastomer (TPE)",
+    "tpe_intro1": "TPE'ler, kauçuğun esnekliğini termoplastiğin işlenebilirliğiyle birleştiren malzeme sınıfıdır. Vulkanizasyon gerektirmedikleri için enjeksiyonla seri üretilebilir ve geri dönüştürülebilirler.",
+    "tpe_intro2": "Farklı sertlik seviyelerinde üretilebilmeleri, aynı malzeme ailesiyle çok farklı uygulamalara hitap edebilmelerini sağlar. İki bileşenli enjeksiyonla sert plastiklere yapıştırılarak yumuşak tutma yüzeyleri oluşturulabilir.",
+    "tpe_props": [
+      "Kauçuk benzeri esneklik",
+      "Geri dönüştürülebilirlik",
+      "Geniş sertlik aralığı",
+      "İyi yorulma dayanımı",
+      "İki bileşenli enjeksiyona uygunluk"
+    ],
+    "tpe_apps": [
+      "Conta ve sızdırmazlık",
+      "Kablo kılıfları",
+      "Tutma yüzeyleri",
+      "Otomotiv körükleri",
+      "Hortum ve boru"
+    ],
+    "tpu_name": "Termoplastik Poliüretan (TPU)",
+    "tpu_intro1": "TPU, elastomerler arasında aşınma direnci ve mekanik dayanım açısından en güçlü malzemelerden biridir. Yüksek elastikiyetini korurken çok iyi yırtılma ve çizilme direnci gösterir.",
+    "tpu_intro2": "Yağ ve yakıt direnci sayesinde endüstriyel ve otomotiv uygulamalarında tercih edilir. Sert ve yumuşak tipleriyle geniş bir sertlik aralığı sunar.",
+    "tpu_props": [
+      "Üstün aşınma direnci",
+      "Yüksek yırtılma dayanımı",
+      "Yağ ve yakıt direnci",
+      "Geniş sertlik aralığı",
+      "İyi elastikiyet"
+    ],
+    "tpu_apps": [
+      "Endüstriyel hortum",
+      "Ayakkabı tabanı",
+      "Konveyör bantları",
+      "Otomotiv bileşenleri",
+      "Koruyucu kaplamalar"
+    ],
+    "eva_name": "Etilen Vinil Asetat (EVA)",
+    "eva_intro1": "EVA, etilen ve vinil asetat kopolimeridir. Vinil asetat oranı arttıkça malzeme yumuşar, şeffaflaşır ve yapışma özelliği güçlenir.",
+    "eva_intro2": "Köpük uygulamalarındaki esneklik ve darbe sönümleme kabiliyeti, ayakkabı ve spor ekipmanlarında yaygın kullanımını sağlar. Ayrıca güneş paneli kapsülleme filmlerinin temel malzemesidir.",
+    "eva_props": [
+      "Yüksek esneklik",
+      "İyi yapışma",
+      "Darbe sönümleme",
+      "Düşük sıcaklıkta esneklik",
+      "Şeffaflık (yüksek VA)"
+    ],
+    "eva_apps": [
+      "Ayakkabı tabanı ve köpük",
+      "Güneş paneli kapsülleme",
+      "Yapıştırıcı ve hot-melt",
+      "Ambalaj filmi",
+      "Spor ekipmanları"
+    ],
+    "abs_name": "Akrilonitril Bütadien Stiren (ABS)",
+    "abs_intro1": "ABS, üç monomerin birleşiminden oluşan amorf bir mühendislik plastiğidir: akrilonitril kimyasal direnç, bütadien tokluk, stiren ise işlenebilirlik ve yüzey kalitesi sağlar.",
+    "abs_intro2": "Kaplanabilir ve boyanabilir olması, görünen yüzey parçalarında büyük avantajdır. Düşük çekme oranı ve boyutsal kararlılığı hassas toleranslı parçalarda tercih edilmesini sağlar. Alev geciktirici ve cam elyaf takviyeli compound tipleri mevcuttur.",
+    "abs_props": [
+      "İyi darbe dayanımı",
+      "Üstün yüzey kalitesi",
+      "Kaplanabilirlik",
+      "Boyutsal kararlılık",
+      "Kolay işlenebilirlik"
+    ],
+    "abs_apps": [
+      "Elektronik muhafazalar",
+      "Beyaz eşya panelleri",
+      "Otomotiv iç aksamı",
+      "Oyuncak",
+      "IT ekipmanları"
+    ],
+    "polikarbonat_name": "Polikarbonat (PC)",
+    "polikarbonat_intro1": "Polikarbonat, mühendislik plastikleri arasında darbe dayanımı en yüksek malzemelerden biridir ve bunu cam benzeri optik saydamlıkla birleştirebilir. Geniş bir sıcaklık aralığında mekanik özelliklerini korur.",
+    "polikarbonat_intro2": "Alev geciktirici, UV kararlı, cam elyaf takviyeli ve ışık difüzyonlu özel tipleriyle otomotiv aydınlatmadan medikal cihazlara kadar geniş bir alanda kullanılır. Higroskopik olduğu için işleme öncesi kurutma kritik önem taşır.",
+    "polikarbonat_props": [
+      "Çok yüksek darbe dayanımı",
+      "Optik saydamlık",
+      "Yüksek ısı direnci",
+      "Boyutsal kararlılık",
+      "Alev geciktirici tipler"
+    ],
+    "polikarbonat_apps": [
+      "Otomotiv farları",
+      "Elektronik kasalar",
+      "Medikal cihazlar",
+      "Güvenlik camı",
+      "LED aydınlatma"
+    ],
+    "pmma_name": "Polimetil Metakrilat (PMMA / Akrilik)",
+    "pmma_intro1": "PMMA, plastikler arasında en yüksek optik berraklığa sahip malzemedir ve ışık geçirgenliği camdan bile yüksektir. Doğal UV direnci sayesinde dış mekânda uzun süre sararmadan kalabilir.",
+    "pmma_intro2": "Yüzey sertliği ve çizilme direnci polikarbonattan daha iyidir; ancak darbe dayanımı belirgin şekilde düşüktür. Bu nedenle görsel kalitenin öncelikli, darbe yükünün sınırlı olduğu uygulamalarda tercih edilir.",
+    "pmma_props": [
+      "En yüksek optik berraklık",
+      "Doğal UV direnci",
+      "Yüzey sertliği",
+      "Çizilme direnci",
+      "Renk kararlılığı"
+    ],
+    "pmma_apps": [
+      "Aydınlatma difüzörleri",
+      "Tabela ve sergileme",
+      "Otomotiv stop lambaları",
+      "Mimari uygulamalar",
+      "Optik parçalar"
+    ],
+    "pbt_name": "Polibütilen Tereftalat (PBT)",
+    "pbt_intro1": "PBT, yarı kristalin bir poliesterdir ve elektriksel yalıtım performansıyla mühendislik plastikleri arasında öne çıkar. Hızlı kristalleşmesi kısa çevrim sürelerinde kalıplamaya olanak tanır.",
+    "pbt_intro2": "Poliamitlere göre çok daha düşük nem alımı ve üstün boyutsal kararlılığı, hassas toleranslı elektrikli parçalarda tercih edilmesinin başlıca nedenidir. Alev geciktirici ve cam elyaf takviyeli tipleri yaygındır.",
+    "pbt_props": [
+      "Üstün elektriksel yalıtım",
+      "Düşük nem alımı",
+      "Boyutsal kararlılık",
+      "Kimyasal direnç",
+      "Hızlı kristalleşme"
+    ],
+    "pbt_apps": [
+      "Konnektör ve soket",
+      "Röle ve bobin karkası",
+      "Otomotiv elektriği",
+      "Beyaz eşya bileşenleri",
+      "Anahtar gövdeleri"
+    ],
+    "san_name": "Stiren Akrilonitril (SAN)",
+    "san_intro1": "SAN, stiren ve akrilonitril kopolimeridir. Akrilonitril ilavesi, polistirene göre belirgin şekilde daha iyi kimyasal direnç ve ısıl dayanım sağlarken berraklığı korur.",
+    "san_intro2": "Yüksek rijitliği ve boyutsal kararlılığı ile şeffaf ama dayanıklı parçalar gerektiren uygulamalarda kullanılır. ABS'ye göre daha sert ancak daha kırılgandır.",
+    "san_props": [
+      "Berraklık",
+      "İyi kimyasal direnç",
+      "Yüksek rijitlik",
+      "Boyutsal kararlılık",
+      "Isıl dayanım (PS'ye göre)"
+    ],
+    "san_apps": [
+      "Mutfak gereçleri",
+      "Kozmetik ambalajı",
+      "Ev aletleri parçaları",
+      "Şeffaf muhafazalar",
+      "Sergileme ürünleri"
+    ],
+    "pc_abs_name": "PC/ABS Alaşımı",
+    "pc_abs_intro1": "PC/ABS alaşımları, polikarbonatın darbe dayanımı ve ısıl performansı ile ABS'nin işlenebilirliği ve maliyet avantajını bir araya getirir. Alaşım oranı değiştirilerek denge uygulamaya göre ayarlanabilir.",
+    "pc_abs_intro2": "Otomotiv iç trim parçalarında ve elektronik muhafazalarda çok yaygındır. Saf polikarbonata göre daha kolay kalıplanır, saf ABS'ye göre ise belirgin şekilde daha yüksek ısıl ve mekanik performans sunar.",
+    "pc_abs_props": [
+      "Yüksek darbe dayanımı",
+      "İyi işlenebilirlik",
+      "Isıl performans",
+      "Boyutsal kararlılık",
+      "Alev geciktirici tipler"
+    ],
+    "pc_abs_apps": [
+      "Otomotiv iç trim",
+      "Elektronik muhafazalar",
+      "IT ekipmanları",
+      "Beyaz eşya bileşenleri",
+      "Şarj sistemleri"
+    ],
+    "ppo_ppe_name": "Modifiye PPO / PPE",
+    "ppo_ppe_intro1": "Modifiye PPO/PPE alaşımları, mühendislik plastikleri arasında en düşük yoğunluğa sahip gruplardan biridir ve neredeyse hiç nem almazlar. Bu, olağanüstü boyutsal kararlılık anlamına gelir.",
+    "ppo_ppe_intro2": "Halojensiz alev geciktirici formülasyonları ve hidrolitik kararlılıkları sayesinde fotovoltaik bağlantı kutuları, batarya bileşenleri ve sıcak su ile temas eden parçalarda tercih edilir.",
+    "ppo_ppe_props": [
+      "Çok düşük nem alımı",
+      "Üstün boyutsal kararlılık",
+      "Halojensiz alev geciktiricilik",
+      "Hidrolitik kararlılık",
+      "Düşük yoğunluk"
+    ],
+    "ppo_ppe_apps": [
+      "Fotovoltaik bağlantı kutuları",
+      "Batarya bileşenleri",
+      "Elektrikli araç parçaları",
+      "Su tesisatı bileşenleri",
+      "Elektrik pano elemanları"
+    ],
+    "pa6_pa66_name": "Poliamit (PA6 / PA66 / Naylon)",
+    "pa6_pa66_intro1": "Poliamitler, yüksek mekanik dayanım, aşınma direnci ve ısıl performansıyla mühendislik plastiklerinin en yaygın kullanılan ailesidir. PA66, PA6'ya göre daha yüksek erime sıcaklığına sahiptir.",
+    "pa6_pa66_intro2": "Cam elyaf takviyesiyle rijitlik ve ısıl deformasyon sıcaklığı belirgin şekilde yükselir. Poliamitler yüksek oranda higroskopiktir; nem alımı boyutları ve mekanik özellikleri etkilediği için kurutma ve depolama koşullarına titizlikle uyulmalıdır.",
+    "pa6_pa66_props": [
+      "Yüksek mekanik dayanım",
+      "Aşınma ve sürtünme direnci",
+      "Yüksek ısıl performans",
+      "Cam elyaf takviyeli tipler",
+      "Alev geciktirici tipler"
+    ],
+    "pa6_pa66_apps": [
+      "Motor bölmesi parçaları",
+      "Dişli ve yataklar",
+      "Elektrik-elektronik bileşenleri",
+      "Yapısal parçalar",
+      "Tarım ve sulama"
+    ]
+  },
+  "nobreak": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "badge": "No Break PP",
+    "catTitle": "No Break PP",
+    "catHighlight": "Yüksek Darbe Dayanımlı Polipropilen",
+    "catDesc": "Kırılmaması gereken parçalar için ultra yüksek darbe dayanımlı PP blok kopolimer grade'leri. SK Geo Centric, Hanwha TotalEnergies ve Borealis / Borouge kaynaklı ürünleri stoktan ve siparişe göre tedarik ediyoruz.",
+    "intro1": "Sektörde \"no break\" olarak anılan ürünler, standart blok kopolimer polipropilenden belirgin şekilde daha yüksek darbe dayanımı sunan ultra yüksek tokluklu PP tipleridir. Kauçuk fazının oranı ve dağılımı optimize edilerek, parçanın darbe altında kırılmak yerine deforme olması hedeflenir.",
+    "intro2": "Bu grade'ler özellikle taşıma kasaları, ağır hizmet kovaları, bebek ve çocuk ürünleri, beyaz eşya bileşenleri ve otomotiv parçaları gibi kırılmanın kabul edilemez olduğu uygulamalarda kullanılır. Düşük sıcaklıkta çalışan uygulamalarda ise soğukta darbe dayanımı belirleyici kriter hâline gelir.",
+    "intro3": "Rijitlikten bir miktar ödün verilerek tokluk kazanıldığı için, doğru grade seçimi uygulamanın darbe-rijitlik dengesine göre yapılmalıdır. Akışkanlık (MFI) tercihi ise parçanın cidar kalınlığı ve kalıp dolum mesafesiyle doğrudan ilişkilidir.",
+    "gradesTitle": "Tedarik Ettiğimiz No Break PP Grade'leri",
+    "gradesDesc": "Her grade için teknik veri sayfası (TDS), numune ve fiyat teklifi talep edebilirsiniz.",
+    "makerLabel": "Üretici",
+    "seriesLabel": "Seri",
+    "selectionTitle": "Grade Seçiminde Nelere Dikkat Edilmeli?",
+    "selectionDesc": "Doğru no break grade'ini belirlemek için aşağıdaki başlıkları netleştirmeniz yeterli.",
+    "sel1": "Parça hangi sıcaklıkta darbe alacak? (oda sıcaklığı mı, soğuk mu)",
+    "sel2": "Cidar kalınlığı ve kalıp dolum mesafesi nedir? (akışkanlık seçimi)",
+    "sel3": "Rijitlik mi tokluk mu öncelikli?",
+    "sel4": "Gıda veya çocuk teması onayı gerekiyor mu?",
+    "sel5": "Compound'a girecek mi, doğrudan enjeksiyon mu?",
+    "sel6": "Renklendirme veya masterbatch kullanımı olacak mı?",
+    "supplyTitle": "Tedarik ve Stok Durumu",
+    "supplyDesc": "No break PP grade'lerini İstanbul'daki depolarımızdan ve siparişe göre temin ediyoruz. Güncel stok durumu, termin süresi ve miktar bazlı fiyatlandırma için satış ekibimize ulaşın.",
+    "supplyNote": "Not: Bu ürünler LG Chem ve Basechem distribütörlüğümüzün kapsamı dışındadır; ilgili üreticilerden tedarik ederek sunuyoruz.",
+    "faqTitle": "No Break PP Hakkında Sık Sorulan Sorular",
+    "faqQ1": "No break PP nedir, normal PPC'den farkı ne?",
+    "faqA1": "No break PP, standart blok kopolimer polipropilene (PPC) göre çok daha yüksek darbe dayanımı sunan ultra yüksek tokluklu tiplerin sektördeki yaygın adıdır. Kauçuk fazının oranı ve dağılımı optimize edilerek parçanın darbe altında kırılmak yerine deforme olması sağlanır. Karşılığında rijitlikten bir miktar ödün verilir.",
+    "faqQ2": "Hangi no break PP grade'lerini tedarik ediyorsunuz?",
+    "faqA2": "SK Geo Centric YUPLENE BH3500 ve BH3820, Hanwha TotalEnergies BI6300 ve BI7300, Borealis / Borouge BD265MO grade'lerini tedarik ediyoruz. Listede olmayan bir grade için de bize yazabilirsiniz — temin edilebilirliğini kontrol edip dönüş yaparız.",
+    "faqQ3": "Bu grade'lerin TDS'ini nasıl alabilirim?",
+    "faqA3": "İlgilendiğiniz grade'in sayfasındaki \"TDS'e Eriş\" butonuna tıklayıp e-posta ve telefon bilginizi bırakmanız yeterli. Talebiniz satış ekibimize iletilir ve üreticinin resmî teknik veri sayfası en kısa sürede e-posta ile paylaşılır.",
+    "faqQ4": "Numune alabilir miyim?",
+    "faqA4": "Evet. Deneme üretimi ve devreye alma çalışmaları için numune talep edebilirsiniz. Grade sayfalarındaki \"Numune Talep Et\" butonundan iletişim bilgilerinizi bırakmanız yeterlidir.",
+    "otherTitle": "Diğer No Break Grade'leri",
+    "backToCat": "Tüm No Break PP Grade'leri",
+    "relatedTitle": "İlgili Hammadde Tipleri",
+    "ctaTitle": "için Teklif Alın",
+    "ctaDesc": "Miktar, termin ve fiyat bilgisi için satış ekibimizle iletişime geçin.",
+    "ctaBtn": "Teklif İste",
+    "aboutTitle": "Bu Grade Hakkında",
+    "propsTitle": "Öne Çıkan Özellikler",
+    "appsTitle": "Tipik Uygulama Alanları",
+    "tdsNote": "Bu sayfada sayısal teknik değer yayınlanmaz. Akış indeksi, Izod darbe dayanımı, yoğunluk ve işleme koşulları gibi değerler üreticinin resmî TDS'inde yer alır — tahmini değer paylaşmıyoruz.",
+    "sk_bh3500_tag": "Ultra Yüksek Darbe Dayanımı",
+    "sk_bh3500_desc": "SK Geo Centric'in YUPLENE serisine ait ultra yüksek darbe dayanımlı polipropilen blok kopolimer. Darbe dayanımının yanı sıra rijitlik, akışkanlık ve ısı direnci dengesiyle öne çıkar.",
+    "sk_bh3500_props": [
+      "Ultra yüksek darbe dayanımı",
+      "Yüksek rijitlik",
+      "İyi akışkanlık",
+      "Isı direnci",
+      "Compound'a uygunluk"
+    ],
+    "sk_bh3500_apps": [
+      "Otomotiv parçaları",
+      "Elektrikli ev aletleri",
+      "Büyük hacimli kaplar",
+      "İnce cidarlı enjeksiyon",
+      "Yüksek hızlı enjeksiyon"
+    ],
+    "sk_bh3820_tag": "Yüksek Akışkanlık + Darbe",
+    "sk_bh3820_desc": "SK Geo Centric YUPLENE serisinin ultra yüksek darbe dayanımlı, yüksek akışkanlıklı blok kopolimer tipi. İnce cidarlı ve yüksek hızlı enjeksiyon uygulamaları için geliştirilmiştir.",
+    "sk_bh3820_props": [
+      "Ultra yüksek darbe dayanımı",
+      "Yüksek akışkanlık",
+      "Rijitlik",
+      "Isı direnci",
+      "İnce cidara uygunluk"
+    ],
+    "sk_bh3820_apps": [
+      "Elektrikli ev aletleri",
+      "Büyük hacimli kaplar",
+      "Otomotiv parçaları",
+      "Endüstriyel parçalar",
+      "İnce cidarlı enjeksiyon"
+    ],
+    "hanwha_total_bi6300_tag": "Yüksek Darbe Blok Kopolimer",
+    "hanwha_total_bi6300_desc": "Hanwha TotalEnergies'in enjeksiyon uygulamaları için geliştirdiği yüksek darbe dayanımlı polipropilen blok kopolimer. Yüksek izotaktik PP tabanı ve optimize kauçuk fazı ile rijitlik-tokluk dengesi sunar.",
+    "hanwha_total_bi6300_props": [
+      "Yüksek darbe dayanımı",
+      "Rijitlik-tokluk dengesi",
+      "İyi işlenebilirlik",
+      "Yüksek izotaktik PP tabanı",
+      "Enjeksiyona uygunluk"
+    ],
+    "hanwha_total_bi6300_apps": [
+      "Ev gereçleri",
+      "Endüstriyel parçalar",
+      "Otomotiv bileşenleri",
+      "Taşıma kasaları",
+      "Genel enjeksiyon"
+    ],
+    "hanwha_total_bi7300_tag": "Süper Darbe Dayanımı",
+    "hanwha_total_bi7300_desc": "Hanwha TotalEnergies'in süper darbe dayanımlı enjeksiyon tipi blok PP ürünü. Yüksek akışkanlığı ve işlenebilirliğiyle otomotiv kompozit tabanı, ev gereçleri ve endüstriyel malzeme uygulamaları için geliştirilmiştir.",
+    "hanwha_total_bi7300_props": [
+      "Süper darbe dayanımı",
+      "Yüksek akışkanlık",
+      "Mükemmel işlenebilirlik",
+      "Rijitlik-tokluk dengesi",
+      "Enjeksiyona uygunluk"
+    ],
+    "hanwha_total_bi7300_apps": [
+      "Otomotiv kompozit tabanı",
+      "Ev gereçleri parçaları",
+      "Endüstriyel malzeme bileşenleri",
+      "Taşıma kasaları",
+      "Genel enjeksiyon"
+    ],
+    "borealis_bd265mo_tag": "Düşük Sıcaklıkta Darbe + Gıda Onaylı",
+    "borealis_bd265mo_desc": "Borstar Nükleasyon Teknolojisi (BNT) ile üretilen çok yüksek darbe dayanımlı heterofazik kopolimer. Düşük sıcaklıklarda dahi üstün darbe dayanımı gösterir; gıda ve çocuk teması için onaylıdır.",
+    "borealis_bd265mo_props": [
+      "Çok yüksek darbe dayanımı",
+      "Düşük sıcaklıkta darbe performansı",
+      "İyi işlenebilirlik",
+      "Rijitlik",
+      "Gıda ve çocuk teması onayı"
+    ],
+    "borealis_bd265mo_apps": [
+      "Bebek ve çocuk ürünleri",
+      "Oyuncak",
+      "Taşıma kasaları ve kutular",
+      "Ağır hizmet kovaları",
+      "Soğuk zincir uygulamaları"
+    ]
   }
 }

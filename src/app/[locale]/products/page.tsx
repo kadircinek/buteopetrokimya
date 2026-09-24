@@ -3,9 +3,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { useLocale } from "next-intl";
-import { ArrowRight, FileText } from "lucide-react";
+import { ArrowRight, FileText, ShieldCheck } from "lucide-react";
 import { buildMetadata, type Locale } from "@/lib/seo";
 import { tdsForCode, type TdsResource } from "@/data/tds";
+import { slugForPolymerCode } from "@/data/polymerTypes";
+import { NO_BREAK_GRADES } from "@/data/noBreakPP";
 import TdsGate from "@/components/TdsGate";
 import FaqSection from "@/components/FaqSection";
 
@@ -16,6 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default function ProductsPage() {
   const t = useTranslations("products");
+  const tn = useTranslations("nobreak");
   const locale = useLocale();
 
   const polyolefins = [
@@ -96,8 +99,8 @@ export default function ProductsPage() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {polyolefins.map((p) => (
+                <div key={p.code} className="flex flex-col">
                 <TdsGate
-                  key={p.code}
                   resource={tdsForCode(p.code)}
                   productName={p.code}
                   cellClassName="relative block w-full text-left p-4 rounded-2xl border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all group cursor-pointer"
@@ -106,6 +109,12 @@ export default function ProductsPage() {
                   <div className="text-xl font-bold mb-1 group-hover:text-green-700 transition-colors" style={{color: "#1B4332"}}>{p.code}</div>
                   <div className="text-xs text-gray-400 leading-tight">{p.name}</div>
                 </TdsGate>
+                {slugForPolymerCode(p.code) && (
+                  <Link href={`/${locale}/products/${slugForPolymerCode(p.code)}`} className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-semibold text-gray-400 hover:text-green-700 transition-colors">
+                    {t("detailsLink")} <ArrowRight size={11} />
+                  </Link>
+                )}
+                </div>
               ))}
             </div>
           </div>
@@ -125,8 +134,8 @@ export default function ProductsPage() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {engineering.map((p) => (
+                <div key={p.code} className="flex flex-col">
                 <TdsGate
-                  key={p.code}
                   resource={tdsForCode(p.code)}
                   productName={p.code}
                   cellClassName="relative block w-full text-left p-6 rounded-2xl text-white group hover:-translate-y-1 transition-all cursor-pointer"
@@ -136,6 +145,12 @@ export default function ProductsPage() {
                   <div className="text-2xl font-bold mb-2">{p.code}</div>
                   <div className="text-xs text-white/70">{p.name}</div>
                 </TdsGate>
+                {slugForPolymerCode(p.code) && (
+                  <Link href={`/${locale}/products/${slugForPolymerCode(p.code)}`} className="mt-1.5 inline-flex items-center gap-1 text-[11px] font-semibold text-gray-400 hover:text-green-700 transition-colors">
+                    {t("detailsLink")} <ArrowRight size={11} />
+                  </Link>
+                )}
+                </div>
               ))}
             </div>
           </div>
@@ -197,6 +212,46 @@ export default function ProductsPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* No Break PP — öne çıkan ürün grubu */}
+        <section className="py-20" style={{ background: "linear-gradient(135deg, #0d2b1a, #1a3a5c)" }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-white flex-shrink-0 bg-white/10 border border-white/20">
+                <ShieldCheck size={22} />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-white">{tn("catTitle")} — {tn("catHighlight")}</h2>
+                <p className="text-white/60 text-sm">{tn("badge")}</p>
+              </div>
+            </div>
+            <p className="text-white/70 max-w-3xl mb-8 leading-relaxed">{tn("catDesc")}</p>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-8">
+              {NO_BREAK_GRADES.map((g) => (
+                <Link
+                  key={g.slug}
+                  href={`/${locale}/products/no-break-pp/${g.slug}`}
+                  className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:-translate-y-0.5 transition-all"
+                >
+                  <div className="font-mono font-black text-xl text-white mb-1">{g.short}</div>
+                  <div className="text-xs text-white/50 leading-snug">{g.maker}</div>
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs font-semibold" style={{ color: "#86efac" }}>
+                    {t("detailsLink")} <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <Link
+              href={`/${locale}/products/no-break-pp`}
+              className="inline-flex items-center gap-2 font-bold px-7 py-3 rounded-full text-white transition-all hover:-translate-y-0.5 text-sm"
+              style={{ backgroundColor: "#4CAF50" }}
+            >
+              {tn("backToCat")} <ArrowRight size={16} />
+            </Link>
           </div>
         </section>
 

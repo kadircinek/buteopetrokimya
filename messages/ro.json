@@ -7,7 +7,8 @@
     "partners": "Parteneri",
     "contact": "Contact",
     "finder": "Găsitor Materiale",
-    "getQuote": "Obține Ofertă"
+    "getQuote": "Obține Ofertă",
+    "blog": "Ghid Tehnic"
   },
   "hero": {
     "badge": "Distribuitor Turcia LG Chem & Basechem",
@@ -116,7 +117,8 @@
     "pbtEngName": "Polibutilenă Tereftalat",
     "sanName": "Stiren Acrilonitril",
     "ppoName": "Polifenil Eter (Noryl)",
-    "paName": "Poliamidă"
+    "paName": "Poliamidă",
+    "detailsLink": "Detalii"
   },
   "sectors": {
     "badge": "Sectoarele Noastre",
@@ -331,7 +333,18 @@
     "ctaDesc": "Contactați echipa noastră de vânzări pentru selecția gradului, fișe tehnice și prețuri.",
     "ctaBtn": "Solicitați Ofertă",
     "supplyTitle": "Aprovizionare în Turcia și Europa",
-    "supplyDesc": "Ca Buteo Petrochemicals, furnizăm această familie de produse în Turcia și Europa prin cele două depozite din Istanbul și biroul nostru din București. Expediere în aceeași zi în limitele orașului Istanbul."
+    "supplyDesc": "Ca Buteo Petrochemicals, furnizăm această familie de produse în Turcia și Europa prin cele două depozite din Istanbul și biroul nostru din București. Expediere în aceeași zi în limitele orașului Istanbul.",
+    "selectionTitle": "La ce trebuie să fiți atenți la alegerea gradului",
+    "selectionDesc": "Clarificarea întrebărilor de mai jos este suficientă pentru a restrânge gradul potrivit — restul îl rezolvă echipa noastră tehnică împreună cu dumneavoastră.",
+    "faqTitle": "Întrebări Frecvente despre {brand}",
+    "faqQ1": "Cine furnizează {brand} în Turcia?",
+    "faqA1": "Buteo Petrochemicals este distribuitorul LG Chem pentru Turcia și furnizează întreaga familie de produse {brand} în Turcia și Europa. Din cele două depozite din Istanbul oferim livrare în aceeași zi în oraș.",
+    "faqQ2": "Cum pot obține fișa tehnică (TDS) pentru {brand}?",
+    "faqA2": "Apăsați „Accesați TDS” pe pagina gradului care vă interesează și lăsați adresa de e-mail și numărul de telefon. Solicitarea ajunge la echipa noastră de vânzări, iar TDS-ul oficial LG Chem este trimis prin e-mail cât mai curând posibil.",
+    "faqQ3": "Pot solicita o mostră de {brand}?",
+    "faqA3": "Da. Puteți solicita mostre pentru producție de probă și punere în funcțiune. Folosiți butonul „Solicitați Mostră” de pe paginile gradelor și lăsați datele de contact.",
+    "faqQ4": "Gradul {brand} de care am nevoie nu este listat — ce pot face?",
+    "faqA4": "Pe site listăm gradele principale, însă avem acces la întregul portofoliu LG Chem. Trimiteți-ne codul gradului căutat și verificăm disponibilitatea și termenul de livrare."
   },
   "news": {
     "badge": "Noutăți",
@@ -462,11 +475,798 @@
     "oemDesc": "Produsele compound Basechem, furnizate celor mai mari producători din Coreea de ani de zile, oferă calitate certificată conform standardelor OEM globale.",
     "ctaTitle": "Obțineți o Ofertă pentru Produsele Basechem",
     "ctaDesc": "Solicitați o ofertă de preț și fișă tehnică pentru produse ABS, PC, PBT, PC/ABS, PPO/PPE sau PA.",
-    "ctaBtn": "Solicită Ofertă"
+    "ctaBtn": "Solicită Ofertă",
+    "detailsLink": "Detalii"
   },
   "faq": {
     "badge": "Întrebări",
     "title": "Întrebări Frecvente",
     "subtitle": "Întrebări despre produse, TDS, mostre și livrare"
+  },
+  "grade": {
+    "home": "Acasă",
+    "lgchem": "LG Chem",
+    "badge": "Stoc Distribuitor Autorizat",
+    "familyLabel": "Familie de Produse",
+    "baseLabel": "Tip de Polimer",
+    "intro": "{grade} este un grad de plastic tehnic pe bază de {base} din familia de produse {brand} a LG Chem. În calitate de distribuitor LG Chem pentru Turcia, Buteo Petrochemicals furnizează acest grad în Turcia și Europa.",
+    "dataTitle": "Date Tehnice",
+    "dataDesc": "Toate valorile tehnice ale acestui grad — indicele de curgere, densitatea, rezistența la tracțiune, proprietățile termice și condițiile de procesare — sunt publicate în fișa tehnică oficială LG Chem (TDS). Nu publicăm valori estimative; solicitați TDS-ul actual și corect prin formularul de mai jos.",
+    "dataNote": "Solicitarea dumneavoastră ajunge la echipa noastră de vânzări și este trimisă prin e-mail cât mai curând posibil.",
+    "sampleTitle": "Solicitare Mostră",
+    "sampleDesc": "Solicitați o mostră pentru punere în funcțiune și producție de probă.",
+    "highlightsTitle": "Proprietăți Cheie ale Familiei {brand}",
+    "appsTitle": "Aplicații Tipice",
+    "siblingsTitle": "Alte Grade din Familia {brand}",
+    "siblingsDesc": "Dacă acest grad nu corespunde întocmai cerințelor, explorați alternative din aceeași familie.",
+    "backToBrand": "Toate Gradele {brand}",
+    "supplyTitle": "Livrare în Turcia și Europa",
+    "supplyDesc": "Din cele două depozite ale noastre din Istanbul oferim livrare în aceeași zi în Istanbul și aprovizionăm Europa prin biroul nostru din București. Contactați echipa de vânzări pentru stoc și termen de livrare.",
+    "ctaTitle": "Solicitați o Ofertă pentru {grade}",
+    "ctaDesc": "Contactați echipa noastră de vânzări pentru cantitate, termen și preț.",
+    "ctaBtn": "Solicitați Ofertă",
+    "notFoundHint": "Dacă gradul căutat nu este listat, scrieți-ne — avem acces la întregul portofoliu LG Chem."
+  },
+  "blog": {
+    "navLabel": "Ghid Tehnic",
+    "home": "Acasă",
+    "badge": "Ghid Tehnic",
+    "title": "Plastice Tehnice",
+    "titleHighlight": "Ghid Tehnic",
+    "pageDesc": "Ghiduri practice despre alegerea materialelor, condițiile de procesare și aplicațiile industriale, pentru echipele de achiziții și inginerie.",
+    "readTime": "min citire",
+    "allPosts": "Toate Articolele",
+    "relatedTitle": "Familii de Produse Conexe",
+    "backToBlog": "Înapoi la Ghidul Tehnic",
+    "publishedOn": "Publicat",
+    "ctaTitle": "Să identificăm împreună materialul potrivit pentru aplicația dumneavoastră",
+    "ctaDesc": "Echipa noastră tehnică vă susține în alegerea materialului, compararea gradelor și procesul de mostre.",
+    "ctaBtn": "Contactați-ne",
+    "disclaimer": "Acest articol conține informații generale despre materiale. Valorile tehnice numerice variază în funcție de grad și apar doar în fișa tehnică oficială (TDS)."
+  },
+  "privacy": {
+    "navLabel": "Politica de Confidențialitate",
+    "home": "Acasă",
+    "badge": "Notă Juridică",
+    "title": "Protecția Datelor cu Caracter Personal și",
+    "titleHighlight": "Politica de Confidențialitate",
+    "updated": "Ultima actualizare: 10 septembrie 2026",
+    "intro": "La Buteo Petrochemicals acordăm importanță protecției datelor cu caracter personal pe care ni le transmiteți prin intermediul site-ului nostru. Această notă explică ce date prelucrăm și în ce scop, în temeiul Legii turce nr. 6698 privind protecția datelor cu caracter personal (KVKK).",
+    "s1t": "1. Operatorul de Date",
+    "s1a": "Datele dumneavoastră cu caracter personal sunt prelucrate de Buteo Petrochemicals, în calitate de operator, în limitele descrise mai jos.",
+    "s1b": "Adresă: Küçükbakkalköy, Ali Ay Sk. No:19, 34750 Ataşehir / Istanbul, Turcia",
+    "s1c": "E-mail: info@buteopetrokimya.com · Telefon: +90 542 189 43 40",
+    "s2t": "2. Datele Prelucrate",
+    "s2i": "Prin formularul de contact, solicitarea fișei tehnice (TDS), solicitarea de mostre și formularele de căutare a materialelor de pe site sunt prelucrate următoarele date:",
+    "s2l1": "Date de identitate: nume și prenume",
+    "s2l2": "Date de contact: adresă de e-mail, număr de telefon",
+    "s2l3": "Date profesionale: denumirea companiei (când este furnizată opțional)",
+    "s2l4": "Conținutul solicitării: produsul/gradul de interes și informațiile din mesajul dumneavoastră",
+    "s2n": "Pe site-ul nostru nu sunt utilizate cookie-uri de analiză sau publicitate ale terților pentru urmărirea vizitatorilor.",
+    "s3t": "3. Scopurile Prelucrării",
+    "s3l1": "Soluționarea solicitărilor și revenirea cu un răspuns",
+    "s3l2": "Transmiterea fișelor tehnice (TDS) și a solicitărilor de mostre",
+    "s3l3": "Furnizarea de informații privind produsele, prețurile și termenele",
+    "s3l4": "Acordarea de suport tehnic înainte și după vânzare",
+    "s3l5": "Îndeplinirea obligațiilor legale",
+    "s4t": "4. Temeiul Juridic",
+    "s4a": "Datele dumneavoastră sunt prelucrate prin mijloace automate atunci când transmiteți un formular, în temeiul „legăturii directe cu încheierea sau executarea unui contract” și al „necesității prelucrării pentru interesele legitime ale operatorului”, conform articolului 5 din KVKK.",
+    "s5t": "5. Transferul Datelor",
+    "s5a": "Formularele transmise ajung la adresa noastră de e-mail prin infrastructura furnizorului nostru de servicii de livrare e-mail (Web3Forms). Site-ul nostru este găzduit pe infrastructura Vercel.",
+    "s5b": "Datele dumneavoastră nu sunt partajate cu terți în afara obligațiilor legale și nu sunt niciodată vândute sau închiriate în scopuri de marketing.",
+    "s6t": "6. Perioada de Păstrare",
+    "s6a": "Datele sunt păstrate pe durata necesară soluționării solicitării și pe durata impusă de relația comercială; acolo unde există o obligație legală de păstrare, pe perioada prevăzută de legislația aplicabilă. La finalul acestor perioade, datele sunt șterse, distruse sau anonimizate.",
+    "s7t": "7. Drepturile Dumneavoastră conform KVKK",
+    "s7i": "Conform articolului 11 din KVKK aveți următoarele drepturi:",
+    "s7l1": "Să aflați dacă datele dumneavoastră sunt prelucrate",
+    "s7l2": "Să solicitați informații dacă au fost prelucrate",
+    "s7l3": "Să aflați scopul prelucrării și dacă sunt utilizate conform acestuia",
+    "s7l4": "Să solicitați rectificarea datelor incomplete sau incorecte",
+    "s7l5": "Să solicitați ștergerea sau distrugerea în condițiile prevăzute de lege",
+    "s7l6": "Să solicitați notificarea acestor operațiuni către terții cărora le-au fost transferate datele",
+    "s7l7": "Să solicitați despăgubiri dacă suferiți un prejudiciu din cauza prelucrării ilegale",
+    "s8t": "8. Cereri",
+    "s8a": "Puteți transmite cereri privind drepturile de mai sus prin e-mail la info@buteopetrokimya.com sau printr-o cerere scrisă la adresa indicată mai sus. Cererile sunt soluționate în cel mult 30 de zile.",
+    "s9t": "9. Cookie-uri",
+    "s9a": "Site-ul nostru utilizează doar cookie-urile tehnice necesare funcționării. Setări precum preferința de limbă sunt stocate în browserul dumneavoastră. Nu se utilizează cookie-uri pentru urmărire publicitară sau profilare.",
+    "s10t": "10. Modificări",
+    "s10a": "Această notă poate fi actualizată atunci când este necesar. Versiunea curentă este publicată întotdeauna pe această pagină și poate fi urmărită prin data actualizării de mai sus.",
+    "contactTitle": "Pentru întrebările dumneavoastră",
+    "contactDesc": "Ne puteți contacta pentru orice întrebare sau solicitare privind datele dumneavoastră cu caracter personal.",
+    "contactBtn": "Contactați-ne"
+  },
+  "bcDetail": {
+    "home": "Acasă",
+    "basechem": "Basechem",
+    "distributorBadge": "Distribuitor Turcia",
+    "variantsTitle": "Variante Disponibile",
+    "variantsDesc": "Puteți solicita fișa tehnică (TDS) și prețul pentru variantele de mai jos.",
+    "variantUnit": "variante",
+    "highlightsTitle": "Proprietăți Cheie",
+    "appsTitle": "Aplicații",
+    "oemTitle": "Producție Aprobată OEM",
+    "oemDesc": "Cu peste 30 de ani de experiență, Basechem este furnizor aprobat pentru OEM-uri globale precum Samsung, LG și Hyundai. Infrastructura de producție certificată UL și RoHS răspunde așteptărilor de calitate ale industriei auto și electronice.",
+    "supplyTitle": "Livrare în Turcia și Europa",
+    "supplyDesc": "La Buteo Petrochemicals furnizăm această grupă de produse în Turcia și Europa din cele două depozite din Istanbul și biroul nostru din București. Contactați echipa de vânzări pentru culori și formulări personalizate.",
+    "otherTitle": "Alte Produse Basechem",
+    "backToAll": "Toate Produsele Basechem",
+    "ctaTitle": "— Solicitați o Ofertă",
+    "ctaDesc": "Contactați echipa noastră de vânzări pentru alegerea variantei, fișe tehnice și prețuri.",
+    "ctaBtn": "Solicitați Ofertă",
+    "detailsLink": "Detalii"
+  },
+  "sectorDetail": {
+    "home": "Acasă",
+    "sectors": "Sectoare",
+    "badge": "Soluții Industriale",
+    "partsTitle": "Piese Tipice de Aplicație",
+    "criteriaTitle": "Criterii de Alegere a Materialului",
+    "criteriaDesc": "Pentru a determina materia primă potrivită pentru acest sector, vă recomandăm să clarificați mai întâi următoarele aspecte.",
+    "brandsTitle": "Familii de Produse LG Chem Recomandate pentru Acest Sector",
+    "basechemTitle": "Compounduri Basechem pentru Acest Sector",
+    "linkNote": "Apăsați pe familiile de produse de mai jos pentru a vedea listele de grade și a solicita TDS.",
+    "otherTitle": "Alte Sectoare",
+    "backToAll": "Toate Sectoarele",
+    "supplyTitle": "Livrare în Turcia și Europa",
+    "supplyDesc": "Din cele două depozite din Istanbul oferim livrare în aceeași zi în oraș și aprovizionăm Europa prin biroul nostru din București.",
+    "ctaTitle": "Să Determinăm Materia Primă Potrivită pentru Sectorul Dumneavoastră",
+    "ctaDesc": "Spuneți-ne despre aplicația dumneavoastră, iar echipa noastră tehnică va identifica gradele potrivite și va oferi suport TDS și mostre.",
+    "ctaBtn": "Solicitați Ofertă",
+    "finderBtn": "Căutare Material",
+    "s1intro1": "Industria auto este domeniul în care cererea de materii prime plastice este atât cea mai mare, cât și cea mai solicitantă din punct de vedere tehnic. Temperatura ridicată continuă din compartimentul motor, calitatea suprafeței cerută la interior și rezistența UV așteptată la piesele exterioare necesită proprietăți foarte diferite.",
+    "s1intro2": "Obiectivele de reducere a greutății au accelerat înlocuirea pieselor metalice cu plastice tehnice. Odată cu răspândirea vehiculelor electrice, a crescut semnificativ cererea de compounduri ignifuge cu izolare electrică ridicată pentru componentele de baterii, sistemele de încărcare și conectorii de înaltă tensiune.",
+    "s1parts": [
+      "Piese din compartimentul motor",
+      "Elemente de interior și exterior",
+      "Difuzoare de faruri și iluminat",
+      "Conectori și piese electrice",
+      "Mecanisme de uși și scaune",
+      "Burdufuri de suspensie",
+      "Componente de baterii și încărcare",
+      "Piese de bară și caroserie"
+    ],
+    "s1criteria": [
+      "Temperatura de funcționare continuă",
+      "Rezistența la impact (inclusiv la temperaturi scăzute)",
+      "Rezistența la UV și intemperii",
+      "Ignifugare și izolare electrică",
+      "Rezistența la uleiuri, combustibili și substanțe chimice",
+      "Obiective de greutate și cost"
+    ],
+    "s2intro1": "În sectorul electric și electronic, alegerea materialului începe de obicei cu certificarea. Clasa de inflamabilitate UL-94, valoarea CTI și conformitatea RoHS sunt precondiții pentru aprobarea piesei.",
+    "s2intro2": "Tendința de miniaturizare impune fluiditate ridicată și ignifugare la secțiuni subțiri. Sistemele ignifuge fără halogeni sunt tot mai solicitate din cauza reglementărilor de mediu și a politicilor clienților.",
+    "s2parts": [
+      "Conectori și prize",
+      "Relee și carcase de bobine",
+      "Carcase electronice",
+      "Componente de întrerupătoare",
+      "Cutii de joncțiune fotovoltaice",
+      "Carcase de încărcătoare și adaptoare",
+      "Suporturi cu protecție ESD/EMI",
+      "Corpuri de întrerupătoare și prize"
+    ],
+    "s2criteria": [
+      "Clasa UL-94 și grosimea la care se aplică",
+      "Cerința de ignifugare fără halogeni",
+      "Izolare electrică (CTI)",
+      "Stabilitate dimensională și absorbție de umiditate",
+      "Fluiditate pentru pereți subțiri",
+      "Performanța la îmbătrânire termică"
+    ],
+    "s3intro1": "Electrocasnicele cer simultan calitate vizibilă a suprafeței și performanță mecanică de lungă durată. La piesele vizibile precum panouri și capace, luciul suprafeței și stabilitatea culorii sunt decisive.",
+    "s3intro2": "La interiorul frigiderelor, componentele mașinilor de spălat și piesele din jurul cuptoarelor devin critice rezistența la temperatură, la detergenți și compatibilitatea cu contactul alimentar. Utilizarea unor familii de materiale foarte diferite în același produs este, prin urmare, frecventă.",
+    "s3parts": [
+      "Panouri și capace frontale",
+      "Piese interioare de frigider",
+      "Componente pentru mașini de spălat",
+      "Butoane, mânere și mecanisme",
+      "Piese de ventilatoare și motoare",
+      "Carcase de control electronic"
+    ],
+    "s3criteria": [
+      "Calitatea suprafeței și stabilitatea culorii",
+      "Temperatura de deformare termică",
+      "Rezistența la detergenți și substanțe chimice",
+      "Compatibilitate cu contactul alimentar",
+      "Rezistența la impact",
+      "Stabilitate dimensională"
+    ],
+    "s4intro1": "În construcții și infrastructură criteriul decisiv este durabilitatea. Piesele folosite la fațade sunt expuse ani la rând la UV, variații de temperatură și precipitații, iar materialul trebuie să își păstreze proprietățile mecanice.",
+    "s4intro2": "Reglementările de siguranță la incendiu sunt de asemenea decisive pentru elementele de construcție. În aplicațiile transparente de acoperiș și fațadă, rezistența la impact și transmisia luminii trebuie obținute împreună.",
+    "s4parts": [
+      "Panouri transparente de acoperiș și fațadă",
+      "Țevi și fitinguri",
+      "Canale de cablu și piese de instalații",
+      "Componente de ferestre și uși",
+      "Corpuri de iluminat",
+      "Elemente de hidroizolație și drenaj"
+    ],
+    "s4criteria": [
+      "Rezistență de lungă durată la UV și intemperii",
+      "Clasa de siguranță la incendiu",
+      "Rezistența la impact",
+      "Transmisia luminii (aplicații transparente)",
+      "Rezistența chimică și la apă",
+      "Stabilitate dimensională"
+    ],
+    "s5intro1": "În aplicațiile medicale, alegerea materialului trebuie corelată cu metoda de sterilizare. Sterilizarea cu abur (autoclavă), gama și oxid de etilenă afectează materialele diferit; unii polimeri se pot îngălbeni sau fragiliza după expunerea gama.",
+    "s5intro2": "Transparența este critică la dispozitivele unde nivelul lichidului trebuie vizibil. Biocompatibilitatea și conformitatea cu standardele relevante sunt precondiții pentru utilizarea în sănătate, deci statusul de aprobare trebuie verificat la alegerea gradului.",
+    "s5parts": [
+      "Corpuri și carcase de dispozitive",
+      "Camere și rezervoare transparente",
+      "Corpuri de instrumente chirurgicale",
+      "Componente de dializă și perfuzie",
+      "Echipamente de laborator",
+      "Piese de mecanisme mobile"
+    ],
+    "s5criteria": [
+      "Compatibilitatea cu metoda de sterilizare",
+      "Biocompatibilitate și aprobări relevante",
+      "Cerința de transparență",
+      "Rezistența la substanțe chimice și dezinfectanți",
+      "Rezistența la impact",
+      "Stabilitatea culorii (după gama)"
+    ],
+    "s6intro1": "La mobilier și articole de uz casnic materialul este de obicei vizibil și atins, astfel încât calitatea suprafeței, consistența culorii și senzația tactilă contează la fel de mult ca proprietățile tehnice.",
+    "s6intro2": "La piesele mobile precum feronerie, șine și balamale, rezistența la frecare și la oboseală devin esențiale. Articolele de bucătărie în contact cu alimentele necesită aprobare de conformitate.",
+    "s6parts": [
+      "Feronerie pentru mobilier",
+      "Șine, balamale și mecanisme glisante",
+      "Mânere și butoane",
+      "Articole de bucătărie",
+      "Recipiente de depozitare",
+      "Piese decorative"
+    ],
+    "s6criteria": [
+      "Calitatea suprafeței și consistența culorii",
+      "Rezistența la frecare și uzură",
+      "Rezistența la oboseală (mișcare repetată)",
+      "Compatibilitate cu contactul alimentar",
+      "Rezistența la zgâriere",
+      "Echilibrul de cost"
+    ],
+    "s7intro1": "În aplicațiile de apărare și aviație se așteaptă reducerea greutății fără compromisuri de performanță. Înlocuirea metalului este cea mai puternică motivație în acest sector.",
+    "s7intro2": "Stabilitatea pe un interval larg de temperaturi, siguranța la incendiu și rezistența în medii dificile sunt cerințe fundamentale. În funcție de aplicație, pot fi necesare și ecranarea electromagnetică sau controlul sarcinilor statice.",
+    "s7parts": [
+      "Componente structurale ușoare",
+      "Carcase electronice și conectori",
+      "Piese cu ecranare EMI",
+      "Componente de sisteme de combustibil și hidraulice",
+      "Piese de interior cabină",
+      "Elemente de fixare"
+    ],
+    "s7criteria": [
+      "Raportul greutate/rezistență",
+      "Stabilitate pe interval larg de temperaturi",
+      "Siguranță la incendiu și comportament la fum",
+      "Rezistența la substanțe chimice și combustibili",
+      "Ecranare EMI / control ESD",
+      "Precizie dimensională"
+    ],
+    "s8intro1": "În aplicațiile agricole materialul rămâne în exterior perioade lungi. Expunerea continuă la UV, variațiile de temperatură și contactul cu substanțele chimice agricole obosesc materialul, făcând din stabilizarea UV cea mai critică cerință.",
+    "s8intro2": "Sistemele de irigație necesită în plus contact permanent cu apa și stabilitate dimensională sub presiune. Rezistența la substanțe precum îngrășămintele și pesticidele determină direct durata de viață a piesei.",
+    "s8parts": [
+      "Fitinguri de irigație",
+      "Piese pentru sisteme de picurare",
+      "Supape și mecanisme cu roți dințate",
+      "Conectori pentru sere",
+      "Componente de utilaje agricole",
+      "Echipamente de depozitare și manipulare"
+    ],
+    "s8criteria": [
+      "Stabilizare UV și durată de viață în exterior",
+      "Rezistența la substanțe chimice agricole",
+      "Contact cu apa și stabilitate hidrolitică",
+      "Stabilitate dimensională sub presiune",
+      "Rezistența la impact la temperaturi scăzute",
+      "Cost"
+    ],
+    "s9intro1": "În aplicațiile navale apa sărată este unul dintre cele mai agresive medii. Plasticele tehnice care înlocuiesc piesele metalice din cauza coroziunii oferă un avantaj clar în acest sector.",
+    "s9intro2": "Expunerea continuă la soare aduce în prim-plan rezistența la UV, iar contactul cu apa evidențiază stabilitatea hidrolitică. La vehiculele de transport devin decisive reglementările privind siguranța la incendiu și materialele de interior.",
+    "s9parts": [
+      "Piese de punte și echipamente exterioare",
+      "Elemente de fixare",
+      "Componente de pompe și supape",
+      "Canale de cablu și carcase",
+      "Piese de interior",
+      "Corpuri de iluminat"
+    ],
+    "s9criteria": [
+      "Rezistența la apă sărată și coroziune",
+      "Rezistența la UV și intemperii",
+      "Stabilitate hidrolitică",
+      "Clasa de siguranță la incendiu",
+      "Rezistența la impact",
+      "Greutate"
+    ],
+    "s10intro1": "În sectorul jucăriilor siguranța este pe primul loc. Materialul trebuie să respecte reglementările privind siguranța jucăriilor, să nu conțină metale grele și să îndeplinească condiții de contact similare celor alimentare.",
+    "s10intro2": "De asemenea, contează culorile vii, calitatea bună a suprafeței și rezistența la impact; jucăriile sunt scăpate și solicitate. Compatibilitatea pigmenților cu materialul este un alt aspect de urmărit.",
+    "s10parts": [
+      "Corpuri și carcase de jucării",
+      "Piese de mecanisme mobile",
+      "Componente decorative",
+      "Piese pentru jucării de construcție",
+      "Echipamente de joacă exterioare"
+    ],
+    "s10criteria": [
+      "Conformitatea cu reglementările de siguranță a jucăriilor",
+      "Rezistența la impact",
+      "Vivacitatea culorii și compatibilitatea pigmenților",
+      "Calitatea suprafeței și absența bavurilor",
+      "Rezistența la UV (exterior)",
+      "Cost"
+    ],
+    "s11intro1": "În aplicațiile de iluminat, tehnologia LED a schimbat așteptările privind materialele. Materialele de difuzie a luminii au fost dezvoltate pentru a transforma lumina punctiformă în iluminare uniformă de suprafață.",
+    "s11intro2": "În aplicațiile energetice, izolarea electrică, ignifugarea și rezistența în exterior devin esențiale. Cutiile de joncțiune fotovoltaice și sistemele de stocare a energiei au crescut cererea de materiale ignifuge fără halogeni și stabile hidrolitic.",
+    "s11parts": [
+      "Difuzoare pentru corpuri LED",
+      "Corpuri și carcase de iluminat",
+      "Cutii de joncțiune fotovoltaice",
+      "Componente de stocare a energiei",
+      "Elemente de panouri electrice",
+      "Panouri retroiluminate"
+    ],
+    "s11criteria": [
+      "Echilibrul dintre transmisia luminii și difuzie",
+      "Stabilitate sub sarcină termică",
+      "Ignifugare (inclusiv fără halogeni)",
+      "Izolare electrică",
+      "Rezistență la UV și în exterior",
+      "Stabilitate dimensională"
+    ]
+  },
+  "polymer": {
+    "home": "Acasă",
+    "products": "Produse",
+    "badge": "Materie Primă Plastică",
+    "aboutTitle": "Despre Această Materie Primă",
+    "propsTitle": "Proprietăți Cheie",
+    "appsTitle": "Aplicații Tipice",
+    "brandsTitle": "Familii de Produse Conexe din Portofoliul Nostru",
+    "brandsDesc": "Mărcile și compoundurile pe care le furnizăm în acest tip de material — apăsați pentru liste de grade și solicitări TDS.",
+    "basechemTitle": "Compounduri Basechem Conexe",
+    "noBrands": "Furnizăm acest tip de material la cerere. Spuneți-ne cerința și revenim cu sursa și termenul de livrare.",
+    "tdsTitle": "Fișa Tehnică",
+    "tdsDesc": "Informațiile de pe această pagină descriu proprietățile generale ale tipului de polimer. Valorile numerice precum indicele de curgere, densitatea și rezistența variază în funcție de grad și apar doar în TDS-ul oficial — nu publicăm valori estimative.",
+    "supplyTitle": "Livrare în Turcia și Europa",
+    "supplyDesc": "Din cele două depozite din Istanbul oferim livrare în aceeași zi în oraș și aprovizionăm Europa prin biroul nostru din București.",
+    "otherTitle": "Alte Tipuri de Materii Prime",
+    "backToAll": "Toate Produsele",
+    "ctaTitle": "— Solicitați o Ofertă",
+    "ctaDesc": "Contactați echipa noastră de vânzări pentru cantitate, termen și preț.",
+    "ctaBtn": "Solicitați Ofertă",
+    "groupPoly": "Poliolefine și Polimeri Standard",
+    "groupEng": "Plastice Tehnice",
+    "pp_homopolimer_name": "Polipropilenă Homopolimer (PPH)",
+    "pp_homopolimer_intro1": "Homopolimerul de polipropilenă este cel mai rigid tip din familia PP, cu cea mai ridicată temperatură de deformare termică. Produs dintr-un singur monomer, are un grad ridicat de cristalinitate, ceea ce aduce avantaje de rezistență și duritate.",
+    "pp_homopolimer_intro2": "Datorită densității reduse, rezistenței chimice largi și costului avantajos, este utilizat într-o gamă foarte largă, de la ambalaje la piese industriale. Totuși, rezistența la impact la temperaturi scăzute este limitată față de tipurile copolimer, aspect care trebuie luat în calcul în aplicațiile la rece.",
+    "pp_homopolimer_props": [
+      "Rigiditate ridicată",
+      "Temperatură ridicată de deformare termică",
+      "Rezistență chimică largă",
+      "Densitate redusă",
+      "Duritate bună a suprafeței"
+    ],
+    "pp_homopolimer_apps": [
+      "Ambalaje și recipiente",
+      "Piese industriale",
+      "Articole de uz casnic",
+      "Fibre textile",
+      "Piese injectate"
+    ],
+    "pp_kopolimer_name": "Polipropilenă Copolimer Bloc (PPC)",
+    "pp_kopolimer_intro1": "Copolimerul bloc de polipropilenă este produs prin adăugarea unei faze de etilenă la structura homopolimerului. Această adăugare crește semnificativ rezistența la impact, în special la temperaturi scăzute.",
+    "pp_kopolimer_intro2": "Tenacitatea se obține în detrimentul unei părți din rigiditate. Acest echilibru este preferat pentru navete utilizate în medii reci, piese auto și componente industriale.",
+    "pp_kopolimer_props": [
+      "Rezistență ridicată la impact",
+      "Tenacitate la temperaturi scăzute",
+      "Rezistență chimică",
+      "Densitate redusă",
+      "Prelucrabilitate bună"
+    ],
+    "pp_kopolimer_apps": [
+      "Navete de transport",
+      "Piese auto de interior",
+      "Componente industriale",
+      "Ambalaje pentru lanțul frigorific",
+      "Articole de uz casnic"
+    ],
+    "pp_random_name": "Polipropilenă Copolimer Random (PPRC)",
+    "pp_random_intro1": "În copolimerul random de polipropilenă unitățile de etilenă sunt distribuite aleatoriu de-a lungul lanțului. Această structură scade cristalinitatea și conferă materialului claritate și flexibilitate.",
+    "pp_random_intro2": "Este preferat în ambalaje unde transparența contează și în sisteme de țevi care necesită flexibilitate. Are o temperatură de topire mai scăzută decât homopolimerul.",
+    "pp_random_props": [
+      "Claritate ridicată",
+      "Flexibilitate",
+      "Rezistență bună la impact",
+      "Rezistență chimică",
+      "Sudabilitate"
+    ],
+    "pp_random_apps": [
+      "Ambalaje transparente",
+      "Sisteme de țevi",
+      "Ambalaje medicale",
+      "Recipiente de depozitare",
+      "Piese injectate"
+    ],
+    "hdpe_name": "Polietilenă de Înaltă Densitate (HDPE)",
+    "hdpe_intro1": "Datorită structurii liniare a lanțului, HDPE oferă cristalinitate ridicată și, prin urmare, rigiditate și rezistență mari. Este cel mai durabil membru al familiei polietilenelor.",
+    "hdpe_intro2": "Rezistența chimică excelentă și permeabilitatea redusă la umiditate îl fac materialul standard pentru depozitarea lichidelor, sisteme de țevi și ambalaje. Fiind ușor reciclabil, reprezintă și un avantaj pentru sustenabilitate.",
+    "hdpe_props": [
+      "Rezistență mare la tracțiune",
+      "Rezistență chimică excelentă",
+      "Permeabilitate redusă la umiditate",
+      "Rezistență bună la impact",
+      "Reciclabilitate"
+    ],
+    "hdpe_apps": [
+      "Țevi și fitinguri",
+      "Ambalaje pentru lichide",
+      "Rezervoare de stocare",
+      "Recipiente industriale",
+      "Piese suflate"
+    ],
+    "ldpe_name": "Polietilenă de Joasă Densitate (LDPE)",
+    "ldpe_intro1": "LDPE are cristalinitate redusă datorită structurii ramificate a lanțului, ceea ce îl face moale, flexibil și ușor de prelucrat.",
+    "ldpe_intro2": "Este materialul de bază pentru aplicațiile de folie; alungirea ridicată și sudarea termică bună sunt decisive în sectorul ambalajelor. Oferă de asemenea rezistență chimică bună și izolare electrică.",
+    "ldpe_props": [
+      "Flexibilitate ridicată",
+      "Sudare termică bună",
+      "Alungire ridicată",
+      "Rezistență chimică",
+      "Izolare electrică"
+    ],
+    "ldpe_apps": [
+      "Folie de ambalaj",
+      "Folie stretch și shrink",
+      "Izolație de cablu",
+      "Recipiente flexibile",
+      "Aplicații de acoperire"
+    ],
+    "gpps_name": "Polistiren de Uz General (GPPS)",
+    "gpps_intro1": "GPPS este un material termoplastic amorf rigid și foarte stabil dimensional, cu claritate asemănătoare sticlei. Contracția redusă reprezintă un avantaj pentru piesele cu toleranțe strânse.",
+    "gpps_intro2": "Prelucrarea ușoară și costul avantajos îl fac răspândit în produsele de larg consum. Totuși, din cauza naturii fragile, pentru piesele solicitate la impact ar trebui luate în considerare HIPS sau alte tipuri modificate.",
+    "gpps_props": [
+      "Claritate asemănătoare sticlei",
+      "Rigiditate ridicată",
+      "Stabilitate dimensională",
+      "Prelucrare ușoară",
+      "Contracție redusă"
+    ],
+    "gpps_apps": [
+      "Ambalaje transparente",
+      "Carcase CD/DVD",
+      "Produse de unică folosință",
+      "Articole de expunere",
+      "Consumabile de laborator"
+    ],
+    "hips_name": "Polistiren cu Rezistență Mare la Impact (HIPS)",
+    "hips_intro1": "HIPS este produs prin adăugarea unei faze de cauciuc la polistiren. Această modificare elimină claritatea, dar crește foarte mult rezistența la impact.",
+    "hips_intro2": "Termoformabilitatea și calitatea bună a suprafeței îl fac remarcabil pentru căptușelile de frigidere și aplicațiile de ambalaj. Este ușor de vopsit și imprimat.",
+    "hips_props": [
+      "Rezistență mare la impact",
+      "Termoformabilitate",
+      "Calitate bună a suprafeței",
+      "Vopsibilitate",
+      "Stabilitate dimensională"
+    ],
+    "hips_apps": [
+      "Căptușeli de frigidere",
+      "Ambalaje alimentare",
+      "Carcase electronice",
+      "Piese de jucării",
+      "Semnalistică și expunere"
+    ],
+    "tpe_name": "Elastomer Termoplastic (TPE)",
+    "tpe_intro1": "TPE-urile sunt o clasă de materiale care combină flexibilitatea cauciucului cu prelucrabilitatea materialelor termoplastice. Deoarece nu necesită vulcanizare, pot fi injectate în producție de serie și reciclate.",
+    "tpe_intro2": "Disponibilitatea în diferite niveluri de duritate permite unei singure familii de materiale să acopere aplicații foarte diferite. Prin injecție bicomponentă pot fi lipite pe plastice rigide pentru a crea suprafețe de prindere moi.",
+    "tpe_props": [
+      "Flexibilitate similară cauciucului",
+      "Reciclabilitate",
+      "Interval larg de duritate",
+      "Rezistență bună la oboseală",
+      "Potrivit pentru injecție bicomponentă"
+    ],
+    "tpe_apps": [
+      "Garnituri și etanșări",
+      "Manșoane de cablu",
+      "Suprafețe de prindere",
+      "Burdufuri auto",
+      "Furtunuri și tuburi"
+    ],
+    "tpu_name": "Poliuretan Termoplastic (TPU)",
+    "tpu_intro1": "TPU este unul dintre cei mai rezistenți elastomeri în privința rezistenței la abraziune și a rezistenței mecanice. Prezintă o foarte bună rezistență la rupere și zgâriere, păstrând totodată elasticitatea ridicată.",
+    "tpu_intro2": "Datorită rezistenței la uleiuri și combustibili este preferat în aplicații industriale și auto. Cu tipuri dure și moi oferă un interval larg de duritate.",
+    "tpu_props": [
+      "Rezistență excepțională la abraziune",
+      "Rezistență mare la rupere",
+      "Rezistență la uleiuri și combustibili",
+      "Interval larg de duritate",
+      "Elasticitate bună"
+    ],
+    "tpu_apps": [
+      "Furtunuri industriale",
+      "Tălpi de încălțăminte",
+      "Benzi transportoare",
+      "Componente auto",
+      "Acoperiri de protecție"
+    ],
+    "eva_name": "Etilen Vinil Acetat (EVA)",
+    "eva_intro1": "EVA este un copolimer de etilenă și acetat de vinil. Pe măsură ce conținutul de acetat de vinil crește, materialul devine mai moale, mai transparent și mai adeziv.",
+    "eva_intro2": "Flexibilitatea și amortizarea la impact în aplicațiile de spumă îl fac răspândit în încălțăminte și echipamente sportive. Este de asemenea materialul de bază pentru foliile de încapsulare a panourilor solare.",
+    "eva_props": [
+      "Flexibilitate ridicată",
+      "Aderență bună",
+      "Amortizare la impact",
+      "Flexibilitate la temperaturi scăzute",
+      "Transparență (VA ridicat)"
+    ],
+    "eva_apps": [
+      "Tălpi și spumă",
+      "Încapsulare panouri solare",
+      "Adezivi și hot-melt",
+      "Folie de ambalaj",
+      "Echipamente sportive"
+    ],
+    "abs_name": "Acrilonitril Butadien Stiren (ABS)",
+    "abs_intro1": "ABS este un plastic tehnic amorf format din trei monomeri: acrilonitrilul asigură rezistență chimică, butadiena tenacitate, iar stirenul prelucrabilitate și calitatea suprafeței.",
+    "abs_intro2": "Faptul că poate fi metalizat și vopsit reprezintă un avantaj major pentru piesele vizibile. Contracția redusă și stabilitatea dimensională îl fac preferat pentru piese cu toleranțe strânse. Sunt disponibile tipuri ignifuge și armate cu fibră de sticlă.",
+    "abs_props": [
+      "Rezistență bună la impact",
+      "Calitate excelentă a suprafeței",
+      "Metalizabilitate",
+      "Stabilitate dimensională",
+      "Prelucrare ușoară"
+    ],
+    "abs_apps": [
+      "Carcase electronice",
+      "Panouri de electrocasnice",
+      "Piese auto de interior",
+      "Jucării",
+      "Echipamente IT"
+    ],
+    "polikarbonat_name": "Policarbonat (PC)",
+    "polikarbonat_intro1": "Policarbonatul are una dintre cele mai ridicate rezistențe la impact dintre plasticele tehnice și poate combina acest lucru cu o claritate optică asemănătoare sticlei. Își păstrează proprietățile mecanice pe un interval larg de temperaturi.",
+    "polikarbonat_intro2": "Cu tipuri speciale ignifuge, stabile la UV, armate cu fibră de sticlă și cu difuzie a luminii, este utilizat de la iluminatul auto până la dispozitive medicale. Fiind higroscopic, uscarea înainte de procesare este esențială.",
+    "polikarbonat_props": [
+      "Rezistență foarte mare la impact",
+      "Claritate optică",
+      "Rezistență ridicată la căldură",
+      "Stabilitate dimensională",
+      "Tipuri ignifuge"
+    ],
+    "polikarbonat_apps": [
+      "Faruri auto",
+      "Carcase electronice",
+      "Dispozitive medicale",
+      "Geamuri de siguranță",
+      "Iluminat LED"
+    ],
+    "pmma_name": "Polimetacrilat de Metil (PMMA / Acrilic)",
+    "pmma_intro1": "PMMA are cea mai ridicată claritate optică dintre plastice, cu o transmisie a luminii chiar mai mare decât a sticlei. Datorită rezistenței UV intrinseci poate rămâne în exterior perioade lungi fără a se îngălbeni.",
+    "pmma_intro2": "Duritatea suprafeței și rezistența la zgâriere sunt mai bune decât ale policarbonatului; totuși, rezistența la impact este semnificativ mai mică. Este preferat acolo unde calitatea vizuală primează și solicitarea la impact este limitată.",
+    "pmma_props": [
+      "Cea mai ridicată claritate optică",
+      "Rezistență UV intrinsecă",
+      "Duritate a suprafeței",
+      "Rezistență la zgâriere",
+      "Stabilitatea culorii"
+    ],
+    "pmma_apps": [
+      "Difuzoare de iluminat",
+      "Semnalistică și expunere",
+      "Lămpi spate auto",
+      "Aplicații arhitecturale",
+      "Piese optice"
+    ],
+    "pbt_name": "Polibutilen Tereftalat (PBT)",
+    "pbt_intro1": "PBT este un poliester semicristalin care se remarcă printre plasticele tehnice prin performanța de izolare electrică. Cristalizarea rapidă permite injecția la timpi de ciclu scurți.",
+    "pbt_intro2": "Absorbția de umiditate mult mai redusă decât a poliamidelor și stabilitatea dimensională superioară sunt principalele motive pentru care este preferat în piese electrice de precizie. Tipurile ignifuge și armate cu fibră de sticlă sunt răspândite.",
+    "pbt_props": [
+      "Izolare electrică superioară",
+      "Absorbție redusă de umiditate",
+      "Stabilitate dimensională",
+      "Rezistență chimică",
+      "Cristalizare rapidă"
+    ],
+    "pbt_apps": [
+      "Conectori și prize",
+      "Relee și carcase de bobine",
+      "Electrică auto",
+      "Componente de electrocasnice",
+      "Corpuri de întrerupătoare"
+    ],
+    "san_name": "Stiren Acrilonitril (SAN)",
+    "san_intro1": "SAN este un copolimer de stiren și acrilonitril. Conținutul de acrilonitril oferă o rezistență chimică și termică semnificativ mai bună decât polistirenul, păstrând claritatea.",
+    "san_intro2": "Cu rigiditate ridicată și stabilitate dimensională, este utilizat acolo unde sunt necesare piese transparente dar durabile. Este mai dur, dar mai fragil decât ABS.",
+    "san_props": [
+      "Claritate",
+      "Rezistență chimică bună",
+      "Rigiditate ridicată",
+      "Stabilitate dimensională",
+      "Performanță termică (față de PS)"
+    ],
+    "san_apps": [
+      "Articole de bucătărie",
+      "Ambalaje cosmetice",
+      "Piese de electrocasnice mici",
+      "Carcase transparente",
+      "Articole de expunere"
+    ],
+    "pc_abs_name": "Aliaj PC/ABS",
+    "pc_abs_intro1": "Aliajele PC/ABS îmbină rezistența la impact și performanța termică ale policarbonatului cu prelucrabilitatea și avantajul de cost ale ABS-ului. Echilibrul poate fi ajustat în funcție de aplicație prin modificarea raportului aliajului.",
+    "pc_abs_intro2": "Sunt foarte răspândite în elementele de interior auto și carcasele electronice. Se injectează mai ușor decât policarbonatul pur și oferă o performanță termică și mecanică net superioară ABS-ului pur.",
+    "pc_abs_props": [
+      "Rezistență ridicată la impact",
+      "Prelucrabilitate bună",
+      "Performanță termică",
+      "Stabilitate dimensională",
+      "Tipuri ignifuge"
+    ],
+    "pc_abs_apps": [
+      "Interior auto",
+      "Carcase electronice",
+      "Echipamente IT",
+      "Componente de electrocasnice",
+      "Sisteme de încărcare"
+    ],
+    "ppo_ppe_name": "PPO / PPE Modificat",
+    "ppo_ppe_intro1": "Aliajele PPO/PPE modificate se numără printre grupele cu cea mai mică densitate din categoria plasticelor tehnice și nu absorb practic deloc umiditate. Acest lucru înseamnă o stabilitate dimensională remarcabilă.",
+    "ppo_ppe_intro2": "Datorită formulărilor ignifuge fără halogeni și stabilității hidrolitice, sunt preferate în cutii de joncțiune fotovoltaice, componente de baterii și piese în contact cu apa fierbinte.",
+    "ppo_ppe_props": [
+      "Absorbție foarte redusă de umiditate",
+      "Stabilitate dimensională remarcabilă",
+      "Ignifugare fără halogeni",
+      "Stabilitate hidrolitică",
+      "Densitate redusă"
+    ],
+    "ppo_ppe_apps": [
+      "Cutii de joncțiune fotovoltaice",
+      "Componente de baterii",
+      "Piese pentru vehicule electrice",
+      "Componente sanitare",
+      "Elemente de panouri electrice"
+    ],
+    "pa6_pa66_name": "Poliamidă (PA6 / PA66 / Nailon)",
+    "pa6_pa66_intro1": "Poliamidele sunt cea mai utilizată familie de plastice tehnice, oferind rezistență mecanică ridicată, rezistență la uzură și performanță termică. PA66 are o temperatură de topire mai ridicată decât PA6.",
+    "pa6_pa66_intro2": "Armarea cu fibră de sticlă crește semnificativ rigiditatea și temperatura de deformare termică. Poliamidele sunt puternic higroscopice; deoarece absorbția de umiditate afectează dimensiunile și proprietățile mecanice, condițiile de uscare și depozitare trebuie respectate strict.",
+    "pa6_pa66_props": [
+      "Rezistență mecanică ridicată",
+      "Rezistență la uzură și frecare",
+      "Performanță termică ridicată",
+      "Tipuri armate cu fibră de sticlă",
+      "Tipuri ignifuge"
+    ],
+    "pa6_pa66_apps": [
+      "Piese din compartimentul motor",
+      "Roți dințate și lagăre",
+      "Componente electrice și electronice",
+      "Piese structurale",
+      "Agricultură și irigații"
+    ]
+  },
+  "nobreak": {
+    "home": "Acasă",
+    "products": "Produse",
+    "badge": "PP No Break",
+    "catTitle": "PP No Break",
+    "catHighlight": "Polipropilenă cu Impact Ridicat",
+    "catDesc": "Grade de copolimer bloc PP cu rezistență ultra-ridicată la impact pentru piese care nu trebuie să se rupă. Furnizăm produse de la SK Geo Centric, Hanwha TotalEnergies și Borealis / Borouge din stoc și la comandă.",
+    "intro1": "Cunoscute în industrie ca „no break”, acestea sunt tipuri de PP cu tenacitate ultra-ridicată care oferă o rezistență la impact semnificativ mai mare decât copolimerul bloc standard. Prin optimizarea proporției și distribuției fazei de cauciuc, piesa este proiectată să se deformeze în loc să se rupă la impact.",
+    "intro2": "Aceste grade sunt utilizate în special acolo unde ruperea este inacceptabilă — navete, găleți de uz intensiv, produse pentru copii, componente de electrocasnice și piese auto. În aplicațiile la temperaturi scăzute, rezistența la impact la rece devine criteriul decisiv.",
+    "intro3": "Deoarece tenacitatea se obține în detrimentul unei părți din rigiditate, gradul potrivit trebuie ales în funcție de echilibrul impact-rigiditate al aplicației. Alegerea fluidității (MFI) este legată direct de grosimea peretelui piesei și de distanța de umplere a matriței.",
+    "gradesTitle": "Gradele PP No Break pe Care le Furnizăm",
+    "gradesDesc": "Puteți solicita fișa tehnică (TDS), mostre și prețuri pentru fiecare grad.",
+    "makerLabel": "Producător",
+    "seriesLabel": "Serie",
+    "selectionTitle": "La ce trebuie să fiți atenți la alegerea gradului",
+    "selectionDesc": "Clarificarea aspectelor de mai jos este suficientă pentru a determina gradul no break potrivit.",
+    "sel1": "La ce temperatură va primi piesa impactul? (temperatura camerei sau frig)",
+    "sel2": "Care este grosimea peretelui și distanța de umplere a matriței? (alegerea fluidității)",
+    "sel3": "Este prioritară rigiditatea sau tenacitatea?",
+    "sel4": "Este necesară aprobarea pentru contact alimentar sau cu copii?",
+    "sel5": "Va fi folosit în compounding sau injectat direct?",
+    "sel6": "Se va folosi colorare sau masterbatch?",
+    "supplyTitle": "Furnizare și Stoc",
+    "supplyDesc": "Furnizăm grade PP no break din depozitele noastre din Istanbul și la comandă. Contactați echipa de vânzări pentru stocul curent, termenul de livrare și prețuri în funcție de volum.",
+    "supplyNote": "Notă: aceste produse nu fac parte din distribuțiile noastre LG Chem și Basechem; le furnizăm prin achiziție de la producătorii respectivi.",
+    "faqTitle": "Întrebări Frecvente despre PP No Break",
+    "faqQ1": "Ce este PP no break și cu ce diferă de PPC standard?",
+    "faqA1": "PP no break este denumirea uzuală din industrie pentru tipurile cu tenacitate ultra-ridicată care oferă o rezistență la impact mult mai mare decât copolimerul bloc standard (PPC). Prin optimizarea proporției și distribuției fazei de cauciuc, piesa se deformează în loc să se rupă la impact. În schimb, se cedează o parte din rigiditate.",
+    "faqQ2": "Ce grade PP no break furnizați?",
+    "faqA2": "Furnizăm SK Geo Centric YUPLENE BH3500 și BH3820, Hanwha TotalEnergies BI6300 și BI7300, precum și Borealis / Borouge BD265MO. Ne puteți scrie și pentru un grad nelistat — verificăm disponibilitatea și revenim.",
+    "faqQ3": "Cum pot obține TDS-ul pentru aceste grade?",
+    "faqA3": "Apăsați „Accesați TDS” pe pagina gradului care vă interesează și lăsați adresa de e-mail și numărul de telefon. Solicitarea ajunge la echipa de vânzări, iar fișa tehnică oficială a producătorului este trimisă prin e-mail cât mai curând posibil.",
+    "faqQ4": "Pot solicita o mostră?",
+    "faqA4": "Da. Puteți solicita mostre pentru producție de probă și punere în funcțiune. Folosiți butonul „Solicitați Mostră” de pe paginile gradelor și lăsați datele de contact.",
+    "otherTitle": "Alte Grade No Break",
+    "backToCat": "Toate Gradele PP No Break",
+    "relatedTitle": "Tipuri de Materii Prime Conexe",
+    "ctaTitle": "— Solicitați o Ofertă",
+    "ctaDesc": "Contactați echipa noastră de vânzări pentru cantitate, termen și preț.",
+    "ctaBtn": "Solicitați Ofertă",
+    "aboutTitle": "Despre Acest Grad",
+    "propsTitle": "Proprietăți Cheie",
+    "appsTitle": "Aplicații Tipice",
+    "tdsNote": "Pe această pagină nu sunt publicate valori tehnice numerice. Valori precum indicele de curgere, rezistența Izod la impact, densitatea și condițiile de procesare apar în TDS-ul oficial al producătorului — nu partajăm valori estimative.",
+    "sk_bh3500_tag": "Rezistență Ultra-Ridicată la Impact",
+    "sk_bh3500_desc": "Copolimer bloc de polipropilenă cu rezistență ultra-ridicată la impact din seria YUPLENE a SK Geo Centric. Pe lângă rezistența la impact, se remarcă prin echilibrul dintre rigiditate, fluiditate și rezistență termică.",
+    "sk_bh3500_props": [
+      "Rezistență ultra-ridicată la impact",
+      "Rigiditate ridicată",
+      "Fluiditate bună",
+      "Rezistență termică",
+      "Potrivit pentru compounding"
+    ],
+    "sk_bh3500_apps": [
+      "Piese auto",
+      "Electrocasnice",
+      "Recipiente de mari dimensiuni",
+      "Injecție cu pereți subțiri",
+      "Injecție de mare viteză"
+    ],
+    "sk_bh3820_tag": "Fluiditate Ridicată + Impact",
+    "sk_bh3820_desc": "Tipul de copolimer bloc cu rezistență ultra-ridicată la impact și fluiditate mare din seria YUPLENE a SK Geo Centric. Dezvoltat pentru injecție cu pereți subțiri și viteză foarte mare.",
+    "sk_bh3820_props": [
+      "Rezistență ultra-ridicată la impact",
+      "Fluiditate ridicată",
+      "Rigiditate",
+      "Rezistență termică",
+      "Potrivit pentru pereți subțiri"
+    ],
+    "sk_bh3820_apps": [
+      "Electrocasnice",
+      "Recipiente de mari dimensiuni",
+      "Piese auto",
+      "Piese industriale",
+      "Injecție cu pereți subțiri"
+    ],
+    "hanwha_total_bi6300_tag": "Copolimer Bloc cu Impact Ridicat",
+    "hanwha_total_bi6300_desc": "Copolimer bloc de polipropilenă cu rezistență ridicată la impact, dezvoltat de Hanwha TotalEnergies pentru aplicații de injecție. Baza PP înalt izotactică și faza de cauciuc optimizată oferă un echilibru între rigiditate și tenacitate.",
+    "hanwha_total_bi6300_props": [
+      "Rezistență ridicată la impact",
+      "Echilibru rigiditate-tenacitate",
+      "Prelucrabilitate bună",
+      "Bază PP înalt izotactică",
+      "Potrivit pentru injecție"
+    ],
+    "hanwha_total_bi6300_apps": [
+      "Articole de uz casnic",
+      "Piese industriale",
+      "Componente auto",
+      "Navete de transport",
+      "Injecție generală"
+    ],
+    "hanwha_total_bi7300_tag": "Rezistență Super la Impact",
+    "hanwha_total_bi7300_desc": "Grad de PP bloc pentru injecție cu rezistență super la impact de la Hanwha TotalEnergies. Cu fluiditate și prelucrabilitate ridicate, este dezvoltat pentru baze compozite auto, piese de uz casnic și aplicații de materiale industriale.",
+    "hanwha_total_bi7300_props": [
+      "Rezistență super la impact",
+      "Fluiditate ridicată",
+      "Prelucrabilitate excelentă",
+      "Echilibru rigiditate-tenacitate",
+      "Potrivit pentru injecție"
+    ],
+    "hanwha_total_bi7300_apps": [
+      "Bază compozită auto",
+      "Piese de uz casnic",
+      "Componente de materiale industriale",
+      "Navete de transport",
+      "Injecție generală"
+    ],
+    "borealis_bd265mo_tag": "Impact la Temperaturi Scăzute + Aprobat Alimentar",
+    "borealis_bd265mo_desc": "Copolimer heterofazic cu rezistență foarte mare la impact, produs cu Tehnologia de Nucleere Borstar (BNT). Prezintă o rezistență excelentă la impact chiar și la temperaturi scăzute și este aprobat pentru contact alimentar și cu copii.",
+    "borealis_bd265mo_props": [
+      "Rezistență foarte mare la impact",
+      "Performanță la impact la temperaturi scăzute",
+      "Prelucrabilitate bună",
+      "Rigiditate",
+      "Aprobare pentru contact alimentar și cu copii"
+    ],
+    "borealis_bd265mo_apps": [
+      "Produse pentru copii",
+      "Jucării",
+      "Navete și cutii",
+      "Găleți de uz intensiv",
+      "Aplicații pentru lanțul frigorific"
+    ]
   }
 }

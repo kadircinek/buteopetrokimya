@@ -43,6 +43,7 @@ export default function Navbar() {
     { href: `/${locale}/basechem`, label: "Basechem" },
     { href: `/${locale}/finder`, label: t("finder") },
     { href: `/${locale}/sectors`, label: t("sectors") },
+    { href: `/${locale}/blog`, label: t("blog") },
     { href: `/${locale}/contact`, label: t("contact") },
   ];
 
