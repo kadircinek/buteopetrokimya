@@ -104,20 +104,6 @@ export default function SectorPage({ params }: Props) {
         provider: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
         areaServed: ["TR", "Europe"],
         url,
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name,
-          itemListElement: [
-            ...data.brands.map((b) => ({
-              "@type": "Offer",
-              itemOffered: { "@type": "Product", name: BRAND_SLUGS[b], url: `${SITE_URL}/${locale}/lgchem/${b}` },
-            })),
-            ...data.basechem.map((b) => ({
-              "@type": "Offer",
-              itemOffered: { "@type": "Product", name: `Basechem ${BASECHEM_SLUGS[b]}`, url: `${SITE_URL}/${locale}/basechem/${b}` },
-            })),
-          ],
-        },
       },
       {
         "@type": "BreadcrumbList",

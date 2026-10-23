@@ -94,29 +94,6 @@ export default function NoBreakGradePage({ params }: Props) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Product",
-        name: g.code,
-        sku: g.short,
-        model: g.short,
-        alternateName: g.aliases,
-        category: t("catHighlight"),
-        description: t(`${k}_desc`),
-        brand: { "@type": "Brand", name: g.maker },
-        manufacturer: { "@type": "Organization", name: g.maker },
-        isSimilarTo: others.map((o) => ({
-          "@type": "Product",
-          name: o.code,
-          url: `${SITE_URL}/${locale}/products/no-break-pp/${o.slug}`,
-        })),
-        url,
-        offers: {
-          "@type": "Offer",
-          availability: "https://schema.org/InStock",
-          seller: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-          areaServed: ["TR", "Europe"],
-        },
-      },
-      {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: t("home"), item: `${SITE_URL}/${locale}` },

@@ -94,28 +94,6 @@ export default function GradePage({ params }: Props) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Product",
-        name: data.grade,
-        sku: data.code,
-        model: data.code,
-        category: b.base,
-        description: t("intro", { grade: data.grade, brand: b.brand, base: b.base }),
-        brand: { "@type": "Brand", name: "LG Chem" },
-        manufacturer: { "@type": "Organization", name: "LG Chem" },
-        isSimilarTo: data.siblings.map((g) => ({
-          "@type": "Product",
-          name: g,
-          url: `${SITE_URL}/${locale}/lgchem/${brand}/${gradeSlug(g)}`,
-        })),
-        url,
-        offers: {
-          "@type": "Offer",
-          availability: "https://schema.org/InStock",
-          seller: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-          areaServed: ["TR", "Europe"],
-        },
-      },
-      {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: t("home"), item: `${SITE_URL}/${locale}` },

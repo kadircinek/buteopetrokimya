@@ -106,19 +106,6 @@ export default function PolymerTypePage({ params }: Props) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Product",
-        name,
-        category: data.group === "engineering" ? t("groupEng") : t("groupPoly"),
-        description: t(`${key}_intro1`),
-        url,
-        offers: {
-          "@type": "Offer",
-          availability: "https://schema.org/InStock",
-          seller: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-          areaServed: ["TR", "Europe"],
-        },
-      },
-      {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: t("home"), item: `${SITE_URL}/${locale}` },

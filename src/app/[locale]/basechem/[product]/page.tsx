@@ -93,28 +93,6 @@ export default function BasechemProductPage({ params }: Props) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Product",
-        name: `Basechem ${data.code}`,
-        alternateName: data.fullName,
-        category: data.code,
-        description: data.desc,
-        brand: { "@type": "Brand", name: "Basechem" },
-        manufacturer: { "@type": "Organization", name: "Basechem" },
-        url,
-        additionalProperty: data.variants.map((v) => ({
-          "@type": "PropertyValue",
-          name: v.type,
-          value: v.tag,
-          description: v.desc,
-        })),
-        offers: {
-          "@type": "Offer",
-          availability: "https://schema.org/InStock",
-          seller: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-          areaServed: ["TR", "Europe"],
-        },
-      },
-      {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: t("home"), item: `${SITE_URL}/${locale}` },

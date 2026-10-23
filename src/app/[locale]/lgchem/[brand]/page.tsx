@@ -115,24 +115,6 @@ export default function BrandPage({ params }: Props) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Product",
-        name: data.brand,
-        category: data.base,
-        description: data.desc,
-        brand: { "@type": "Brand", name: "LG Chem" },
-        manufacturer: { "@type": "Organization", name: "LG Chem" },
-        url: `${SITE_URL}/${locale}/lgchem/${brand}`,
-        ...(data.grades.length
-          ? { model: data.grades, additionalProperty: data.grades.map((g) => ({ "@type": "PropertyValue", name: "Grade", value: g })) }
-          : {}),
-        offers: {
-          "@type": "Offer",
-          availability: "https://schema.org/InStock",
-          seller: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-          areaServed: ["TR", "Europe"],
-        },
-      },
-      {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: t("home"), item: `${SITE_URL}/${locale}` },

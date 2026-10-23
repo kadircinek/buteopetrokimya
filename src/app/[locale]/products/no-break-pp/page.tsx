@@ -80,20 +80,8 @@ export default function NoBreakIndexPage({ params }: Props) {
           itemListElement: NO_BREAK_GRADES.map((g, i) => ({
             "@type": "ListItem",
             position: i + 1,
-            item: {
-              "@type": "Product",
-              name: g.code,
-              sku: g.short,
-              alternateName: g.aliases,
-              brand: { "@type": "Brand", name: g.maker },
-              url: `${SITE_URL}/${locale}/products/no-break-pp/${g.slug}`,
-              offers: {
-                "@type": "Offer",
-                availability: "https://schema.org/InStock",
-                seller: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-                areaServed: ["TR", "Europe"],
-              },
-            },
+            name: g.code,
+            url: `${SITE_URL}/${locale}/products/no-break-pp/${g.slug}`,
           })),
         },
       },
