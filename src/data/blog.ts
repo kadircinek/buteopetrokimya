@@ -28,7 +28,7 @@ const TR: BlogPost[] = [
     slug: "pc-mi-abs-mi",
     date: "2026-09-02",
     category: "Malzeme Seçimi",
-    title: "PC mi, ABS mi? Doğru Malzemeyi Seçmenin 5 Kriteri",
+    title: "PC mi ABS mi? PC/ABS Nedir — 5 Kriterde Karşılaştırma",
     excerpt:
       "Polikarbonat ve ABS, mühendislik plastiklerinde en sık karşılaştırılan iki malzeme. Hangi durumda hangisini seçmelisiniz?",
     readingMinutes: 6,
@@ -95,7 +95,7 @@ const TR: BlogPost[] = [
     slug: "ul-94-v0-nedir",
     date: "2026-08-24",
     category: "Teknik Rehber",
-    title: "UL-94 V-0 Nedir? Alev Geciktirici Plastik Seçimi",
+    title: "UL94 V-0 Nedir? UL-94 Yanmazlık Sınıfları (V-0, V-1, V-2)",
     excerpt:
       "Elektrik-elektronik projelerinde en sık istenen sertifikasyonlardan biri UL-94 V-0. Sınıflar ne anlama geliyor, nasıl seçim yapılır?",
     readingMinutes: 5,
@@ -149,7 +149,7 @@ const TR: BlogPost[] = [
     slug: "pa6-pa66-farki",
     date: "2026-08-11",
     category: "Malzeme Seçimi",
-    title: "PA6 ile PA66 Arasındaki Fark Nedir?",
+    title: "PA6 vs PA66: Farkları Nelerdir? Karşılaştırma Tablosu",
     excerpt:
       "İki poliamit tipi ilk bakışta çok benzer görünür ama ısıl dayanım, nem alımı ve maliyet açısından önemli farkları vardır.",
     readingMinutes: 5,
@@ -305,7 +305,7 @@ const EN: BlogPost[] = [
     slug: "pc-mi-abs-mi",
     date: "2026-09-02",
     category: "Material Selection",
-    title: "PC or ABS? 5 Criteria for Choosing the Right Material",
+    title: "PC vs ABS: What Is PC/ABS? A 5-Criteria Comparison",
     excerpt:
       "Polycarbonate and ABS are the two most frequently compared engineering plastics. When should you choose which?",
     readingMinutes: 6,
@@ -372,7 +372,7 @@ const EN: BlogPost[] = [
     slug: "ul-94-v0-nedir",
     date: "2026-08-24",
     category: "Technical Guide",
-    title: "What Is UL-94 V-0? Selecting Flame Retardant Plastics",
+    title: "What Is UL94 V-0? UL-94 Flammability Classes (V-0, V-1, V-2)",
     excerpt:
       "UL-94 V-0 is one of the most frequently requested ratings in electrical and electronic projects. What do the classes mean and how do you choose?",
     readingMinutes: 5,
@@ -426,7 +426,7 @@ const EN: BlogPost[] = [
     slug: "pa6-pa66-farki",
     date: "2026-08-11",
     category: "Material Selection",
-    title: "What Is the Difference Between PA6 and PA66?",
+    title: "PA6 vs PA66: Key Differences and Comparison Table",
     excerpt:
       "The two polyamide types look very similar at first glance, but differ significantly in thermal performance, moisture uptake and cost.",
     readingMinutes: 5,
@@ -582,7 +582,7 @@ const RO: BlogPost[] = [
     slug: "pc-mi-abs-mi",
     date: "2026-09-02",
     category: "Alegerea Materialului",
-    title: "PC sau ABS? 5 Criterii pentru Alegerea Materialului Potrivit",
+    title: "PC sau ABS? Ce Este PC/ABS — Comparație în 5 Criterii",
     excerpt:
       "Policarbonatul și ABS-ul sunt cele mai frecvent comparate materiale plastice tehnice. Când ar trebui să alegeți fiecare?",
     readingMinutes: 6,
@@ -649,7 +649,7 @@ const RO: BlogPost[] = [
     slug: "ul-94-v0-nedir",
     date: "2026-08-24",
     category: "Ghid Tehnic",
-    title: "Ce Înseamnă UL-94 V-0? Alegerea Plasticelor Ignifuge",
+    title: "Ce Înseamnă UL94 V-0? Clasele UL-94 (V-0, V-1, V-2)",
     excerpt:
       "UL-94 V-0 este una dintre cele mai frecvent solicitate clasificări în proiectele electrice și electronice. Ce înseamnă clasele și cum alegeți?",
     readingMinutes: 5,
@@ -703,7 +703,7 @@ const RO: BlogPost[] = [
     slug: "pa6-pa66-farki",
     date: "2026-08-11",
     category: "Alegerea Materialului",
-    title: "Care Este Diferența dintre PA6 și PA66?",
+    title: "PA6 vs PA66: Diferențe și Tabel Comparativ",
     excerpt:
       "Cele două tipuri de poliamidă par foarte asemănătoare la prima vedere, dar diferă semnificativ ca performanță termică, absorbție de umiditate și cost.",
     readingMinutes: 5,

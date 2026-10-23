@@ -206,7 +206,10 @@
     "authorizedDistributor": "Yetkili Distribütör",
     "officesTitle": "Ofislerimiz",
     "hqOffice": "Merkez Ofis",
-    "europeOffice": "Avrupa Ofisi"
+    "europeOffice": "Avrupa Ofisi",
+    "lgchemProducts": "LG Chem Ürünleri",
+    "basechemProducts": "Basechem Ürünleri",
+    "materials": "Hammaddeler"
   },
   "rnd": {
     "badge": "AR-GE",
@@ -522,7 +525,9 @@
     "ctaTitle": "Uygulamanız için doğru malzemeyi birlikte belirleyelim",
     "ctaDesc": "Teknik ekibimiz malzeme seçimi, grade karşılaştırması ve numune süreçlerinde size destek olur.",
     "ctaBtn": "Bize Ulaşın",
-    "disclaimer": "Bu yazı genel malzeme bilgisi içerir. Sayısal teknik değerler grade'e göre değişir ve yalnızca resmî teknik veri sayfasında (TDS) yer alır."
+    "disclaimer": "Bu yazı genel malzeme bilgisi içerir. Sayısal teknik değerler grade'e göre değişir ve yalnızca resmî teknik veri sayfasında (TDS) yer alır.",
+    "shortAnswer": "Kısa Cevap",
+    "faqTitle": "Sık Sorulan Sorular"
   },
   "privacy": {
     "navLabel": "KVKK & Gizlilik",
@@ -1142,7 +1147,14 @@
       "Elektrik-elektronik bileşenleri",
       "Yapısal parçalar",
       "Tarım ve sulama"
-    ]
+    ],
+    "faqTitle": "{code} Hakkında Sık Sorulan Sorular",
+    "faqQ1": "{code} hammadde nereden alınır?",
+    "faqA1": "Buteo Petrokimya, {code} hammaddesini İstanbul Avrupa ve Anadolu Yakası'ndaki iki deposundan Türkiye geneline, Bükreş ofisi üzerinden de Avrupa'ya tedarik eder. İstanbul il sınırları içinde aynı gün sevkiyat mümkündür. Stok ve termin bilgisi için satış ekibimize ulaşabilirsiniz.",
+    "faqQ2": "{code} teknik veri sayfasını (TDS) nasıl alabilirim?",
+    "faqA2": "Bu sayfadaki \"TDS'e Eriş\" butonuna tıklayıp e-posta ve telefon bilginizi bırakmanız yeterli. Talebiniz satış ekibimize iletilir ve üreticinin resmî teknik veri sayfası en kısa sürede e-posta ile paylaşılır.",
+    "faqQ3": "{code} hammadde fiyatı ne kadar?",
+    "faqA3": "{code} fiyatı; grade'e, sipariş miktarına, termin süresine ve güncel piyasa koşullarına göre değişir. Bu nedenle sabit liste fiyatı yayınlamıyoruz. İhtiyacınızı iletirseniz size güncel fiyat teklifi hazırlarız."
   },
   "nobreak": {
     "home": "Ana Sayfa",

@@ -206,7 +206,10 @@
     "authorizedDistributor": "Authorized Distributor",
     "officesTitle": "Our Offices",
     "hqOffice": "Headquarters",
-    "europeOffice": "European Office"
+    "europeOffice": "European Office",
+    "lgchemProducts": "LG Chem Products",
+    "basechemProducts": "Basechem Products",
+    "materials": "Raw Materials"
   },
   "rnd": {
     "badge": "R&D",
@@ -522,7 +525,9 @@
     "ctaTitle": "Let's identify the right material for your application together",
     "ctaDesc": "Our technical team supports you in material selection, grade comparison and sampling.",
     "ctaBtn": "Contact Us",
-    "disclaimer": "This article contains general material information. Numerical technical values vary by grade and appear only in the official technical data sheet (TDS)."
+    "disclaimer": "This article contains general material information. Numerical technical values vary by grade and appear only in the official technical data sheet (TDS).",
+    "shortAnswer": "Short Answer",
+    "faqTitle": "Frequently Asked Questions"
   },
   "privacy": {
     "navLabel": "Privacy Policy",
@@ -1142,7 +1147,14 @@
       "Electrical and electronic components",
       "Structural parts",
       "Agriculture and irrigation"
-    ]
+    ],
+    "faqTitle": "Frequently Asked Questions About {code}",
+    "faqQ1": "Where can I buy {code} raw material?",
+    "faqA1": "Buteo Petrochemicals supplies {code} raw material across Türkiye from its two warehouses on the European and Anatolian sides of Istanbul, and to Europe via its Bucharest office. Same-day delivery is possible within Istanbul. Contact our sales team for stock and lead time.",
+    "faqQ2": "How can I obtain the {code} technical data sheet (TDS)?",
+    "faqA2": "Click \"Access TDS\" on this page and leave your email and phone number. Your request reaches our sales team and the manufacturer's official technical data sheet is shared by email as soon as possible.",
+    "faqQ3": "What is the price of {code} raw material?",
+    "faqA3": "The price of {code} depends on the grade, order quantity, lead time and current market conditions, so we do not publish a fixed list price. Send us your requirement and we will prepare a current quotation."
   },
   "nobreak": {
     "home": "Home",

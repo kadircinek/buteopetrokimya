@@ -71,7 +71,7 @@ const SEO: Record<PageKey, Record<Locale, SeoEntry>> = {
   },
   lgchem: {
     tr: {
-      title: "LG Chem Ürünleri | LUPOY LUPOX LUMID LUMILOY LUSEP — Türkiye",
+      title: "LG Chem Türkiye Distribütörü | LUPOY, LUPOX, LUMID Ürünleri",
       description:
         "LG Chem Türkiye distribütörü: LUPOY, LUPOX, LUMID, LUMILOY, LUSEP, LUCON, LUMIPLAS, LUCEL, LUPOL, KEYFLEX. Gerçek grade'ler ve TDS talebi.",
       keywords: ["LG Chem distribütörü", "LG Chem Türkiye", "LUPOY", "LUPOX", "LUMID", "LUMILOY", "LUSEP", "LUCON", "LUMIPLAS", "LUCEL", "LUPOL", "LUPOS", "KEYFLEX BT", "PC compound", "PBT compound", "mPPE", "PPS compound", "POM", "LG Chem mühendislik plastiği grade"],

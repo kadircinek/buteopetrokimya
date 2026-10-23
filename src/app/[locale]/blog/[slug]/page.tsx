@@ -3,10 +3,11 @@ import { use } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { ArrowRight, ChevronRight, Clock, Info } from "lucide-react";
+import { ArrowRight, ChevronRight, Clock, Info, Zap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getPost, getPosts, ALL_POST_SLUGS } from "@/data/blog";
+import { getBlogExtra } from "@/data/blogExtras";
 import { BRAND_SLUGS } from "@/data/lgchemBrands";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 
   return {
-    title: `${post.title} | ${SITE_NAME}`,
+    title: post.title.length <= 48 ? `${post.title} | ${SITE_NAME}` : post.title,
     description: clamp(post.excerpt),
     keywords: [post.title, post.category, ...post.relatedBrands.map((b) => BRAND_SLUGS[b] ?? b)],
     alternates: {
@@ -64,6 +65,7 @@ export default function BlogPostPage({ params }: Props) {
 
   const others = getPosts(locale).filter((p) => p.slug !== slug).slice(0, 3);
   const url = `${SITE_URL}/${locale}/blog/${slug}`;
+  const extra = getBlogExtra(slug, locale);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -89,6 +91,16 @@ export default function BlogPostPage({ params }: Props) {
           { "@type": "ListItem", position: 3, name: post.title, item: url },
         ],
       },
+      ...(extra
+        ? [{
+            "@type": "FAQPage",
+            mainEntity: extra.faq.map((x) => ({
+              "@type": "Question",
+              name: x.q,
+              acceptedAnswer: { "@type": "Answer", text: x.a },
+            })),
+          }]
+        : []),
     ],
   };
 
@@ -128,6 +140,42 @@ export default function BlogPostPage({ params }: Props) {
         {/* Gövde */}
         <article className="py-16 bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Kısa cevap — öne çıkan snippet için */}
+            {extra && (
+              <div className="mb-12 p-6 rounded-2xl border-l-4" style={{ borderColor: "#40916C", background: "#f0fdf4" }}>
+                <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wide mb-2" style={{ color: "#1B4332" }}>
+                  <Zap size={15} /> {t("shortAnswer")}
+                </div>
+                <p className="text-gray-800 leading-relaxed text-lg">{extra.answer}</p>
+              </div>
+            )}
+
+            {extra?.table && (
+              <div className="mb-12 overflow-x-auto rounded-2xl border border-gray-100">
+                <table className="w-full text-left text-sm">
+                  <caption className="text-left p-4 font-bold text-gray-900 text-base">{extra.table.caption}</caption>
+                  <thead style={{ background: "#1B4332" }}>
+                    <tr>
+                      {extra.table.head.map((h) => (
+                        <th key={h} scope="col" className="px-4 py-3 font-semibold text-white whitespace-nowrap">{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {extra.table.rows.map((r, i) => (
+                      <tr key={i} className={i % 2 ? "bg-gray-50" : "bg-white"}>
+                        {r.map((c, j) => (
+                          j === 0
+                            ? <th key={j} scope="row" className="px-4 py-3 font-semibold text-gray-900">{c}</th>
+                            : <td key={j} className="px-4 py-3 text-gray-600">{c}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+
             {post.sections.map((s, i) => (
               <section key={i} className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">{s.h}</h2>
@@ -138,6 +186,24 @@ export default function BlogPostPage({ params }: Props) {
                 </div>
               </section>
             ))}
+
+            {/* SSS — FAQPage */}
+            {extra && (
+              <section className="mb-12">
+                <h2 className="text-2xl font-bold text-gray-900 mb-5">{t("faqTitle")}</h2>
+                <div className="space-y-3">
+                  {extra.faq.map((x, i) => (
+                    <details key={i} className="group rounded-2xl border border-gray-100 overflow-hidden" open={i === 0}>
+                      <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer font-semibold text-gray-900 hover:bg-gray-50 transition-colors list-none">
+                        {x.q}
+                        <ChevronRight size={18} className="text-gray-400 group-open:rotate-90 transition-transform flex-shrink-0" />
+                      </summary>
+                      <div className="px-5 pb-5 text-gray-600 leading-relaxed">{x.a}</div>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            )}
 
             {/* Dürüstlük notu */}
             <div className="flex items-start gap-3 p-5 rounded-2xl border border-gray-100 bg-gray-50">

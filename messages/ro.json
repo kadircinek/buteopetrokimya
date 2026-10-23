@@ -206,7 +206,10 @@
     "authorizedDistributor": "Distribuitor Autorizat",
     "officesTitle": "Birourile Noastre",
     "hqOffice": "Sediu Central",
-    "europeOffice": "Birou European"
+    "europeOffice": "Birou European",
+    "lgchemProducts": "Produse LG Chem",
+    "basechemProducts": "Produse Basechem",
+    "materials": "Materii Prime"
   },
   "rnd": {
     "badge": "C&D",
@@ -522,7 +525,9 @@
     "ctaTitle": "Să identificăm împreună materialul potrivit pentru aplicația dumneavoastră",
     "ctaDesc": "Echipa noastră tehnică vă susține în alegerea materialului, compararea gradelor și procesul de mostre.",
     "ctaBtn": "Contactați-ne",
-    "disclaimer": "Acest articol conține informații generale despre materiale. Valorile tehnice numerice variază în funcție de grad și apar doar în fișa tehnică oficială (TDS)."
+    "disclaimer": "Acest articol conține informații generale despre materiale. Valorile tehnice numerice variază în funcție de grad și apar doar în fișa tehnică oficială (TDS).",
+    "shortAnswer": "Răspuns Scurt",
+    "faqTitle": "Întrebări Frecvente"
   },
   "privacy": {
     "navLabel": "Politica de Confidențialitate",
@@ -1142,7 +1147,14 @@
       "Componente electrice și electronice",
       "Piese structurale",
       "Agricultură și irigații"
-    ]
+    ],
+    "faqTitle": "Întrebări Frecvente despre {code}",
+    "faqQ1": "De unde pot cumpăra materie primă {code}?",
+    "faqA1": "Buteo Petrochemicals furnizează materie primă {code} în Turcia din cele două depozite din Istanbul și în Europa prin biroul din București. Livrarea în aceeași zi este posibilă în Istanbul. Contactați echipa de vânzări pentru stoc și termen.",
+    "faqQ2": "Cum pot obține fișa tehnică (TDS) pentru {code}?",
+    "faqA2": "Apăsați „Accesați TDS” pe această pagină și lăsați adresa de e-mail și numărul de telefon. Solicitarea ajunge la echipa de vânzări, iar fișa tehnică oficială a producătorului este trimisă prin e-mail cât mai curând posibil.",
+    "faqQ3": "Care este prețul materiei prime {code}?",
+    "faqA3": "Prețul {code} depinde de grad, cantitatea comandată, termenul de livrare și condițiile actuale ale pieței, de aceea nu publicăm un preț fix de listă. Trimiteți-ne cerința și vă pregătim o ofertă actualizată."
   },
   "nobreak": {
     "home": "Acasă",

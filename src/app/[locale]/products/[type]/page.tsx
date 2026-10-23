@@ -40,9 +40,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const path = `/products/${type}`;
 
   const titles: Record<string, string> = {
-    tr: `${name} | Plastik Hammadde Tedarikçisi`,
-    en: `${name} | Plastic Raw Material Supplier`,
-    ro: `${name} | Furnizor Materii Prime Plastice`,
+    tr: `${name} Hammadde | Tedarik, TDS ve Fiyat`,
+    en: `${name} Raw Material | Supply, TDS and Price`,
+    ro: `${name} Materie Primă | Furnizare, TDS și Preț`,
   };
   const descriptions: Record<string, string> = {
     tr: `${name} hammadde tedariki — Buteo Petrokimya. İstanbul'da iki depo, aynı gün sevkiyat. TDS ve fiyat teklifi için ulaşın.`,
@@ -97,6 +97,10 @@ export default function PolymerTypePage({ params }: Props) {
   const apps = t.raw(`${key}_apps`) as string[];
   const others = POLYMERS.filter((p) => p.slug !== type);
   const url = `${SITE_URL}/${locale}/products/${type}`;
+  const faq = [1, 2, 3].map((n) => ({
+    q: t(`faqQ${n}`, { code: data.code }),
+    a: t(`faqA${n}`, { code: data.code }),
+  }));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -121,6 +125,14 @@ export default function PolymerTypePage({ params }: Props) {
           { "@type": "ListItem", position: 2, name: t("products"), item: `${SITE_URL}/${locale}/products` },
           { "@type": "ListItem", position: 3, name, item: url },
         ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faq.map((x) => ({
+          "@type": "Question",
+          name: x.q,
+          acceptedAnswer: { "@type": "Answer", text: x.a },
+        })),
       },
     ],
   };
@@ -296,6 +308,24 @@ export default function PolymerTypePage({ params }: Props) {
                 <h2 className="text-xl font-bold text-gray-900 mb-2">{t("supplyTitle")}</h2>
                 <p className="text-gray-600 leading-relaxed">{t("supplyDesc")}</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SSS */}
+        <section className="py-16" style={{ background: "#f8fafc" }}>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">{t("faqTitle", { code: data.code })}</h2>
+            <div className="space-y-3">
+              {faq.map((x, i) => (
+                <details key={i} className="group rounded-2xl border border-gray-100 overflow-hidden bg-white">
+                  <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer font-semibold text-gray-900 hover:bg-gray-50 transition-colors list-none">
+                    {x.q}
+                    <ChevronRight size={18} className="text-gray-400 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  </summary>
+                  <div className="px-5 pb-5 text-gray-600 leading-relaxed">{x.a}</div>
+                </details>
+              ))}
             </div>
           </div>
         </section>

@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { Phone, Mail, Globe, MapPin } from "lucide-react";
+import { POLYMERS } from "@/data/polymerTypes";
+import { SECTORS } from "@/data/sectorContent";
 
 export default function Footer() {
   const t = useTranslations();
@@ -13,8 +15,8 @@ export default function Footer() {
     { href: `/${locale}`, label: t("nav.home") },
     { href: `/${locale}/about`, label: t("nav.about") },
     { href: `/${locale}/products`, label: t("nav.products") },
-    { href: `/${locale}/lgchem`, label: "LG Chem Ürünleri" },
-    { href: `/${locale}/basechem`, label: "Basechem Ürünleri" },
+    { href: `/${locale}/lgchem`, label: t("footer.lgchemProducts") },
+    { href: `/${locale}/basechem`, label: t("footer.basechemProducts") },
     { href: `/${locale}/sectors`, label: t("nav.sectors") },
     { href: `/${locale}/blog`, label: t("nav.blog") },
     { href: `/${locale}/contact`, label: t("nav.contact") },
@@ -118,7 +120,34 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        {/* Hammadde ve sektör linkleri — her sayfadan iç link (tarama önceliği) */}
+        <div className="border-t border-white/10 mt-12 pt-10 grid md:grid-cols-2 gap-10">
+          <nav aria-label={t("footer.materials")}>
+            <h3 className="text-sm font-bold uppercase tracking-widest text-green-400 mb-4">{t("footer.materials")}</h3>
+            <ul className="flex flex-wrap gap-x-4 gap-y-2">
+              <li>
+                <Link href={`/${locale}/products/no-break-pp`} className="text-gray-400 text-xs hover:text-white transition-colors">No Break PP</Link>
+              </li>
+              {POLYMERS.map((p) => (
+                <li key={p.slug}>
+                  <Link href={`/${locale}/products/${p.slug}`} className="text-gray-400 text-xs hover:text-white transition-colors">{p.code}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <nav aria-label={t("nav.sectors")}>
+            <h3 className="text-sm font-bold uppercase tracking-widest text-green-400 mb-4">{t("nav.sectors")}</h3>
+            <ul className="flex flex-wrap gap-x-4 gap-y-2">
+              {SECTORS.map((sec) => (
+                <li key={sec.slug}>
+                  <Link href={`/${locale}/sectors/${sec.slug}`} className="text-gray-400 text-xs hover:text-white transition-colors">{t(`sectors.s${sec.n}`)}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+
+        <div className="border-t border-white/10 mt-10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Buteo Petrokimya. {t("footer.rights")}
             {" · "}
